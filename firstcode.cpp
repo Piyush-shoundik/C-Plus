@@ -1,14 +1,29 @@
-// Necessary header files for input output functions
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// int main()
+// {
+//     // std::cout << "Hello, World!";
+//     std::cout << "welcome to srmist";
 
-// main() function: where the execution of
-// C++ program begins
-int main() {
-  
-    // This statement prints "Hello World"
-    cout << "Hello World";
+// return 0;
+// }
 
+// #include <iostream>
+// using namespace std;
+
+int main()
+{
+    int a;
+    cout << "Enter a number: ";
+    cin >> a;
+    cout << "You entered: " << a << endl;
     return 0;
 }
-my name is piyush print krde bhai
+
+// #include <iostream>
+// using namespace std; 
+
+// main()
+// {
+//     int a,b,c
+// return 0; 
+// }
