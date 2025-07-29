@@ -84,14 +84,30 @@
 
 // Area or perimeter of Circle
 
+// #include <iostream>
+// main()
+// {
+//     float radius,area,perimeter;
+//     std::cout << "Enter radius: ";
+//     std::cin >> radius;
+//     area = 3.14 * radius * radius ;
+//     perimeter = 2 * 3.14 * radius;
+//     std::cout << "perimeter is :"<< perimeter << "\narea is :" << area;
+// return(0);
+// }
+
+// Product discount
+
+// finding actual price
+
 #include <iostream>
+
 main()
 {
-    float radius,area,perimeter;
-    std::cout << "Enter radius: ";
-    std::cin >> radius;
-    area = 3.14 * radius * radius ;
-    perimeter = 2 * 3.14 * radius;
-    std::cout << "perimeter is :"<< perimeter << "\narea is :" << area;
+    int saleP,After_dis,actP;
+    std::cout << "Enter Sale Price then discount Percent\n";
+    std::cin >> saleP >> After_dis ;
+    actP = saleP - (saleP * After_dis / 100);
+    std::cout << "Actual price " << actP;
 return(0);
 }
