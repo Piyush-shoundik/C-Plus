@@ -40,19 +40,30 @@
 
 // trying for one more time 
 
-# include <iostream>
+// # include <iostream>
+// main()
+// {
+//     int a,b,c,d,e;
+//     std:: cout << "Enter first no. you want to add ";
+//     std:: cin >> a;
+//     std:: cout << "Enter second no. you want to add ";
+//     std:: cin >> b;
+//     std:: cout << "Enter first no. you want to subtract ";
+//     std:: cin >> c;
+//     std:: cout << "Enter second no. you want to subtract ";
+//     std:: cin >> d;
+//     e = a + b - c - d ;
+//     std:: cout << "This is the result of your calculation " << e ;
+// return (0);
+// }
+
+#include <iostream>
 main()
 {
-    int a,b,c,d,e;
-    std:: cout << "Enter first no. you want to add ";
-    std:: cin >> a;
-    std:: cout << "Enter second no. you want to add ";
-    std:: cin >> b;
-    std:: cout << "Enter first no. you want to subtract ";
-    std:: cin >> c;
-    std:: cout << "Enter second no. you want to subtract ";
-    std:: cin >> d;
-    e = a + b - c - d ;
-    std:: cout << "This is the result of your calculation " << e ;
-
+    int a,b,c;
+    std::cout << "Enter length and breath of rectangle \n"  ;
+    std::cin >> a >> b;
+    c = 2 * a + b;
+    std::cout << "Perimeter of rectangle is: "<< c ;
+return (0);
 }
