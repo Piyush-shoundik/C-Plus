@@ -71,13 +71,27 @@
 
 // Area of rectangle
 
+// #include <iostream>
+// main()
+// {
+//     int a,b,c;
+//     std::cout << "Enter length and breath \n";
+//     std::cin >> a >> b;
+//     c = a * b ;
+//     std::cout << "Heres the area of rectanlge or square : " << c ;
+// return(0);
+// }
+
+// Area or perimeter of Circle
+
 #include <iostream>
 main()
 {
-    int a,b,c;
-    std::cout << "Enter length and breath \n";
-    std::cin >> a >> b;
-    c = a * b ;
-    std::cout << "Heres the area of rectanlge or square : " << c ;
+    float radius,area,perimeter;
+    std::cout << "Enter radius: ";
+    std::cin >> radius;
+    area = 3.14 * radius * radius ;
+    perimeter = 2 * 3.14 * radius;
+    std::cout << "perimeter is :"<< perimeter << "\narea is :" << area;
 return(0);
 }
