@@ -57,13 +57,27 @@
 // return (0);
 // }
 
+// #include <iostream>
+// main()
+// {
+//     int a,b,c;
+//     std::cout << "Enter length and breath of rectangle \n"  ;
+//     std::cin >> a >> b;
+//     c = 2 * a + b;
+//     std::cout << "Perimeter of rectangle is: "<< c ;
+// return (0);
+// }
+
+
+// Area of rectangle
+
 #include <iostream>
 main()
 {
     int a,b,c;
-    std::cout << "Enter length and breath of rectangle \n"  ;
+    std::cout << "Enter length and breath \n";
     std::cin >> a >> b;
-    c = 2 * a + b;
-    std::cout << "Perimeter of rectangle is: "<< c ;
-return (0);
+    c = a * b ;
+    std::cout << "Heres the area of rectanlge or square : " << c ;
+return(0);
 }
