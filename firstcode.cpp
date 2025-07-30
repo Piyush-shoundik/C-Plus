@@ -100,14 +100,37 @@
 
 // finding actual price
 
-#include <iostream>
+// #include <iostream>
+
+// main()
+// {
+//     int saleP,After_dis,actP;
+//     std::cout << "Enter Sale Price then discount Percent\n";
+//     std::cin >> saleP >> After_dis ;
+//     actP = saleP - (saleP * After_dis / 100);
+//     std::cout << "Actual price " << actP;
+// return(0);
+// }
+
+// using if and else statment 
+// to check weather the no is even or false 
+
+#include <iostream> 
 
 main()
 {
-    int saleP,After_dis,actP;
-    std::cout << "Enter Sale Price then discount Percent\n";
-    std::cin >> saleP >> After_dis ;
-    actP = saleP - (saleP * After_dis / 100);
-    std::cout << "Actual price " << actP;
+    int number;
+    std:: cout << "Enter your no. \n";
+    std:: cin >> number;
+    
+    if(number % 2 == 0)
+    {
+        std::cout << "number is even";
+    } 
+    else
+    {
+        std::cout<< "number is odd";
+    }
+
 return(0);
 }
