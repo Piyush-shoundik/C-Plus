@@ -115,22 +115,45 @@
 // using if and else statment 
 // to check weather the no is even or false 
 
+// #include <iostream> 
+
+// int main()
+// {
+//     int number;
+//     std:: cout << "Enter your no. \n";
+//     std:: cin >> number;
+    
+//     if(number % 2 == 0)
+//     {
+//         std::cout << "number is even";
+//     } 
+//     else
+//     {
+//         std::cout<< "number is odd";
+//     }
+
+// return(0);
+// }
+
+// how to check which number is greater
+ 
 #include <iostream> 
 
-main()
+int main()
 {
-    int number;
-    std:: cout << "Enter your no. \n";
-    std:: cin >> number;
-    
-    if(number % 2 == 0)
+    float number1,number2;
+    std::cout << "Enter your no. \n";
+    std::cin >> number1 >>number2;
+    if (number1 > number2 )
     {
-        std::cout << "number is even";
-    } 
-    else
+        std::cout << "First one is greater "<< number1 ;
+    }else if(number1 == number2 )
     {
-        std::cout<< "number is odd";
+        std::cout << "Both Are Equal";
     }
-
-return(0);
+    else 
+    {
+        std::cout <<"Second one is greater "<<number2;
+    }
+return(0) ;
 }
