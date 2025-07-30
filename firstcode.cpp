@@ -196,20 +196,46 @@
 // student requires a total of 40% and at least 33% in each subject. Assume there
 // are three subjects and take the marks as input from the user
 
-#include <iostream>
-int main(){
-    int sub1,sub2,sub3,per;
-    std::cout << "Enter the numbers";
-    std::cin >> sub1 >> sub2 >> sub3;
+// #include <iostream>
+// int main(){
+//     int sub1,sub2,sub3,per;
+//     std::cout << "Enter the numbers";
+//     std::cin >> sub1 >> sub2 >> sub3;
     
-    per = (sub1+sub2+sub3) / 3;
+//     per = (sub1+sub2+sub3) / 3;
 
-    if (sub1 >= 33 && sub2 >= 33 && sub3 >= 33 && per >= 40){
-        std::cout << "You are passed";
-    }
-    else{
-        std::cout << "You are fail";
-    }
+//     if (sub1 >= 33 && sub2 >= 33 && sub3 >= 33 && per >= 40){
+//         std::cout << "You are passed";
+//     }
+//     else{
+//         std::cout << "You are fail";
+//     }
+// return(0);
+// }
+
+// Calculate income tax paid by an employee to the government as per the slabs
+// mentioned below:
+//  Income Slab Tax
+//  2.5 - 5.0L 5%
+//  5.0L - 10.0L 20%
+//  Above 10.0L 30%
+// Note that there is no tax below 2.5L. Take income amount as an input from the user
+
+
+#include <iostream>
+    int main(){
+        float input;
+        std::cout << "Enter your income";
+        std::cin >> input;
+        if (input <= 2.4){
+            std::cout<< "You are tax free";
+        }else if(input >= 2.5 && input <= 5.0 ){
+            std::cout <<"You are on takslab 5% \n" << (input*5)/100 ;
+        }else if(input >= 5.1 && input <= 10.0 ){
+            std::cout <<"You are on takslab 20% \n" << (input*20)/100;
+        }else{
+            std::cout <<"You are on takslab 30% \n" << (input*20)/100;
+        }
 return(0);
 }
 
