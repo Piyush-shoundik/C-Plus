@@ -177,17 +177,39 @@
 
 // to find biggest number in three no.
 
+// #include <iostream>
+// int main(){
+//     int a,b,c;
+//     std::cout << "Enter your no. \n";
+//     std::cin >> a >> b >> c ; 
+//     if (a && b < c ){
+//         std::cout << "Third number is greater ";
+//     }else if ( a && c < b ){
+//         std::cout << "second no. is greater";
+//     }else{
+//         std::cout << "first no. is greater";
+//     }
+// return(0);
+// }
+
+// Write a program to determine whether a student has passed or failed. To pass, a
+// student requires a total of 40% and at least 33% in each subject. Assume there
+// are three subjects and take the marks as input from the user
+
 #include <iostream>
 int main(){
-    int a,b,c;
-    std::cout << "Enter your no. \n";
-    std::cin >> a >> b >> c ; 
-    if (a && b < c ){
-        std::cout << "Third number is greater ";
-    }else if ( a && c < b ){
-        std::cout << "second no. is greater";
-    }else{
-        std::cout << "first no. is greater";
+    int sub1,sub2,sub3,per;
+    std::cout << "Enter the numbers";
+    std::cin >> sub1 >> sub2 >> sub3;
+    
+    per = (sub1+sub2+sub3) / 3;
+
+    if (sub1 >= 33 && sub2 >= 33 && sub3 >= 33 && per >= 40){
+        std::cout << "You are passed";
+    }
+    else{
+        std::cout << "You are fail";
     }
 return(0);
 }
+
