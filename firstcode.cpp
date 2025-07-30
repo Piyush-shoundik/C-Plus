@@ -137,23 +137,40 @@
 
 // how to check which number is greater
  
-#include <iostream> 
+// #include <iostream> 
 
+// int main()
+// {
+//     float number1,number2;
+//     std::cout << "Enter your no. \n";
+//     std::cin >> number1 >>number2;
+//     if (number1 > number2 )
+//     {
+//         std::cout << "First one is greater "<< number1 ;
+//     }else if(number1 == number2 )
+//     {
+//         std::cout << "Both Are Equal";
+//     }
+//     else 
+//     {
+//         std::cout <<"Second one is greater "<<number2;
+//     }
+// return(0) ;
+// }
+
+// comparing two no. if there is negative no. or positive
+
+#include <iostream>
 int main()
 {
-    float number1,number2;
-    std::cout << "Enter your no. \n";
-    std::cin >> number1 >>number2;
-    if (number1 > number2 )
+    int number;
+    std::cout << "Enter your Number here ";
+    std::cin >> number;
+    if (number >= 0)
     {
-        std::cout << "First one is greater "<< number1 ;
-    }else if(number1 == number2 )
-    {
-        std::cout << "Both Are Equal";
+        std::cout << "Number is positive ";
+    }else{
+        std::cout << "Number is negative ";
     }
-    else 
-    {
-        std::cout <<"Second one is greater "<<number2;
-    }
-return(0) ;
+return(0);
 }
