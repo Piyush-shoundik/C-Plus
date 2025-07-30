@@ -160,17 +160,34 @@
 
 // comparing two no. if there is negative no. or positive
 
+// #include <iostream>
+// int main()
+// {
+//     int number;
+//     std::cout << "Enter your Number here ";
+//     std::cin >> number;
+//     if (number >= 0)
+//     {
+//         std::cout << "Number is positive ";
+//     }else{
+//         std::cout << "Number is negative ";
+//     }
+// return(0);
+// }
+
+// to find biggest number in three no.
+
 #include <iostream>
-int main()
-{
-    int number;
-    std::cout << "Enter your Number here ";
-    std::cin >> number;
-    if (number >= 0)
-    {
-        std::cout << "Number is positive ";
+int main(){
+    int a,b,c;
+    std::cout << "Enter your no. \n";
+    std::cin >> a >> b >> c ; 
+    if (a && b < c ){
+        std::cout << "Third number is greater ";
+    }else if ( a && c < b ){
+        std::cout << "second no. is greater";
     }else{
-        std::cout << "Number is negative ";
+        std::cout << "first no. is greater";
     }
 return(0);
 }
