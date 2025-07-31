@@ -222,20 +222,35 @@
 // Note that there is no tax below 2.5L. Take income amount as an input from the user
 
 
+// #include <iostream>
+//     int main(){
+//         float input;
+//         std::cout << "Enter your income";
+//         std::cin >> input;
+//         if (input <= 2.4){
+//             std::cout<< "You are tax free";
+//         }else if(input >= 2.5 && input <= 5.0 ){
+//             std::cout <<"You are on takslab 5% \n" << (input*5)/100 ;
+//         }else if(input >= 5.1 && input <= 10.0 ){
+//             std::cout <<"You are on takslab 20% \n" << (input*20)/100;
+//         }else{
+//             std::cout <<"You are on takslab 30% \n" << (input*20)/100;
+//         }
+// return(0);
+// }
+
+// write a code to calculate leap year
+
 #include <iostream>
-    int main(){
-        float input;
-        std::cout << "Enter your income";
-        std::cin >> input;
-        if (input <= 2.4){
-            std::cout<< "You are tax free";
-        }else if(input >= 2.5 && input <= 5.0 ){
-            std::cout <<"You are on takslab 5% \n" << (input*5)/100 ;
-        }else if(input >= 5.1 && input <= 10.0 ){
-            std::cout <<"You are on takslab 20% \n" << (input*20)/100;
-        }else{
-            std::cout <<"You are on takslab 30% \n" << (input*20)/100;
-        }
+int main (){
+    int yearinput;
+    std::cout << "Enter the year ";
+    std::cin >> yearinput;
+    if ((yearinput % 4 == 0 && yearinput % 100 != 0) || (yearinput % 400 == 0)) {
+        std::cout << "The leap year";
+    }
+    else{
+        std::cout <<  "Not a leap year";
+    }
 return(0);
 }
-
