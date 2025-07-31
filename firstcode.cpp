@@ -278,7 +278,6 @@
 // printin no. 1 to 10
 
 // #include <iostream>
-// #include <iostream>
 // int main(){
 //     int i;
 //     i = 1;
@@ -291,17 +290,37 @@
 
 // print number from 1 to name
 
+// #include <iostream>
+// int main(){
+//     int i,number;
+//     i = 1;
+//     std::cout << "Enter your no.";
+//     std::cin >> number ;
+
+//     while(i <= number){
+//         std::cout << i << "\n";
+//         i = i+1;
+//     }
+// return(0);
+// }
+
+// printin no. 10 to 1
+
 #include <iostream>
 int main(){
-    int i,number;
-    i = 1;
-    std::cout << "Enter your no.";
-    std::cin >> number ;
-
-    while(i <= number){
-        std::cout << i << "\n";
-        i = i+1;
+    int i;
+    i = 10;
+    while (i >= 1 ){
+        std::cout << i << "\n" ;
+        i = i - 1;
     }
-return(0);
+return (0);
 }
+
+
+
+
+
+
+
 
