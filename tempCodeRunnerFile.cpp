@@ -1,1 +1,1 @@
-yearinput
+printin no. 1 to 10

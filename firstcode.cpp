@@ -257,20 +257,36 @@
 
 // finding gretest among these no.
 
-#include <iostream>
+// #include <iostream>
 
+// int main(){
+//     int a,b,c,d; 
+//     std::cout << "Enter your 4 no.\n ";
+//     std::cin >> a >> b >> c >> d ;
+//     if (a > b && c && d ){
+//         std::cout << "Number " << a << " is greater";
+//     }else if (b > c && d && a ){
+//         std::cout << "Number "<<  b << " is greater";
+//     }else if (c > d && a && b ){
+//         std::cout << "Number " << c << " is greater";
+//     }else{
+//         std::cout << "Number " << d << " is greater";
+//     }
+// return(0);
+// }
+
+// printin no. 1 to 10
+
+#include <iostream>
+#include <iostream>
 int main(){
-    int a,b,c,d; 
-    std::cout << "Enter your 4 no.\n ";
-    std::cin >> a >> b >> c >> d ;
-    if (a > b && c && d ){
-        std::cout << "Number " << a << " is greater";
-    }else if (b > c && d && a ){
-        std::cout << "Number "<<  b << " is greater";
-    }else if (c > d && a && b ){
-        std::cout << "Number " << c << " is greater";
-    }else{
-        std::cout << "Number " << d << " is greater";
+    int i;
+    i = 1;
+    while (i <= 11 ){
+        std::cout << i << "\n" ;
+        i = i + 1;
     }
-return(0);
+return (0);
 }
+
+
