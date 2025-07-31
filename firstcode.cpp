@@ -288,7 +288,7 @@
 // return (0);
 // }
 
-// print number from 1 to name
+// print number from 1 to number
 
 // #include <iostream>
 // int main(){
@@ -306,15 +306,30 @@
 
 // printin no. 10 to 1
 
+// #include <iostream>
+// int main(){
+//     int i;
+//     i = 10;
+//     while (i >= 1 ){
+//         std::cout << i << "\n" ;
+//         i = i - 1;
+//     }
+// return (0);
+// }
+
+// to print number from n to 1 
+
 #include <iostream>
 int main(){
-    int i;
-    i = 10;
-    while (i >= 1 ){
-        std::cout << i << "\n" ;
-        i = i - 1;
+    int inputn,i;
+    i = 1;
+    std::cout << "Enter the no. you want to print from" ;
+    std::cin >> inputn ;
+    while(inputn >= i ){
+        std::cout << inputn << "\n";
+        inputn = inputn - i;
     }
-return (0);
+    return(0);
 }
 
 
