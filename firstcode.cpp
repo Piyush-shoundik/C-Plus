@@ -319,15 +319,31 @@
 
 // to print number from n to 1 
 
+// #include <iostream>
+// int main(){
+//     int inputn,i;
+//     i = 1;
+//     std::cout << "Enter the no. you want to print from" ;
+//     std::cin >> inputn ;
+//     while(inputn >= i ){
+//         std::cout << inputn << "\n";
+//         inputn = inputn - i;
+//     }
+//     return(0);
+// }
+
 #include <iostream>
-int main(){
-    int inputn,i;
-    i = 1;
-    std::cout << "Enter the no. you want to print from" ;
-    std::cin >> inputn ;
-    while(inputn >= i ){
-        std::cout << inputn << "\n";
-        inputn = inputn - i;
+
+main(){
+    char letter;
+    std::cout << "Enter a alphabet";
+    std::cin >> letter;
+    if (letter >= 'a' && letter <= 'z' ){
+        std::cout << "it is lowercase";
+    }else if(letter >= 'A' && letter <= 'Z' ){
+        std::cout << "it is uppercase";
+    }else{
+        std::cout << "Enter a valid alphabet";
     }
     return(0);
 }
