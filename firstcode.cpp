@@ -241,16 +241,36 @@
 
 // write a code to calculate leap year
 
+// #include <iostream>
+// int main (){
+//     int yearinput;
+//     std::cout << "Enter the year ";
+//     std::cin >> yearinput;
+//     if ((yearinput % 4 == 0 && yearinput % 100 != 0) || (yearinput % 400 == 0)) {
+//         std::cout << "The leap year";
+//     }
+//     else{
+//         std::cout <<  "Not a leap year";
+//     }
+// return(0);
+// }
+
+// finding gretest among these no.
+
 #include <iostream>
-int main (){
-    int yearinput;
-    std::cout << "Enter the year ";
-    std::cin >> yearinput;
-    if ((yearinput % 4 == 0 && yearinput % 100 != 0) || (yearinput % 400 == 0)) {
-        std::cout << "The leap year";
-    }
-    else{
-        std::cout <<  "Not a leap year";
+
+int main(){
+    int a,b,c,d; 
+    std::cout << "Enter your 4 no.\n ";
+    std::cin >> a >> b >> c >> d ;
+    if (a > b && c && d ){
+        std::cout << "Number " << a << " is greater";
+    }else if (b > c && d && a ){
+        std::cout << "Number "<<  b << " is greater";
+    }else if (c > d && a && b ){
+        std::cout << "Number " << c << " is greater";
+    }else{
+        std::cout << "Number " << d << " is greater";
     }
 return(0);
 }
