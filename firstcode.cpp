@@ -348,20 +348,33 @@
 //     return(0);
 // }
 
+// #include <iostream>
+
+// int main(){
+//     int number;
+//     // std::cout << "Printing from 10 to 20";
+//     number = 0;
+//     number = 10;
+//     while(number <= 20){
+//         std::cout << number << "\n";
+//         number = number + 1;
+//     }
+// return(0);
+// }
+
+// using do while loop 
+
 #include <iostream>
 
 int main(){
-    int number;
-    // std::cout << "Printing from 10 to 20";
-    number = 0;
-    number = 10;
-    while(number <= 20){
-        std::cout << number << "\n";
-        number = number + 1;
-    }
+    int firstN;
+    firstN = 1;
+    do{
+        std::cout << firstN << "\n";
+        firstN = firstN + 1;
+    }while(firstN >= 10);
 return(0);
 }
-
 
 
 
