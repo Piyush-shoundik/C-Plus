@@ -364,15 +364,33 @@
 
 // using do while loop 
 
+// #include <iostream>
+
+// int main(){
+//     int firstN;
+//     firstN = 1;
+//     do{
+//         std::cout << firstN << "\n";
+//         firstN = firstN + 1;
+//     }while(firstN >= 10);
+// return(0);
+// }
+
+
+// to find even no. till 50
+
 #include <iostream>
 
 int main(){
-    int firstN;
-    firstN = 1;
-    do{
-        std::cout << firstN << "\n";
-        firstN = firstN + 1;
-    }while(firstN >= 10);
+    int i,t;
+    i = 1;
+    t = 50;
+    while (i <= 50){
+        if((i % 2) == 0 ){
+            std::cout << i << "\n";
+        }
+        i++;
+    }
 return(0);
 }
 
