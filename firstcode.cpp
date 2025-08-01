@@ -332,22 +332,35 @@
 //     return(0);
 // }
 
+// #include <iostream>
+
+// main(){
+//     char letter;
+//     std::cout << "Enter a alphabet";
+//     std::cin >> letter;
+//     if (letter >= 'a' && letter <= 'z' ){
+//         std::cout << "it is lowercase";
+//     }else if(letter >= 'A' && letter <= 'Z' ){
+//         std::cout << "it is uppercase";
+//     }else{
+//         std::cout << "Enter a valid alphabet";
+//     }
+//     return(0);
+// }
+
 #include <iostream>
 
-main(){
-    char letter;
-    std::cout << "Enter a alphabet";
-    std::cin >> letter;
-    if (letter >= 'a' && letter <= 'z' ){
-        std::cout << "it is lowercase";
-    }else if(letter >= 'A' && letter <= 'Z' ){
-        std::cout << "it is uppercase";
-    }else{
-        std::cout << "Enter a valid alphabet";
+int main(){
+    int number;
+    // std::cout << "Printing from 10 to 20";
+    number = 0;
+    number = 10;
+    while(number <= 20){
+        std::cout << number << "\n";
+        number = number + 1;
     }
-    return(0);
+return(0);
 }
-
 
 
 

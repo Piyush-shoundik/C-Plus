@@ -1,1 +1,1 @@
-printin no. 1 to 10
+std::cout << "Printing from 10 to 20";
