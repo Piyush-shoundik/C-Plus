@@ -379,22 +379,39 @@
 
 // to find even no. till 50
 
+// #include <iostream>
+
+// int main(){
+//     int i,t;
+//     i = 1;
+//     t = 50;
+//     while (i <= 50){
+//         if((i % 2) == 0 ){
+//             std::cout << i << "\n";
+//         }
+//         i++;
+//     }
+// return(0);
+// }
+
+// Write a program that takes an integer input from the user and calculates the sum of its digits using a while loop
+
 #include <iostream>
 
 int main(){
-    int i,t;
-    i = 1;
-    t = 50;
-    while (i <= 50){
-        if((i % 2) == 0 ){
-            std::cout << i << "\n";
-        }
-        i++;
+    int n;
+    std::cout << "Enter your numbers you want to add ";
+    std::cin >> n;
+    int numb, temp, sum = 0;
+    numb = n ;
+    while (numb != 0){
+    sum = sum + (numb % 10 );
+    numb = numb / 10;
+    if (numb == 0 ){
+        std::cout << sum;}
     }
 return(0);
 }
-
-
 
 
 
