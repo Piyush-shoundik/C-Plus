@@ -384,7 +384,7 @@
 // int main(){
 //     int i,t;
 //     i = 1;
-//     t = 50;program that takes an integer input from the user and calculates the sum of its digits
+//     t = 50;
 //     while (i <= 50){
 //         if((i % 2) == 0 ){
 //             std::cout << i << "\n";
@@ -394,7 +394,7 @@
 // return(0);
 // }
 
-// Write a  using a while loop
+// Write a program that takes an integer input from the user and calculates the sum of its digits using a while loop
 
 // #include <iostream>
 
@@ -415,20 +415,48 @@
 
 // print the no. in reverse form 
 
+// #include <iostream>
+// int main(){
+//     int n;
+//     std::cout << "Enter your no. you want to reverse";
+//     std::cin >> n;
+//     int numb,sum =0;
+//     numb = n ;
+//     while(numb != 0){
+//     sum = numb % 10;
+//     numb = numb / 10;
+//     std::cout << sum;
+//     }
+//     return(0);
+// }
+
 #include <iostream>
 int main(){
-    int n;
-    std::cout << "Enter your no. you want to reverse";
-    std::cin >> n;
-    int numb,sum =0;
-    numb = n ;
-    while(numb != 0){
-    sum = numb % 10;
-    numb = numb / 10;
-    std::cout << sum;
+    int a,b,choice;
+    std::cout << "Enter a and b";
+    std::cin >> a >> b;
+    std::cout << "enter your choice from 1,2,3,4";
+    std::cin >> choice;
+    switch(choice){
+        case 1 :
+        std :: cout << a+b;
+        break;
+        case 2 :
+        std :: cout << a-b;
+        break;
+        case 3 :
+        std :: cout << a*b;
+        break;
+        case 4 :
+        std :: cout << a/b;
+        break;
+        default:
+        std :: cout << "enter valid no.";
     }
     return(0);
+
 }
+
 
 
 
