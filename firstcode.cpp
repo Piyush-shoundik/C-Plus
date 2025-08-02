@@ -384,7 +384,7 @@
 // int main(){
 //     int i,t;
 //     i = 1;
-//     t = 50;
+//     t = 50;program that takes an integer input from the user and calculates the sum of its digits
 //     while (i <= 50){
 //         if((i % 2) == 0 ){
 //             std::cout << i << "\n";
@@ -394,23 +394,40 @@
 // return(0);
 // }
 
-// Write a program that takes an integer input from the user and calculates the sum of its digits using a while loop
+// Write a  using a while loop
+
+// #include <iostream>
+
+// int main(){
+//     int n;
+//     std::cout << "Enter your numbers you want to add ";
+//     std::cin >> n;
+//     int numb, temp, sum = 0;
+//     numb = n ;
+//     while (numb != 0){
+//     sum = sum + (numb % 10 );
+//     numb = numb / 10;
+//     if (numb == 0 ){
+//         std::cout << sum;}
+//     }
+// return(0);
+// }
+
+// print the no. in reverse form 
 
 #include <iostream>
-
 int main(){
     int n;
-    std::cout << "Enter your numbers you want to add ";
+    std::cout << "Enter your no. you want to reverse";
     std::cin >> n;
-    int numb, temp, sum = 0;
+    int numb,sum =0;
     numb = n ;
-    while (numb != 0){
-    sum = sum + (numb % 10 );
+    while(numb != 0){
+    sum = numb % 10;
     numb = numb / 10;
-    if (numb == 0 ){
-        std::cout << sum;}
+    std::cout << sum;
     }
-return(0);
+    return(0);
 }
 
 
