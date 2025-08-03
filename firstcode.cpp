@@ -459,19 +459,37 @@
 
 // write a program to add sum of n nos. of natural no.
 
-# include <iostream>
+// # include <iostream>
+// int main(){
+//     int n,i, sum = 0;;
+//     std::cout << "Enter your nos. you want to add";
+//     std::cin >> n;
+//     i = 1;
+//     while(i <= n){
+//         sum = sum + i;
+//         if (i >= n){
+//             std::cout << sum;
+//         } 
+//         i ++;
+//     }
+// return(0);
+// }
+
+// same question but this time by using for loop
+
+#include <iostream>
 int main(){
-    int n,i,sum = 0;;
-    std::cout << "Enter your nos. you want to add";
+    int i,n,sum = 0;
+    std::cout << "Enter your nos.";
     std::cin >> n;
-    i = 1;
-    while(i <= n){
+    for(i = 1;i <= n; i++)
+    {
         sum = sum + i;
-        if (i >= n){
-            std::cout << sum;
-        } 
-        i ++;
+        if (i >= n){    
+        std::cout << sum;}
+        
     }
-return(0);
+    return (0);
 }
+
 
