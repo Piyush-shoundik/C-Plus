@@ -467,7 +467,7 @@
 //     i = 1;
 //     while(i <= n){
 //         sum = sum + i;
-//         if (i >= n){
+//         if (i == n){
 //             std::cout << sum;
 //         } 
 //         i ++;
@@ -477,19 +477,35 @@
 
 // same question but this time by using for loop
 
+// #include <iostream>
+// int main(){
+//     int i,n,sum = 0;
+//     std::cout << "Enter your nos.";
+//     std::cin >> n;
+//     for(i = 1;i <= n; i++)
+//     {
+//         sum = sum + i;
+//         if (i >= n){    
+//         std::cout << sum;}
+        
+//     }
+//     return (0);
+// }
+
+// multiplying two no.
+
 #include <iostream>
 int main(){
-    int i,n,sum = 0;
-    std::cout << "Enter your nos.";
-    std::cin >> n;
-    for(i = 1;i <= n; i++)
-    {
-        sum = sum + i;
-        if (i >= n){    
-        std::cout << sum;}
-        
+    int inum,multi = 1;
+    std::cout << "Enter your no.";
+    std::cin >> inum;
+    while(inum != 0){
+        multi = multi * (inum % 10);
+        inum = inum/10;
+        if(inum == 0){
+            std::cout << multi;
+        }
     }
-    return (0);
+    return(0);
 }
-
 
