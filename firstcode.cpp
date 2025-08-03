@@ -494,18 +494,41 @@
 
 // multiplying two no.
 
+// #include <iostream>
+// int main(){
+//     int inum,multi = 1;
+//     std::cout << "Enter your no.";
+//     std::cin >> inum;
+//     while(inum != 0){
+//         multi = multi * (inum % 10);
+//         inum = inum/10;
+//         if(inum == 0){
+//             std::cout << multi;
+//         }
+//     }
+//     return(0);
+// }
+
+// write a program to add the even nos. and multiply the odd no. 
+
 #include <iostream>
 int main(){
-    int inum,multi = 1;
-    std::cout << "Enter your no.";
-    std::cin >> inum;
-    while(inum != 0){
-        multi = multi * (inum % 10);
-        inum = inum/10;
-        if(inum == 0){
-            std::cout << multi;
+    int number,digit,add = 0 ,multi = 1;
+    std::cout << "Enter your number: ";
+    std::cin >> number;
+    
+    while (number != 0) {
+        digit = number % 10;
+        if ((digit % 2) == 0 ){
+            add = add + digit;
         }
-    }
-    return(0);
+        else{
+            multi = multi * digit;
+        }
+        number = number / 10;
 }
+std::cout << "Sum of even no. is \n" << add;
+std::cout << "\nmultiplication of odd no. is \n" << multi;
 
+return(0);
+}
