@@ -430,34 +430,48 @@
 //     return(0);
 // }
 
-#include <iostream>
+// #include <iostream>
+// int main(){
+//     int a,b,choice;
+//     std::cout << "Enter a and b";
+//     std::cin >> a >> b;
+//     std::cout << "enter your choice from 1,2,3,4";
+//     std::cin >> choice;
+//     switch(choice){
+//         case 1 :
+//         std :: cout << a+b;
+//         break;
+//         case 2 :
+//         std :: cout << a-b;
+//         break;
+//         case 3 :
+//         std :: cout << a*b;
+//         break;
+//         case 4 :
+//         std :: cout << a/b;
+//         break;
+//         default:
+//         std :: cout << "enter valid no.";
+//     }
+//     return(0);
+
+// }
+
+// write a program to add sum of n nos. of natural no.
+
+# include <iostream>
 int main(){
-    int a,b,choice;
-    std::cout << "Enter a and b";
-    std::cin >> a >> b;
-    std::cout << "enter your choice from 1,2,3,4";
-    std::cin >> choice;
-    switch(choice){
-        case 1 :
-        std :: cout << a+b;
-        break;
-        case 2 :
-        std :: cout << a-b;
-        break;
-        case 3 :
-        std :: cout << a*b;
-        break;
-        case 4 :
-        std :: cout << a/b;
-        break;
-        default:
-        std :: cout << "enter valid no.";
+    int n,i,sum = 0;;
+    std::cout << "Enter your nos. you want to add";
+    std::cin >> n;
+    i = 1;
+    while(i <= n){
+        sum = sum + i;
+        if (i >= n){
+            std::cout << sum;
+        } 
+        i ++;
     }
-    return(0);
-
+return(0);
 }
-
-
-
-
 
