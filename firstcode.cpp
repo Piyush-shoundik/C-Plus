@@ -511,24 +511,43 @@
 
 // write a program to add the even nos. and multiply the odd no. 
 
-#include <iostream>
-int main(){
-    int number,digit,add = 0 ,multi = 1;
-    std::cout << "Enter your number: ";
-    std::cin >> number;
+// #include <iostream>
+// int main(){
+//     int number,digit,add = 0 ,multi = 1;
+//     std::cout << "Enter your number: ";
+//     std::cin >> number;
     
-    while (number != 0) {
-        digit = number % 10;
-        if ((digit % 2) == 0 ){
-            add = add + digit;
-        }
-        else{
-            multi = multi * digit;
-        }
-        number = number / 10;
-}
-std::cout << "Sum of even no. is \n" << add;
-std::cout << "\nmultiplication of odd no. is \n" << multi;
+//     while (number != 0) {
+//         digit = number % 10;
+//         if ((digit % 2) == 0 ){
+//             add = add + digit;
+//         }
+//         else{
+//             multi = multi * digit;
+//         }
+//         number = number / 10;
+// }
+// std::cout << "Sum of even no. is \n" << add;
+// std::cout << "\nmultiplication of odd no. is \n" << multi;
 
-return(0);
-}
+// return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// To find the factorial of given no. n 
+
+#include <iostream>
+    int main(){
+    int num, mult = 1, i ;
+    std::cout << "Enter your no you want to find factorial \n";
+    std::cin >> num;
+    i = 1;
+    while(i <= num){
+        mult = mult * i;
+        i++;
+        }
+    std::cout << mult;
+    return(0);
+    }
+    
