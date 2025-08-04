@@ -1,14 +1,14 @@
+#include <iostream>
 int main(){
-    int n,i, sum = 0;;
-    std::cout << "Enter your nos. you want to add";
+    int n;
+    std::cout << "Enter your no. you want to reverse";
     std::cin >> n;
-    i = 1;
-    while(i <= n){
-        sum = sum + i;
-        if (i == n){
-            std::cout << sum;
-        } 
-        i ++;
+    int numb,sum =0;
+    numb = n ;
+    while(numb != 0){
+    sum = numb % 10;
+    numb = numb / 10;
+    std::cout << sum;
     }
-return(0);
+    return(0);
 }

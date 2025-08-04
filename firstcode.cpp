@@ -537,17 +537,43 @@
 
 // To find the factorial of given no. n 
 
-#include <iostream>
-    int main(){
-    int num, mult = 1, i ;
-    std::cout << "Enter your no you want to find factorial \n";
-    std::cin >> num;
-    i = 1;
-    while(i <= num){
-        mult = mult * i;
-        i++;
-        }
-    std::cout << mult;
-    return(0);
-    }
+// #include <iostream>
+//     int main(){
+//     int num, mult = 1, i ;
+//     std::cout << "Enter your no you want to find factorial \n";
+//     std::cin >> num;
+//     i = 1;
+//     while(i <= num){
+//         mult = mult * i;
+//         i++;
+//         }
+//     std::cout << mult;
+//     return(0);
+//     }
     
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// to find the palindrome no.
+
+#include <iostream>
+int main() {
+    int num, reverse = 0,digit;;
+    std::cout << "Enter your number: ";
+    std::cin >> num;
+
+    int n = num;
+
+    while(n != 0) {
+        digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = n / 10;
+    }
+
+    if(reverse == num) {
+        std::cout << "The number is a palindrome.";
+    } else {
+        std::cout << "The number is not a palindrome.";
+    }
+
+    return 0;
+}
