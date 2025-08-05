@@ -578,21 +578,44 @@
 //     return 0;
 // }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // write table of any no.
 
+// #include <iostream>
+// int main(){
+//     int num, i = 1, digit;
+//     std:: cout << "Enter your no.";
+//     std:: cin >> num;
+    
+//     while (i <= 10){
+//         digit = num * i;
+//         std::cout << digit << "\n";
+//         i++;
+        
+//     }
+//     return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// we have to write to febonacci series
+
 #include <iostream>
 int main(){
-    int num, i = 1, digit;
+    int num,gap , i = 1,total ,gum ;
     std:: cout << "Enter your no.";
     std:: cin >> num;
+    int n = num;
     
-    while (i <= 10){
-        digit = num * i;
-        std::cout << digit << "\n";
+    do{
+        gum = 0 + i;
+        gap = gum + i;
+        total = gap + gum;
+        std::cout << total << std::endl;
+        gum = gap;
         i++;
-        
     }
+    while (i <= n);
     return(0);
 }
-
