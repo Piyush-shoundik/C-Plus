@@ -693,15 +693,46 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // star question no. 4
+                                                                       
+// #include <iostream>
+// int main(){
+//     int i, j;
+//     for( i = 1 ; i <= 5 ; i++){
+//     for(j = 1 ; j <= i ; j++){
+//         std::cout << j +  i ;
+//     }
+//     std::cout << "\n" ;
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// star question 5
 
 #include <iostream>
 int main(){
-    int i, j;
-    for( i = 1 ; i <= 5 ; i++){
-    for(j = 1 ; j <= i ; j++){
-        std::cout << j +  i ;
-    }
-    std::cout << "\n" ;
+    int i ,j;
+    for(i = 1 ; i <= 5 ; i++){
+        for(j = 1 ;  j <= i ;  j++){
+            if(j == 1){
+                std::cout << "a";
+            }
+            if(j == 2){
+                std::cout << "b";
+            }
+            if(j == 3){
+                std::cout << "c";
+            }
+            if(j == 4){
+                std::cout << "d";
+            }
+            if(j == 5){
+                std::cout << "e";
+            }
+            
+        }
+    std::cout << "\n" ;    
     }
     return(0);
 }
