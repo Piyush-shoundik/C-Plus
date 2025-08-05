@@ -624,16 +624,35 @@
 
 // code to write a * a * a.....n'th
 
-#include <iostream> 
-int main (){
-    int a,b ,digit = 1, i = 1;
-    std::cout << "Enter your no. and times you want to multiply the number \n";
-    std::cin >> a >> b;
-    while (i <= b){
-        digit = digit * a;
-        i++;
-    }
-    std::cout << digit;
+// #include <iostream> 
+// int main (){
+//     int a,b ,digit = 1, i = 1;
+//     std::cout << "Enter your no. and times you want to multiply the number \n";
+//     std::cin >> a >> b;
+//     while (i <= b){
+//         digit = digit * a;
+//         i++;
+//     }
+//     std::cout << digit;
 
-return(0);
+// return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing program to print in stars 
+
+#include <iostream>
+int main(){
+    int a = 1, j;
+    while(a <= 5){
+        j = 1;
+        while(j <= a){
+            std::cout << "*";
+            j++ ;
+        }
+        std:: cout << "\n";
+        a++;
+    }
+    return(0);
 }
