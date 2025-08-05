@@ -661,12 +661,29 @@
 
 // program to print like star by using for loop
 
+// #include <iostream>
+// int main(){
+//     int i, j;
+//     for( i = 1; i <= 5; i++){
+//     for(j = 1; j <= i;j++){
+//         std::cout << i ;
+//     }
+//     std::cout << "\n" ;
+//     }
+//     return(0);
+// }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// star question no. 3
+
 #include <iostream>
 int main(){
     int i, j;
     for( i = 1; i <= 5; i++){
     for(j = 1; j <= i;j++){
-        std::cout << i ;
+        std::cout << j ;
     }
     std::cout << "\n" ;
     }
