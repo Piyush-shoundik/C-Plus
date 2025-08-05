@@ -555,25 +555,44 @@
 
 // to find the palindrome no.
 
+// #include <iostream>
+// int main() {
+//     int num, reverse = 0,digit;;
+//     std::cout << "Enter your number: ";
+//     std::cin >> num;
+
+//     int n = num;
+
+//     while(n != 0) {
+//         digit = n % 10;
+//         reverse = reverse * 10 + digit;
+//         n = n / 10;
+//     }
+
+//     if(reverse == num) {
+//         std::cout << "The number is a palindrome.";
+//     } else {
+//         std::cout << "The number is not a palindrome.";
+//     }
+
+//     return 0;
+// }
+
+
+// write table of any no.
+
 #include <iostream>
-int main() {
-    int num, reverse = 0,digit;;
-    std::cout << "Enter your number: ";
-    std::cin >> num;
-
-    int n = num;
-
-    while(n != 0) {
-        digit = n % 10;
-        reverse = reverse * 10 + digit;
-        n = n / 10;
+int main(){
+    int num, i = 1, digit;
+    std:: cout << "Enter your no.";
+    std:: cin >> num;
+    
+    while (i <= 10){
+        digit = num * i;
+        std::cout << digit << "\n";
+        i++;
+        
     }
-
-    if(reverse == num) {
-        std::cout << "The number is a palindrome.";
-    } else {
-        std::cout << "The number is not a palindrome.";
-    }
-
-    return 0;
+    return(0);
 }
+
