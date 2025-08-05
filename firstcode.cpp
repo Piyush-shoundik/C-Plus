@@ -710,29 +710,45 @@
 
 // star question 5
 
+// #include <iostream>
+// int main(){
+//     int i ,j;
+//     for(i = 1 ; i <= 5 ; i++){
+//         for(j = 1 ;  j <= i ;  j++){
+//             if(j == 1){
+//                 std::cout << "a";
+//             }
+//             if(j == 2){
+//                 std::cout << "b";
+//             }
+//             if(j == 3){
+//                 std::cout << "c";
+//             }
+//             if(j == 4){
+//                 std::cout << "d";
+//             }
+//             if(j == 5){
+//                 std::cout << "e";
+//             }
+            
+//         }
+//     std::cout << "\n" ;    
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// star queation 6 
+
 #include <iostream>
 int main(){
-    int i ,j;
-    for(i = 1 ; i <= 5 ; i++){
-        for(j = 1 ;  j <= i ;  j++){
-            if(j == 1){
-                std::cout << "a";
-            }
-            if(j == 2){
-                std::cout << "b";
-            }
-            if(j == 3){
-                std::cout << "c";
-            }
-            if(j == 4){
-                std::cout << "d";
-            }
-            if(j == 5){
-                std::cout << "e";
-            }
-            
+    int i, j;
+    for(i = 1; i <= 5; i++){
+        for(j = 1; j <= i ; j++){
+            std::cout << char('a' + (j - 1));
         }
-    std::cout << "\n" ;    
+    std::cout << "\n";
     }
     return(0);
 }
