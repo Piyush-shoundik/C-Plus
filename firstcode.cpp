@@ -642,17 +642,33 @@
 
 // writing program to print in stars 
 
+// #include <iostream>
+// int main(){
+//     int a = 1, j;
+//     while(a <= 5){
+//         j = 1;
+//         while(j <= a){
+//             std::cout << "*";
+//             j++ ;
+//         }
+//         std:: cout << "\n";
+//         a++;
+//     }
+//     return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// program to print like star by using for loop
+
 #include <iostream>
 int main(){
-    int a = 1, j;
-    while(a <= 5){
-        j = 1;
-        while(j <= a){
-            std::cout << "*";
-            j++ ;
-        }
-        std:: cout << "\n";
-        a++;
+    int i, j;
+    for( i = 1; i <= 5; i++){
+    for(j = 1; j <= i;j++){
+        std::cout << i ;
+    }
+    std::cout << "\n" ;
     }
     return(0);
 }
