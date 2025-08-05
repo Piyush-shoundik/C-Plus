@@ -601,21 +601,39 @@
 
 // we have to write to febonacci series
 
-#include <iostream>
-int main(){
-    int num,gap , i = 1,total ,gum ;
-    std:: cout << "Enter your no.";
-    std:: cin >> num;
-    int n = num;
+// #include <iostream>
+// int main(){
+//     int num,gap , i = 1,total ,gum ;
+//     std:: cout << "Enter your no.";
+//     std:: cin >> num;
+//     int n = num;
     
-    do{
-        gum = 0 + i;
-        gap = gum + i;
-        total = gap + gum;
-        std::cout << total << std::endl;
-        gum = gap;
+//     do{
+//         gum = 0 + i;
+//         gap = gum + i;
+//         total = gap + gum;
+//         std::cout << total << std::endl;
+//         gum = gap;
+//         i++;
+//     }
+//     while (i <= n);
+//     return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to write a * a * a.....n'th
+
+#include <iostream> 
+int main (){
+    int a,b ,digit = 1, i = 1;
+    std::cout << "Enter your no. and times you want to multiply the number \n";
+    std::cin >> a >> b;
+    while (i <= b){
+        digit = digit * a;
         i++;
     }
-    while (i <= n);
-    return(0);
+    std::cout << digit;
+
+return(0);
 }
