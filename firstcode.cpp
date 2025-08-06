@@ -757,12 +757,33 @@
 
 // star queation 7
 
-#include <iostream>
+// #include <iostream>
+// int main(){
+//     int i, j ;
+//     for(i = 1 ; i <= 5; i++){
+//         for(j = 1; j <= i; j++){
+//             std::cout <<  "*";
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// star question 8
+
+#include <iostream> 
 int main(){
-    int i, j ;
-    for(i = 1 ; i <= 5; i++){
-        for(j = 1; j <= i; j++){
-            std::cout <<  "*";
+    int i;
+    for(i = 1;i <= 5; i++){
+        int j,n = 5;
+        for(j = 1; j <= n - i; j++){
+            std::cout <<" ";
+        }
+        int k;
+        for(k = 1; k <= i; k++){
+            std::cout << "*";
         }
         std::cout << "\n";
     }
