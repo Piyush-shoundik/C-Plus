@@ -794,18 +794,36 @@
 
 // abcd in reverse pyramid
 
+// #include <iostream>
+// int main(){
+//     int i, j, k,n =5 ;
+//     for(i = 1; i <= 5; i++ ){
+//         for(j = 1; j <= n - i; j++){
+//             std::cout << " ";
+//         }
+//         for(k = 1; k <= i; k++){
+//             std::cout << char('a' + (k-1));
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 1234 in reverse pyramid
+
 #include <iostream>
 int main(){
-    int i, j, k,n =5 ;
-    for(i = 1; i <= 5; i++ ){
-        for(j = 1; j <= n - i; j++){
-            std::cout << " ";
+    int i, j ,k , l, n=5;
+    for(i = 1; i <= 5; i++){
+        for(j = i; j <= n-1; j++){
+            std::cout <<" ";
         }
         for(k = 1; k <= i; k++){
-            std::cout << char('a' + (k-1));
+            std::cout << i;
         }
         std::cout << "\n";
     }
     return(0);
 }
-
