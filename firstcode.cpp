@@ -832,15 +832,38 @@
 
 // 1234 in reverse pyramid
 
+// #include <iostream>
+// int main(){
+//     int i, j ,k , l, n=5;
+//     for(i = 1; i <= 5; i++){
+//         for(j = i; j < n; j++){
+//             std::cout <<" ";
+//         }
+//         for(k = 1; k <= i; k++){
+//             std::cout << k;
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// like this is the real actual pyramid
+
 #include <iostream>
 int main(){
-    int i, j ,k , l, n=5;
-    for(i = 1; i <= 5; i++){
-        for(j = i; j <= n-1; j++){
+    int i,l,k,h;
+    for(i = 1 ; i <= 5 ; i++ ){
+        for(l = i; l <= 4; l++){
             std::cout <<" ";
         }
-        for(k = 1; k <= i; k++){
-            std::cout << k;
+        for (k = 1; k <= i; k++){
+            std::cout << "*";
+            
+        }
+        for(h = 2; h <= i; h++){
+            std::cout << "*";
         }
         std::cout << "\n";
     }
