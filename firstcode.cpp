@@ -891,33 +891,48 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// barfi shape star code 
+
+// #include <iostream>
+// int main(){
+//     int i,g,h,k,l;
+//     int q,w,e,r,t;
+//     for(i= 1; i <= 5; i++){
+//         for(g = i; g <= 4; g++){
+//             std::cout << " ";
+//         }
+//         for(h = 1; h <= i; h++){
+//             std::cout << "*";
+//         }
+//         for(k = 2; k <= i; k++){
+//             std::cout << "*";
+//         }
+//         std::cout << "\n";
+//     }
+//     for(q = 1; q <= 5; q++){
+//         for(e = 1; e <= q ; e++){
+//             std::cout << " ";
+//         }
+//         for( w = q ; w <= 4 ; w++ ){
+//             std::cout << "*";
+//         }
+//         for( t = q ; t <= 3 ; t++ ){
+//             std::cout << "*";
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using functions for first time
+
 #include <iostream>
+void sum(int a = 2, int b = 3);
 int main(){
-    int i,g,h,k,l;
-    int q,w,e,r,t;
-    for(i= 1; i <= 5; i++){
-        for(g = i; g <= 4; g++){
-            std::cout << " ";
-        }
-        for(h = 1; h <= i; h++){
-            std::cout << "*";
-        }
-        for(k = 2; k <= i; k++){
-            std::cout << "*";
-        }
-        std::cout << "\n";
-    }
-    for(q = 1; q <= 5; q++){
-        for(e = 1; e <= q ; e++){
-            std::cout << " ";
-        }
-        for( w = q ; w <= 4 ; w++ ){
-            std::cout << "*";
-        }
-        for( t = q ; t <= 3 ; t++ ){
-            std::cout << "*";
-        }
-        std::cout << "\n";
-    }
-    return(0);
+    sum();
 }
+    void sum(int a,int b){
+    std::cout << a + b;}
+    
