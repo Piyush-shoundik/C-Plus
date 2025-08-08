@@ -874,14 +874,47 @@
 
 // star in reverse form but in different form
 
-#include <iostream> 
+// #include <iostream> 
+// int main(){
+//     int i,j,k,l;
+//     for(i = 1; i <= 5; i++){
+//         for(j = 2; j <= i; j++){
+//             std::cout << " "; 
+//         }
+//         for(k = i; k <= 5; k++){
+//             std::cout << "*";
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <iostream>
 int main(){
-    int i,j,k,l;
-    for(i = 1; i <= 5; i++){
-        for(j = 2; j <= i; j++){
-            std::cout << " "; 
+    int i,g,h,k,l;
+    int q,w,e,r,t;
+    for(i= 1; i <= 5; i++){
+        for(g = i; g <= 4; g++){
+            std::cout << " ";
         }
-        for(k = i; k <= 5; k++){
+        for(h = 1; h <= i; h++){
+            std::cout << "*";
+        }
+        for(k = 2; k <= i; k++){
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
+    for(q = 1; q <= 5; q++){
+        for(e = 1; e <= q ; e++){
+            std::cout << " ";
+        }
+        for( w = q ; w <= 4 ; w++ ){
+            std::cout << "*";
+        }
+        for( t = q ; t <= 3 ; t++ ){
             std::cout << "*";
         }
         std::cout << "\n";
