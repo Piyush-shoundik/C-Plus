@@ -851,18 +851,37 @@
 
 // like this is the real actual pyramid
 
-#include <iostream>
-int main(){
-    int i,l,k,h;
-    for(i = 1 ; i <= 5 ; i++ ){
-        for(l = i; l <= 4; l++){
-            std::cout <<" ";
-        }
-        for (k = 1; k <= i; k++){
-            std::cout << "*";
+// #include <iostream>
+// int main(){
+//     int i,l,k,h;
+//     for(i = 1 ; i <= 5 ; i++ ){
+//         for(l = i; l <= 4; l++){
+//             std::cout <<" ";
+//         }
+//         for (k = 1; k <= i; k++){
+//             std::cout << "*";
             
+//         }
+//         for(h = 2; h <= i; h++){
+//             std::cout << "*";
+//         }
+//         std::cout << "\n";
+//     }
+//     return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// star in reverse form but in different form
+
+#include <iostream> 
+int main(){
+    int i,j,k,l;
+    for(i = 1; i <= 5; i++){
+        for(j = 2; j <= i; j++){
+            std::cout << " "; 
         }
-        for(h = 2; h <= i; h++){
+        for(k = i; k <= 5; k++){
             std::cout << "*";
         }
         std::cout << "\n";
