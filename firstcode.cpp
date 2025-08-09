@@ -928,11 +928,26 @@
 
 // using functions for first time
 
+// #include <iostream>
+// void sum(int a = 2, int b = 3);
+// int main(){
+//     sum();
+// }
+//     void sum(int a,int b){
+//     std::cout << a + b;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing code by using inline function
+
 #include <iostream>
-void sum(int a = 2, int b = 3);
-int main(){
-    sum();
+    inline int somet(int k) {
+    return k + 5;  // Function body
 }
-    void sum(int a,int b){
-    std::cout << a + b;}
+int main(){
+    int turn = somet(5);
+    std::cout << "The number is \n" << turn;
+    return(0);
+}
+
     
