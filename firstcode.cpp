@@ -940,16 +940,31 @@
 
 // writing code by using inline function
 
-#include <iostream>
-    inline int somet(int k, int l) {
-    return k + l; }
+// #include <iostream>
+//     inline int somet(int k, int l) {
+//     return k + l; }
 
-int main(){
-    int turn = somet(5,6);
-    std::cout << "The number is \n" << turn;
-    return(0);
-}
+// int main(){
+//     int turn = somet(5,6);
+//     std::cout << "The number is \n" << turn;
+//     return(0);
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// writing code to print in inline code by taking input from user
 
+#include <iostream>
+
+    inline int sum(int a, int b){
+        return a + b ; 
+    }
+
+    int main(){
+        int a , b;
+        std::cin >> a >> b ;
+        int total = sum(a,b);
+        std::cout << total;
+
+        return(0);
+    }
