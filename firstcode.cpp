@@ -973,10 +973,30 @@
 
 // writing code to print in inline code by taking input from user performing multipication
 
-#include <iostream>
+// #include <iostream>
+
+//     inline int sum(int a, int b){
+//         return a * b ; 
+//     }
+
+//     int main(){
+//         int a , b;
+//         std::cout << "Enter your two number \n";
+//         std::cin >> a >> b ;
+//         int total = sum(a,b);
+//         std::cout << total;
+
+//         return(0);
+//     }
+
+////////////////////////////////////////////////////////////////////////////////
+
+// writing code to print in inline code by taking input from user performing subtarct
+
+    #include <iostream>
 
     inline int sum(int a, int b){
-        return a * b ; 
+        return a - b ; 
     }
 
     int main(){
