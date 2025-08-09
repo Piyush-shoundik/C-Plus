@@ -941,13 +941,15 @@
 // writing code by using inline function
 
 #include <iostream>
-    inline int somet(int k) {
-    return k + 5;  // Function body
-}
+    inline int somet(int k, int l) {
+    return k + l; }
+
 int main(){
-    int turn = somet(5);
+    int turn = somet(5,6);
     std::cout << "The number is \n" << turn;
     return(0);
 }
 
-    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
