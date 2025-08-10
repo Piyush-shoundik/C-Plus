@@ -993,18 +993,37 @@
 
 // writing code to print in inline code by taking input from user performing subtarct
 
+    // #include <iostream>
+
+    // inline int sum(int a, int b){
+    //     return a - b ; 
+    // }
+
+    // int main(){
+    //     int a , b;
+    //     std::cout << "Enter your two number \n";
+    //     std::cin >> a >> b ;
+    //     int total = sum(a,b);
+    //     std::cout << total;
+
+    //     return(0);
+    // }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    
+    // program to add two number by taking input from user by using void as function 
+
     #include <iostream>
 
-    inline int sum(int a, int b){
-        return a - b ; 
+    void sum(int a , int b ){
+        std::cout << a + b;
     }
 
     int main(){
-        int a , b;
-        std::cout << "Enter your two number \n";
-        std::cin >> a >> b ;
-        int total = sum(a,b);
-        std::cout << total;
-
-        return(0);
+        int aa , bb;
+        std::cout << "Enter your two number you want to add " ;
+        std::cin >> aa >> bb ;
+        sum(aa,bb);
+        
+    return(0);
     }
