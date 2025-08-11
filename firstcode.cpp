@@ -1028,30 +1028,59 @@
     // return(0);
     // }
 
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 // writing first code using function and class
+
+// #include <iostream>
+
+// class sum{
+//     private:
+//     int a , b;
+
+//     public: 
+//     void get();
+//     void put();
+// };
+
+// void sum::get()
+// {
+//     std::cout << "Enter two number \n";
+//     std::cin >> a >> b;
+// }
+
+// void sum::put(){
+//     std::cout << a + b;
+// }
+
+// int main(){
+//     sum aa;
+//     aa.get();
+//     aa.put();
+
+// return(0);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing code to print output using class and function 
 
 #include <iostream>
 
 class sum{
     private:
-    int a , b;
+    int a, b;
 
-    public: 
-    void get();
-    void put();
-};
-
-void sum::get()
-{
-    std::cout << "Enter two number \n";
+    public:
+    void get(){
+    std::cout << "Enter your two no.\n";
     std::cin >> a >> b;
-}
+    };
 
-void sum::put(){
+    void put(){
     std::cout << a + b;
-}
+    };
+};
 
 int main(){
     sum aa;
