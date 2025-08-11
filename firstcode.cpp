@@ -1065,6 +1065,35 @@
 
 // writing code to print output using class and function 
 
+// #include <iostream>
+
+// class sum{
+//     private:
+//     int a, b;
+
+//     public:
+//     void get(){
+//     std::cout << "Enter your two no.\n";
+//     std::cin >> a >> b;
+//     };
+
+//     void put(){
+//     std::cout << a + b;
+//     };
+// };
+
+// int main(){
+//     sum aa;
+//     aa.get();
+//     aa.put();
+
+// return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing code to print output using class and function and applying multipication. 
+
 #include <iostream>
 
 class sum{
@@ -1078,7 +1107,7 @@ class sum{
     };
 
     void put(){
-    std::cout << a + b;
+    std::cout << a * b;
     };
 };
 
@@ -1089,3 +1118,5 @@ int main(){
 
 return(0);
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////
