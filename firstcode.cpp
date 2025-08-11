@@ -1011,19 +1011,52 @@
 
     ////////////////////////////////////////////////////////////////////////////////
     
-    // program to add two number by taking input from user by using void as function 
+    // program to add two number by taking input from user by using void as function
 
-    #include <iostream>
+    //   #include <iostream>
 
-    void sum(int a , int b ){
-        std::cout << a + b;
-    }
+    // void sum(int a , int b ){
+    //     std::cout << a + b;
+    // }
 
-    int main(){
-        int aa , bb;
-        std::cout << "Enter your two number you want to add " ;
-        std::cin >> aa >> bb ;
-        sum(aa,bb);
+    // int main(){
+    //     int aa , bb;
+    //     std::cout << "Enter your two number you want to add " ;
+    //     std::cin >> aa >> bb ;
+    //     sum(aa,bb);
         
-    return(0);
-    }
+    // return(0);
+    // }
+
+////////////////////////////////////////////////////////////////////////////////
+
+// writing first code using function and class
+
+#include <iostream>
+
+class sum{
+    private:
+    int a , b;
+
+    public: 
+    void get();
+    void put();
+};
+
+void sum::get()
+{
+    std::cout << "Enter two number \n";
+    std::cin >> a >> b;
+}
+
+void sum::put(){
+    std::cout << a + b;
+}
+
+int main(){
+    sum aa;
+    aa.get();
+    aa.put();
+
+return(0);
+}
