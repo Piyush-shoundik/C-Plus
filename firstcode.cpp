@@ -1123,29 +1123,63 @@
 
 // writing the code to print perform dividion in class and function.
 
+// #include <iostream>
+
+// class divide{
+//     private:
+//     int a , b;
+
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void divide::get(){
+//     std::cout << "Enter your number\n";
+//     std::cin >> a >> b ;
+// };
+// void divide::put(){
+//     std::cout << a / b ;
+// };
+
+//     int main(){
+//     divide aa;
+//     aa.get();
+//     aa.put();
+
+// return(0);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// write a code to check if the number is even or odd using class and fuction 
+
 #include <iostream>
 
-class divide{
+class number{
     private:
-    int a , b;
-
+    int a;
     public:
     void get();
     void put();
 };
-
-void divide::get(){
+void number::get(){
     std::cout << "Enter your number\n";
-    std::cin >> a >> b ;
+    std::cin >> a;
 };
-void divide::put(){
-    std::cout << a / b ;
+void number::put(){
+    if(a % 2 == 0){
+        std::cout << "The number is even\n";
+    }else{
+        std::cout << "The number is odd\n";
+    }
 };
 
-    int main(){
-    divide aa;
-    aa.get();
-    aa.put();
+
+int main(){
+    number num;
+    num.get();
+    num.put();
 
 return(0);
 }
