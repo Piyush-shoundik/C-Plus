@@ -1184,32 +1184,67 @@
 // return(0);
 // }
 
-////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 // write a code to check if the number is posite or negative using class and fuction 
+
+// #include <iostream>
+
+// class number{
+//     public:
+//     int a;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     std::cout << "Enter your  number\n";
+//     std::cin >> a ;
+// };
+// void number::put(){
+//     if(a >= 0){
+//         std::cout << "The number is Positive";
+//     }else{
+//         std::cout << "The number is Negative";
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+//     num.put();
+
+// return(0);
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// write a code to check if the number is greater using class and fuction 
 
 #include <iostream>
 
 class number{
-    public:
-    int a;
+    private:
+    int a, b;
     public:
     void get();
     void put();
 };
 
 void number::get(){
-    std::cout << "Enter your  number\n";
-    std::cin >> a ;
+    std::cout << "Enter your number\n";
+    std::cin >> a >> b;
 };
 void number::put(){
-    if(a >= 0){
-        std::cout << "The number is Positive";
-    }else{
-        std::cout << "The number is Negative";
+    if(a > b ){
+        std::cout << "First number is greater";
+    }if(a == b){
+        std::cout << "Number is Equal";
+    }if(a < b){
+        std::cout << "Second number is greater";
     }
 };
-
 int main(){
     number num;
     num.get();

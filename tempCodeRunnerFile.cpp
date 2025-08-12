@@ -1,1 +1,0 @@
- // program to add two number by taking input from user by using void as function
