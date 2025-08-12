@@ -1222,33 +1222,59 @@
 
 // write a code to check if the number is greater using class and fuction 
 
+// #include <iostream>
+
+// class number{
+//     private:
+//     int a, b;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     std::cout << "Enter your number\n";
+//     std::cin >> a >> b;
+// };
+// void number::put(){
+//     if(a > b ){
+//         std::cout << "First number is greater";
+//     }if(a == b){
+//         std::cout << "Number is Equal";
+//     }if(a < b){
+//         std::cout << "Second number is greater";
+//     }
+// };
+// int main(){
+//     number num;
+//     num.get();
+//     num.put();
+
+// return(0);
+// }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// priting number from 1 to 10 using class and function 
+
 #include <iostream>
 
 class number{
     private:
-    int a, b;
+    int a , b ;
     public:
     void get();
-    void put();
 };
-
 void number::get(){
-    std::cout << "Enter your number\n";
-    std::cin >> a >> b;
-};
-void number::put(){
-    if(a > b ){
-        std::cout << "First number is greater";
-    }if(a == b){
-        std::cout << "Number is Equal";
-    }if(a < b){
-        std::cout << "Second number is greater";
+    for(a = 1; a <= 10; a++){
+        std::cout << a << "\n";
     }
 };
+
 int main(){
     number num;
     num.get();
-    num.put();
 
 return(0);
 }
