@@ -1258,23 +1258,56 @@
 
 // priting number from 1 to 10 using class and function 
 
-#include <iostream>
+// #include <iostream>
+
+// class number{
+//     private:
+//     int a , b ;
+//     public:
+//     void get();
+// };
+// void number::get(){
+//     for(a = 1; a <= 10; a++){
+//         std::cout << a << "\n";
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+
+// return(0);
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to print from 1 to n  
+
+#include <iostream> 
 
 class number{
     private:
-    int a , b ;
+    int a,i;
     public:
     void get();
+    void put();
 };
+
 void number::get(){
-    for(a = 1; a <= 10; a++){
-        std::cout << a << "\n";
+    std::cout << "Enter your number till where you want to print\n";
+    std::cin >> a ;    
+};
+
+void number::put(){
+    for( i = 1; i <= a ; i++){
+        std::cout << i << "\n";
     }
 };
 
 int main(){
     number num;
     num.get();
+    num.put();
 
 return(0);
 }
