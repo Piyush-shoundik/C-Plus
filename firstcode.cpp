@@ -1283,24 +1283,58 @@
 
 // code to print from 1 to n  
 
-#include <iostream> 
+// #include <iostream> 
+
+// class number{
+//     private:
+//     int a,i;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     std::cout << "Enter your number till where you want to print\n";
+//     std::cin >> a ;    
+// };
+
+// void number::put(){
+//     for( i = 1; i <= a ; i++){
+//         std::cout << i << "\n";
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+//     num.put();
+
+// return(0);
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to print number in reverse
+
+#include <iostream>
 
 class number{
     private:
-    int a,i;
+    int a , b , rev;
+    
     public:
     void get();
     void put();
 };
 
 void number::get(){
-    std::cout << "Enter your number till where you want to print\n";
-    std::cin >> a ;    
+    std::cout << "Enter your number you want to reverse\n";
+    std::cin >> a ;
 };
 
 void number::put(){
-    for( i = 1; i <= a ; i++){
-        std::cout << i << "\n";
+    for(a  ; a >= 1; a-- ){
+        std::cout << a << "\n";
     }
 };
 
@@ -1309,5 +1343,5 @@ int main(){
     num.get();
     num.put();
 
-return(0);
+return (0);
 }
