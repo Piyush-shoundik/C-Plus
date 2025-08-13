@@ -1316,32 +1316,67 @@
 
 // code to print number in reverse
 
-#include <iostream>
+// #include <iostream>
 
+// class number{
+//     private:
+//     int a , b , rev;
+    
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     std::cout << "Enter your number you want to reverse\n";
+//     std::cin >> a ;
+// };
+
+// void number::put(){
+//     for(a  ; a >= 1; a-- ){
+//         std::cout << a << "\n";
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+//     num.put();
+
+// return (0);
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// code example using array of object
+
+#include <iostream>
 class number{
     private:
-    int a , b , rev;
-    
+    int a , b ;
     public:
     void get();
     void put();
 };
 
 void number::get(){
-    std::cout << "Enter your number you want to reverse\n";
-    std::cin >> a ;
+    std::cout << "Enter your number you want to print\n";
+    std::cin >> a >> b;
 };
 
 void number::put(){
-    for(a  ; a >= 1; a-- ){
-        std::cout << a << "\n";
-    }
+    std::cout << a << "\n" << b << "\n";
 };
 
 int main(){
-    number num;
-    num.get();
-    num.put();
+    number num[5];
+    int i;
+    for( i = 0 ; i < 5 ; i++){
+        num[i].get();
+    }
+    for( i = 0 ; i < 5 ; i++){
+        num[i].put();
+    }
 
-return (0);
+return 0;
 }
