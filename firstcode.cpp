@@ -1385,6 +1385,36 @@
 
 // print star code in class and function
 
+// #include <iostream>
+
+// class number{
+//     // private:
+//     // int a, b ;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     for(int i =  1; i <= 5; i++){
+//         for(int j = 1; j <= i ; j++){
+//             std::cout << "*" ;
+//         }
+//         std::cout << "\n"  ;
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// print star code in class and function after space
+
 #include <iostream>
 
 class number{
@@ -1397,6 +1427,9 @@ class number{
 
 void number::get(){
     for(int i =  1; i <= 5; i++){
+        for(int j = i; j <= 4 ; j++){
+            std::cout << " " ;
+        }
         for(int j = 1; j <= i ; j++){
             std::cout << "*" ;
         }
@@ -1411,3 +1444,4 @@ int main(){
 return 0;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
