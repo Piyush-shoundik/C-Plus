@@ -1350,33 +1350,64 @@
 
 // code example using array of object
 
+// #include <iostream>
+// class number{
+//     private:
+//     int a , b ;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     std::cout << "Enter your number you want to print\n";
+//     std::cin >> a >> b;
+// };
+
+// void number::put(){
+//     std::cout << a << "\n" << b << "\n";
+// };
+
+// int main(){
+//     number num[5];
+//     int i;
+//     for( i = 0 ; i < 5 ; i++){
+//         num[i].get();
+//     }
+//     for( i = 0 ; i < 5 ; i++){
+//         num[i].put();
+//     }
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// print star code in class and function
+
 #include <iostream>
+
 class number{
-    private:
-    int a , b ;
+    // private:
+    // int a, b ;
     public:
     void get();
     void put();
 };
 
 void number::get(){
-    std::cout << "Enter your number you want to print\n";
-    std::cin >> a >> b;
-};
-
-void number::put(){
-    std::cout << a << "\n" << b << "\n";
+    for(int i =  1; i <= 5; i++){
+        for(int j = 1; j <= i ; j++){
+            std::cout << "*" ;
+        }
+        std::cout << "\n"  ;
+    }
 };
 
 int main(){
-    number num[5];
-    int i;
-    for( i = 0 ; i < 5 ; i++){
-        num[i].get();
-    }
-    for( i = 0 ; i < 5 ; i++){
-        num[i].put();
-    }
+    number num;
+    num.get();
 
 return 0;
 }
+
