@@ -1482,34 +1482,70 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-code to print infinte starts
+// code to print infinte starts
+
+// #include <iostream>
+
+// class number{
+//     // private:
+//     // int a, b ;
+//     public:
+//     void get();
+//     void put();
+// };
+
+// void number::get(){
+//     for(int i =  1; i <= 5; i++){
+//         for(int j = 2; j >= i ; j--){
+//             std::cout << " " ;
+//         }
+//         for(int j = 1; i <= 5 ; j--){
+//             std::cout << "*" ;
+//         }
+        
+//         std::cout << "\n"  ;
+//     }
+// };
+
+// int main(){
+//     number num;
+//     num.get();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Rectangle Class: Calculate Area and Perimeter
 
 #include <iostream>
-
-class number{
-    // private:
-    // int a, b ;
+class rectangle{
+    int length,breath;
     public:
-    void get();
-    void put();
+    void setDimensions();
+    void calculateArea();
+    void calculatePerimeter();
 };
 
-void number::get(){
-    for(int i =  1; i <= 5; i++){
-        for(int j = 2; j >= i ; j--){
-            std::cout << " " ;
-        }
-        for(int j = 1; i <= 5 ; j--){
-            std::cout << "*" ;
-        }
-        
-        std::cout << "\n"  ;
-    }
+void rectangle::setDimensions(){
+    std::cout << "Enter your length and breath\n";
+    std::cin >> length >> breath;
+};
+void rectangle::calculateArea(){
+    int area = length * breath;
+    std::cout << "Area is " <<area << "\n";
+};
+void rectangle::calculatePerimeter(){
+    int perimeter = 2 * (length + breath);
+    std::cout << "Perimeter is " << perimeter;
 };
 
 int main(){
-    number num;
-    num.get();
+    rectangle cal;
+    cal.setDimensions();
+    cal.calculateArea();
+    cal.calculatePerimeter();
 
 return 0;
 }
+
