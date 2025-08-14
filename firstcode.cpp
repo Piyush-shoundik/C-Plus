@@ -1518,6 +1518,41 @@
 
 // Rectangle Class: Calculate Area and Perimeter
 
+// #include <iostream>
+// class rectangle{
+//     int length,breath;
+//     public:
+//     void setDimensions();
+//     void calculateArea();
+//     void calculatePerimeter();
+// };
+
+// void rectangle::setDimensions(){
+//     std::cout << "Enter your length and breath\n";
+//     std::cin >> length >> breath;
+// };
+// void rectangle::calculateArea(){
+//     int area = length * breath;
+//     std::cout << "Area is " <<area << "\n";
+// };
+// void rectangle::calculatePerimeter(){
+//     int perimeter = 2 * (length + breath);
+//     std::cout << "Perimeter is " << perimeter;
+// };
+
+// int main(){
+//     rectangle cal;
+//     cal.setDimensions();
+//     cal.calculateArea();
+//     cal.calculatePerimeter();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Square Class: Calculate Area and Perimeter
+
 #include <iostream>
 class rectangle{
     int length,breath;
@@ -1529,14 +1564,14 @@ class rectangle{
 
 void rectangle::setDimensions(){
     std::cout << "Enter your length and breath\n";
-    std::cin >> length >> breath;
+    std::cin >> length ;
 };
 void rectangle::calculateArea(){
-    int area = length * breath;
+    int area = length * length;
     std::cout << "Area is " <<area << "\n";
 };
 void rectangle::calculatePerimeter(){
-    int perimeter = 2 * (length + breath);
+    int perimeter = 4 * length;
     std::cout << "Perimeter is " << perimeter;
 };
 
@@ -1548,4 +1583,3 @@ int main(){
 
 return 0;
 }
-
