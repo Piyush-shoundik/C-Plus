@@ -1588,33 +1588,72 @@
 
 // Triangle Class: Calculate Area and Perimeter
 
+// #include <iostream>
+// class rectangle{
+//     int length,breath,height,base;
+//     public:
+//     void setDimensions();
+//     void calculateArea();
+//     void calculatePerimeter();
+// };
+
+// void rectangle::setDimensions(){
+//     std::cout << "Enter your length,breath and height and base\n";
+//     std::cin >> length >> height >> base ;
+// };
+// void rectangle::calculateArea(){
+//     int area = 0.5 * (base * height) ;
+//     std::cout << "Area is " <<area << "\n";
+// };
+// void rectangle::calculatePerimeter(){
+//     int perimeter =  length + base + height;
+//     std::cout << "Perimeter is " << perimeter;
+// };
+
+// int main(){
+//     rectangle cal;
+//     cal.setDimensions();
+//     cal.calculateArea();
+//     cal.calculatePerimeter();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing code for class as function
+
 #include <iostream>
-class rectangle{
-    int length,breath,height,base;
+
+class clockk{
+    int h,m ;
     public:
-    void setDimensions();
-    void calculateArea();
-    void calculatePerimeter();
+    void getdata();
+    void putdata();
+    void sum(clockk, clockk);
 };
-
-void rectangle::setDimensions(){
-    std::cout << "Enter your length,breath and height and base\n";
-    std::cin >> length >> height >> base ;
-};
-void rectangle::calculateArea(){
-    int area = 0.5 * (base * height) ;
-    std::cout << "Area is " <<area << "\n";
-};
-void rectangle::calculatePerimeter(){
-    int perimeter =  length + base + height;
-    std::cout << "Perimeter is " << perimeter;
-};
-
+void clockk::getdata(){
+    std::cout << "Enter hour: ";
+    std::cin >> h;
+    std::cout << "Enter minutes: ";
+    std::cin >> m;
+}
+void clockk::putdata(){
+    std::cout << "Hours is: " << h;
+    std::cout << "\nminutes is: " << m;
+}
+void clockk::sum(clockk t1, clockk t2){
+    m = t1.m + t2.m;
+    h = m/60;
+    m = m % 60;
+    h = h + (t1.h + t2.h);
+}
 int main(){
-    rectangle cal;
-    cal.setDimensions();
-    cal.calculateArea();
-    cal.calculatePerimeter();
+    clockk t1,t2,t3;
+    t1.getdata();
+    t2.getdata();
+    t3.sum(t1,t2);
+    t3.putdata();
 
 return 0;
 }
