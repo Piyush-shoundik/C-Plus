@@ -1623,37 +1623,70 @@
 
 // writing code for class as function
 
+// #include <iostream>
+
+// class clockk{
+//     int h,m ;
+//     public:
+//     void getdata();
+//     void putdata();
+//     void sum(clockk, clockk);
+// };
+// void clockk::getdata(){
+//     std::cout << "Enter hour: ";
+//     std::cin >> h;
+//     std::cout << "Enter minutes: ";
+//     std::cin >> m;
+// }
+// void clockk::putdata(){
+//     std::cout << "Hours is: " << h;
+//     std::cout << "\nminutes is: " << m;
+// }
+// void clockk::sum(clockk t1, clockk t2){
+//     m = t1.m + t2.m;
+//     h = m/60;
+//     m = m % 60;
+//     h = h + (t1.h + t2.h);
+// }
+// int main(){
+//     clockk t1,t2,t3;
+//     t1.getdata();
+//     t2.getdata();
+//     t3.sum(t1,t2);
+//     t3.putdata();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// program to add two number
+
 #include <iostream>
+using namespace std;
 
-class clockk{
-    int h,m ;
-    public:
-    void getdata();
-    void putdata();
-    void sum(clockk, clockk);
+class Calculator {
+private:
+    int num1, num2;
+
+public:
+    void getNumbers() {
+        cout << "Enter two numbers: ";
+        cin >> num1 >> num2;
+    }
+
+    int add() {
+        return num1 + num2;
+    }
+
+    void displayResult() {
+        cout << "Sum = " << add() << endl;
+    }
 };
-void clockk::getdata(){
-    std::cout << "Enter hour: ";
-    std::cin >> h;
-    std::cout << "Enter minutes: ";
-    std::cin >> m;
-}
-void clockk::putdata(){
-    std::cout << "Hours is: " << h;
-    std::cout << "\nminutes is: " << m;
-}
-void clockk::sum(clockk t1, clockk t2){
-    m = t1.m + t2.m;
-    h = m/60;
-    m = m % 60;
-    h = h + (t1.h + t2.h);
-}
-int main(){
-    clockk t1,t2,t3;
-    t1.getdata();
-    t2.getdata();
-    t3.sum(t1,t2);
-    t3.putdata();
 
-return 0;
+int main() {
+    Calculator calc;   
+    calc.getNumbers(); 
+    calc.displayResult(); 
+    return 0;
 }
