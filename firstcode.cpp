@@ -1662,31 +1662,66 @@
 
 // program to add two number
 
+// #include <iostream>
+// using namespace std;
+
+// class Calculator {
+// private:
+//     int num1, num2;
+
+// public:
+//     void getNumbers() {
+//         cout << "Enter two numbers: ";
+//         cin >> num1 >> num2;
+//     }
+
+//     int add() {
+//         return num1 + num2;
+//     }
+
+//     void displayResult() {
+//         cout << "Sum = " << add() << endl;
+//     }
+// };
+
+// int main() {
+//     Calculator calc;   
+//     calc.getNumbers(); 
+//     calc.displayResult(); 
+//     return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// program to convert celcius to farenhit
+
 #include <iostream>
-using namespace std;
 
-class Calculator {
-private:
-    int num1, num2;
-
-public:
-    void getNumbers() {
-        cout << "Enter two numbers: ";
-        cin >> num1 >> num2;
-    }
-
-    int add() {
-        return num1 + num2;
-    }
-
-    void displayResult() {
-        cout << "Sum = " << add() << endl;
-    }
+class tempconverter{
+    private:
+    int a, b, total;
+    public:
+    void getdata();
+    void putdata();
+    void sum();
 };
 
-int main() {
-    Calculator calc;   
-    calc.getNumbers(); 
-    calc.displayResult(); 
-    return 0;
+void tempconverter::getdata(){
+    int c,f;
+    std::cout << "Enter your temp in celcius \n";
+    std::cin >> c;
+    f = ( c * 9/5 ) + 32;
+}
+
+void tempconverter::putdata(){
+    int f;
+    std::cout << "Temp in farenhit \n" << f;
+}
+
+int main(){
+    tempconverter fntapman;
+    fntapman.getdata();
+    fntapman.putdata();
+
+return 0;
 }
