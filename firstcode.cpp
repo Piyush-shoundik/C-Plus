@@ -1695,33 +1695,65 @@
 
 // program to convert celcius to farenhit
 
+// #include <iostream>
+
+// class tempconverter{
+//     private:
+//     int a, b, total;
+//     public:
+//     void getdata();
+//     void putdata();
+//     void sum();
+// };
+
+// void tempconverter::getdata(){
+//     int c,f;
+//     std::cout << "Enter your temp in celcius \n";
+//     std::cin >> c;
+//     f = ( c * 9/5 ) + 32;
+// }
+
+// void tempconverter::putdata(){
+//     int f;
+//     std::cout << "Temp in farenhit \n" << f;
+// }
+
+// int main(){
+//     tempconverter fntapman;
+//     fntapman.getdata();
+//     fntapman.putdata();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using friend function
+
 #include <iostream>
 
-class tempconverter{
+class add{
     private:
-    int a, b, total;
+    int a , b ;
     public:
-    void getdata();
-    void putdata();
-    void sum();
+    void getdata();                
+    friend int sum(add aa);
 };
 
-void tempconverter::getdata(){
-    int c,f;
-    std::cout << "Enter your temp in celcius \n";
-    std::cin >> c;
-    f = ( c * 9/5 ) + 32;
+void add::getdata(){
+    // int a , b;
+    std::cout << "Enter two number you want to add\n";
+    std::cin >> a >> b;
 }
 
-void tempconverter::putdata(){
-    int f;
-    std::cout << "Temp in farenhit \n" << f;
+int sum(add aa){
+    return (aa.a + aa.b) ;
 }
 
 int main(){
-    tempconverter fntapman;
-    fntapman.getdata();
-    fntapman.putdata();
+    add aa;
+    aa.getdata();
+    std::cout << "addition:" << sum(aa);
 
-return 0;
+    return 0;
 }
