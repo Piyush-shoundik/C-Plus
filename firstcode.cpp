@@ -1758,42 +1758,86 @@
 //     return 0;
 // }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // code to get two input from two different class and performing there calculation in friend function
 
+// #include <iostream>
+
+// class num2;
+// class num1{
+//     int a;
+//     public:
+//     void getdata();
+//     friend int sum(num1 aa, num2 bb);
+// };
+// void num1::getdata(){
+//     std::cout << "Enter first number\n";
+//     std::cin >> a;
+// }
+
+// class num2{
+//     int b;
+//     public:
+//     void getvalue();
+//     friend int sum(num1 aa, num2 bb);
+// };
+// void num2::getvalue(){
+//     std::cout << "Enter your second number\n" ;
+//     std::cin >> b;
+// }
+// int sum(num1 aa, num2 bb){
+//     return aa.a + bb.b;
+// }
+
+// int main(){
+//     num1 aa; num2 bb;
+//     aa.getdata();
+//     bb.getvalue();
+//     std::cout << "Sum = " << sum(aa, bb);
+// return 0;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Using a friend function to calculate the area of the rectangle
+
 #include <iostream>
 
-class num2;
-class num1{
-    int a;
-    public:
-    void getdata();
-    friend int sum(num1 aa, num2 bb);
-};
-void num1::getdata(){
-    std::cout << "Enter first number\n";
-    std::cin >> a;
-}
+class length;
+class breath;
 
-class num2{
+class breath{
+    private:
     int b;
     public:
-    void getvalue();
-    friend int sum(num1 aa, num2 bb);
+    void getdata();
+    friend int rectangle(length aa, breath bb);
 };
-void num2::getvalue(){
-    std::cout << "Enter your second number\n" ;
-    std::cin >> b;
+void breath::getdata(){
+    std::cout << "Enter breath: \n";
+    std::cin >> b ;
 }
-int sum(num1 aa, num2 bb){
-    return aa.a + bb.b;
+class length{
+    int l;
+    public:
+    void getbit();
+    friend int rectangle(length aa, breath bb);
+};
+void length::getbit(){
+    std::cout << "Enter length: \n";
+    std::cin >> l;
+}
+
+int rectangle(length aa, breath bb){
+    return aa.l * bb.b;
 }
 
 int main(){
-    num1 aa; num2 bb;
-    aa.getdata();
-    bb.getvalue();
-    std::cout << "Sum = " << sum(aa, bb);
+    length aa; breath bb;
+    aa.getbit();
+    bb.getdata();
+    std::cout << "Sum = " << rectangle(aa, bb);
+
 return 0;
 }
