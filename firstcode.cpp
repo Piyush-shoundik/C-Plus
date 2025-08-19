@@ -1730,30 +1730,70 @@
 
 // using friend function
 
+// #include <iostream>
+
+// class add{
+//     private:
+//     int a , b ;
+//     public:
+//     void getdata();                
+//     friend int sum(add aa);
+// };
+
+// void add::getdata(){
+//     // int a , b;
+//     std::cout << "Enter two number you want to add\n";
+//     std::cin >> a >> b;
+// }
+
+// int sum(add aa){
+//     return (aa.a + aa.b) ;
+// }
+
+// int main(){
+//     add aa;
+//     aa.getdata();
+//     std::cout << "addition:" << sum(aa);
+
+//     return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to get two input from two different class and performing there calculation in friend function
+
 #include <iostream>
 
-class add{
-    private:
-    int a , b ;
+class num2;
+class num1{
+    int a;
     public:
-    void getdata();                
-    friend int sum(add aa);
+    void getdata();
+    friend int sum(num1 aa, num2 bb);
 };
-
-void add::getdata(){
-    // int a , b;
-    std::cout << "Enter two number you want to add\n";
-    std::cin >> a >> b;
+void num1::getdata(){
+    std::cout << "Enter first number\n";
+    std::cin >> a;
 }
 
-int sum(add aa){
-    return (aa.a + aa.b) ;
+class num2{
+    int b;
+    public:
+    void getvalue();
+    friend int sum(num1 aa, num2 bb);
+};
+void num2::getvalue(){
+    std::cout << "Enter your second number\n" ;
+    std::cin >> b;
+}
+int sum(num1 aa, num2 bb){
+    return aa.a + bb.b;
 }
 
 int main(){
-    add aa;
+    num1 aa; num2 bb;
     aa.getdata();
-    std::cout << "addition:" << sum(aa);
-
-    return 0;
+    bb.getvalue();
+    std::cout << "Sum = " << sum(aa, bb);
+return 0;
 }

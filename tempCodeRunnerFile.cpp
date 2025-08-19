@@ -1,1 +1,1 @@
- // int a , b;
+using friend function
