@@ -1807,21 +1807,57 @@
 // class length;
 // class breath;
 
-class breath{
-    private:
-    static int number;
+// class breath{
+//     private:
+//     static int number;
+//     public:
+//     void print1();
+// };
+
+// int secret::number = 2;
+
+// void secret::print1(){
+//     int a;
+//     a = 2;
+//     std::cout << "sum is: " << a + number ;}
+
+// int main(){
+//     secret aa;
+//     aa.print1();
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// practice-style question for you based on using one class's
+// static data member in another class
+
+#include <iostream>
+
+class bank{
     public:
-    void print1();
+    static int total;
+    void putdata(){
+        std::cout << "Total number of customer is: " << total ;
+    }
 };
 
-int secret::number = 2;
+int bank::total = 0;
 
-void secret::print1(){
-    int a;
-    a = 2;
-    std::cout << "sum is: " << a + number ;}
+class customer{
+    public:
+    void registercustomer(){
+        bank::total++;
+        std::cout << "Registering customer...\n";
+    }
+};
 
 int main(){
-    secret aa;
-    aa.print1();
+    customer c1,c2,c3;
+    bank t;
+
+    c1.registercustomer();
+    c2.registercustomer();
+    c3.registercustomer();
+
+    t.putdata();
 }
