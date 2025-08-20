@@ -1802,42 +1802,67 @@
 
 // Using a friend function to calculate the area of the rectangle
 
+// #include <iostream>
+
+// class length;
+// class breath;
+
+// class breath{
+//     private:
+//     int b;
+//     public:
+//     void getdata();
+//     friend int rectangle(length aa, breath bb);
+// };
+// void breath::getdata(){
+//     std::cout << "Enter breath: \n";
+//     std::cin >> b ;
+// }
+// class length{
+//     int l;
+//     public:
+//     void getbit();
+//     friend int rectangle(length aa, breath bb);
+// };
+// void length::getbit(){
+//     std::cout << "Enter length: \n";
+//     std::cin >> l;
+// }
+
+// int rectangle(length aa, breath bb){
+//     return aa.l * bb.b;
+// }
+
+// int main(){
+//     length aa; breath bb;
+//     aa.getbit();
+//     bb.getdata();
+//     std::cout << "Sum = " << rectangle(aa, bb);
+
+// return 0;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// writing a simple code to print from static values
+writing a simple code to print from static values
 #include <iostream>
 
-class length;
-class breath;
-
-class breath{
+class secret{
     private:
-    int b;
+    static int number;
     public:
-    void getdata();
-    friend int rectangle(length aa, breath bb);
+    void print1();
 };
-void breath::getdata(){
-    std::cout << "Enter breath: \n";
-    std::cin >> b ;
-}
-class length{
-    int l;
-    public:
-    void getbit();
-    friend int rectangle(length aa, breath bb);
-};
-void length::getbit(){
-    std::cout << "Enter length: \n";
-    std::cin >> l;
-}
 
-int rectangle(length aa, breath bb){
-    return aa.l * bb.b;
-}
+int secret::number = 2;
+
+void secret::print1(){
+    int a;
+    a = 2;
+    std::cout << "sum is: " << a + number ;}
 
 int main(){
-    length aa; breath bb;
-    aa.getbit();
-    bb.getdata();
-    std::cout << "Sum = " << rectangle(aa, bb);
-
-return 0;
+    secret aa;
+    aa.print1();
 }
