@@ -1807,48 +1807,7 @@
 // class length;
 // class breath;
 
-// class breath{
-//     private:
-//     int b;
-//     public:
-//     void getdata();
-//     friend int rectangle(length aa, breath bb);
-// };
-// void breath::getdata(){
-//     std::cout << "Enter breath: \n";
-//     std::cin >> b ;
-// }
-// class length{
-//     int l;
-//     public:
-//     void getbit();
-//     friend int rectangle(length aa, breath bb);
-// };
-// void length::getbit(){
-//     std::cout << "Enter length: \n";
-//     std::cin >> l;
-// }
-
-// int rectangle(length aa, breath bb){
-//     return aa.l * bb.b;
-// }
-
-// int main(){
-//     length aa; breath bb;
-//     aa.getbit();
-//     bb.getdata();
-//     std::cout << "Sum = " << rectangle(aa, bb);
-
-// return 0;
-// }
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// writing a simple code to print from static values
-
-#include <iostream>
-
-class secret{
+class breath{
     private:
     static int number;
     public:
