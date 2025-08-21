@@ -1921,36 +1921,102 @@
 
 // using static member function
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class out {
-    int a;                     
-    static int b;              
-public:
+// class out {
+//     int a;                     
+//     static int b;              
+// public:
+//     void getdata();
+//     static void number();
+// };
+
+// int out::b = 0;
+
+// void out::getdata() {
+//     a = 2;             
+//     cout << "a = " << a << endl;
+//     b = b + 1;
+// }
+
+// void out::number() {
+//     cout << "Number is: " << b << endl;
+// }
+
+// int main() {
+//     out aa, bb, cc;
+//     aa.getdata();
+//     bb.getdata();
+//     cc.getdata();
+
+//     out::number();  
+
+//     return 0;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// static function–based question
+
+#include <iostream>
+
+class calculator{
+    int a , b;
+    public:
     void getdata();
-    static void number();
+    static int menu();
+    void result();
 };
 
-int out::b = 0;
+// int calculator::menu = 0;
 
-void out::getdata() {
-    a = 2;             
-    cout << "a = " << a << endl;
-    b = b + 1;
+void calculator::getdata(){
+    std::cout << "Enter your first number\n";
+    std::cin >> a ;
+    std::cout << "Enter your second number\n";
+    std::cin >> b ;
+}
+void calculator::result(){
+    int sum,sub,multi,div,choice;
+
+    std::cout << "Enter your choice:";
+    std::cin >> choice;
+
+    sum = a + b ;
+    sub = a - b ;
+    multi = a * b;
+    div = a/b;
+
+    if(choice == 1 ){
+        std::cout << "Result = " << sum ; 
+    }
+    if(choice == 2 ){
+        std::cout << "Result = " << sub ; 
+    }
+    if(choice == 3 ){
+        std::cout << "Result = " << multi ; 
+    }
+    if(choice == 4){
+        std::cout << "Result = " << div ; 
+    }
+    else{
+        std::cout << "Enter valid input"  ; 
+    }
+}
+int calculator::menu(){
+    std::cout << "Available Operations:\n";
+    std::cout << "1. Addition\n";
+    std::cout << "2. Subtraction\n";
+    std::cout << "3. Multiplication\n";
+    std::cout << "4. Division\n";
 }
 
-void out::number() {
-    cout << "Number is: " << b << endl;
-}
-
-int main() {
-    out aa, bb, cc;
+int main(){
+    calculator aa;
     aa.getdata();
-    bb.getdata();
-    cc.getdata();
+    calculator::menu();
+    aa.result();
 
-    out::number();  
-
-    return 0;
+return 0;
 }

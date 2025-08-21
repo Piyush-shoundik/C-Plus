@@ -1,1 +1,1 @@
-using friend function
+int calculator::menu = 0;
