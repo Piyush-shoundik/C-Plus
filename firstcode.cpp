@@ -1959,64 +1959,89 @@
 
 // static function–based question
 
+// #include <iostream>
+
+// class calculator{
+//     int a , b;
+//     public:
+//     void getdata();
+//     static int menu();
+//     void result();
+// };
+
+// // int calculator::menu = 0;
+
+// void calculator::getdata(){
+//     std::cout << "Enter your first number\n";
+//     std::cin >> a ;
+//     std::cout << "Enter your second number\n";
+//     std::cin >> b ;
+// }
+// void calculator::result(){
+//     int sum,sub,multi,div,choice;
+
+//     std::cout << "Enter your choice:";
+//     std::cin >> choice;
+
+//     sum = a + b ;
+//     sub = a - b ;
+//     multi = a * b;
+//     div = a/b;
+
+//     if(choice == 1 ){
+//         std::cout << "Result = " << sum ; 
+//     }
+//     if(choice == 2 ){
+//         std::cout << "Result = " << sub ; 
+//     }
+//     if(choice == 3 ){
+//         std::cout << "Result = " << multi ; 
+//     }
+//     if(choice == 4){
+//         std::cout << "Result = " << div ; 
+//     }
+//     else{
+//         std::cout << "Enter valid input"  ; 
+//     }
+// }
+// int calculator::menu(){
+//     std::cout << "Available Operations:\n";
+//     std::cout << "1. Addition\n";
+//     std::cout << "2. Subtraction\n";
+//     std::cout << "3. Multiplication\n";
+//     std::cout << "4. Division\n";
+// }
+
+// int main(){
+//     calculator aa;
+//     aa.getdata();
+//     calculator::menu();
+//     aa.result();
+
+// return 0;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using constructor in class
+
 #include <iostream>
 
-class calculator{
-    int a , b;
+class random{
+    int a, b;
     public:
-    void getdata();
-    static int menu();
-    void result();
+    random(){
+        a = 10;
+        b = 20;
+    }
+    void putdata(){
+        std::cout << "A Number is:" << a << "\nB Number is:" << b ;
+    }
 };
 
-// int calculator::menu = 0;
-
-void calculator::getdata(){
-    std::cout << "Enter your first number\n";
-    std::cin >> a ;
-    std::cout << "Enter your second number\n";
-    std::cin >> b ;
-}
-void calculator::result(){
-    int sum,sub,multi,div,choice;
-
-    std::cout << "Enter your choice:";
-    std::cin >> choice;
-
-    sum = a + b ;
-    sub = a - b ;
-    multi = a * b;
-    div = a/b;
-
-    if(choice == 1 ){
-        std::cout << "Result = " << sum ; 
-    }
-    if(choice == 2 ){
-        std::cout << "Result = " << sub ; 
-    }
-    if(choice == 3 ){
-        std::cout << "Result = " << multi ; 
-    }
-    if(choice == 4){
-        std::cout << "Result = " << div ; 
-    }
-    else{
-        std::cout << "Enter valid input"  ; 
-    }
-}
-int calculator::menu(){
-    std::cout << "Available Operations:\n";
-    std::cout << "1. Addition\n";
-    std::cout << "2. Subtraction\n";
-    std::cout << "3. Multiplication\n";
-    std::cout << "4. Division\n";
-}
-
 int main(){
-    calculator aa;
-    aa.getdata();
-    calculator::menu();
-    aa.result();
+    random aa;
+    aa.putdata();
 
-return 0;
+    return 0;
 }
