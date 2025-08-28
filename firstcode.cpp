@@ -2050,48 +2050,78 @@
 
 // Adding two reverse value
 
+// #include <iostream>
+// using namespace std;
+
+// class solution {
+// public:
+//     int a = 243;
+//     int b = 564;
+//     int revA = 0;
+//     int revB = 0;
+
+//     void reverse1();
+//     void reverse2();
+//     void putdata();
+// };
+
+// void solution::reverse1() {
+//     int temp = a;
+//     while (temp > 0) {
+//         int digit = temp % 10;
+//         revA = revA * 10 + digit;
+//         temp = temp / 10;
+//     }
+// }
+
+// void solution::reverse2() {
+//     int temp = b;
+//     while (temp > 0) {
+//         int digit = temp % 10;
+//         revB = revB * 10 + digit;
+//         temp = temp / 10;
+//     }
+// }
+
+// void solution::putdata() {
+//     cout << "Reversed a: " << revA + revB ;
+// }
+
+// int main() {
+//     solution aa;
+//     aa.reverse1();
+//     aa.reverse2();
+//     aa.putdata();
+//     return 0;
+// }
+
+// ///////////////////////////////////////////////////////////////////////
+
+// using copy constructors
+
 #include <iostream>
 using namespace std;
 
-class solution {
-public:
-    int a = 243;
-    int b = 564;
-    int revA = 0;
-    int revB = 0;
-
-    void reverse1();
-    void reverse2();
-    void putdata();
+class number{
+    int a;
+    public : 
+    number(){
+        a = 10;
+    }
+    number(number &z){
+        a = z.a;
+    }
+    void putdata(){
+        cout << a;
+    }
 };
 
-void solution::reverse1() {
-    int temp = a;
-    while (temp > 0) {
-        int digit = temp % 10;
-        revA = revA * 10 + digit;
-        temp = temp / 10;
-    }
-}
-
-void solution::reverse2() {
-    int temp = b;
-    while (temp > 0) {
-        int digit = temp % 10;
-        revB = revB * 10 + digit;
-        temp = temp / 10;
-    }
-}
-
-void solution::putdata() {
-    cout << "Reversed a: " << revA + revB ;
-}
-
-int main() {
-    solution aa;
-    aa.reverse1();
-    aa.reverse2();
+int main(){
+    number aa;
+    number bb(aa);
     aa.putdata();
-    return 0;
+    bb.putdata();
+    
+return 0;
 }
 
