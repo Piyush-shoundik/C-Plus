@@ -2025,23 +2025,73 @@
 
 // using constructor in class
 
-#include <iostream>
+// #include <iostream>
 
-class random{
-    int a, b;
-    public:
-    random(){
-        a = 10;
-        b = 20;
-    }
-    void putdata(){
-        std::cout << "A Number is:" << a << "\nB Number is:" << b ;
-    }
+// class random{
+//     int a, b;
+//     public:
+//     random(){
+//         a = 10;
+//         b = 20;
+//     }
+//     void putdata(){
+//         std::cout << "A Number is:" << a << "\nB Number is:" << b ;
+//     }
+// };
+
+// int main(){
+//     random aa;
+//     aa.putdata();
+
+//     return 0;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Adding two reverse value
+
+#include <iostream>
+using namespace std;
+
+class solution {
+public:
+    int a = 243;
+    int b = 564;
+    int revA = 0;
+    int revB = 0;
+
+    void reverse1();
+    void reverse2();
+    void putdata();
 };
 
-int main(){
-    random aa;
-    aa.putdata();
+void solution::reverse1() {
+    int temp = a;
+    while (temp > 0) {
+        int digit = temp % 10;
+        revA = revA * 10 + digit;
+        temp = temp / 10;
+    }
+}
 
+void solution::reverse2() {
+    int temp = b;
+    while (temp > 0) {
+        int digit = temp % 10;
+        revB = revB * 10 + digit;
+        temp = temp / 10;
+    }
+}
+
+void solution::putdata() {
+    cout << "Reversed a: " << revA + revB ;
+}
+
+int main() {
+    solution aa;
+    aa.reverse1();
+    aa.reverse2();
+    aa.putdata();
     return 0;
 }
+

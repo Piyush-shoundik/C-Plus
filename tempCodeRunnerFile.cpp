@@ -1,1 +1,2 @@
-int calculator::menu = 0;
+
+}
