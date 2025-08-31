@@ -2099,29 +2099,62 @@
 
 // using copy constructors
 
+// #include <iostream>
+// using namespace std;
+
+// class number{
+//     int a;
+//     public : 
+//     number(){
+//         a = 10;
+//     }
+//     number(number &z){
+//         a = z.a;
+//     }
+//     void putdata(){
+//         cout << a;
+//     }
+// };
+
+// int main(){
+//     number aa;
+//     number bb;
+//     aa.putdata();
+//     bb.putdata();
+    
+// return 0;
+// }
+
+// ///////////////////////////////////////////////////////////////////////
+
+// using constructors overloading
+
 #include <iostream>
-using namespace std;
 
 class number{
     int a;
-    public : 
+    public:
     number(){
-        a = 10;
+        a = 5;
+    }
+    number(int x){
+        a = x;
     }
     number(number &z){
         a = z.a;
     }
     void putdata(){
-        cout << a;
+        std::cout << "The number is:" << a << "\n";
     }
 };
 
 int main(){
     number aa;
-    number bb(aa);
+    number bb(20);
+    number cc(aa);
     aa.putdata();
     bb.putdata();
-    
+    cc.putdata();
+
 return 0;
 }
-
