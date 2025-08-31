@@ -2095,7 +2095,7 @@
 //     return 0;
 // }
 
-// ///////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////
 
 // using copy constructors
 
@@ -2129,32 +2129,60 @@
 
 // using constructors overloading
 
+// #include <iostream>
+
+// class number{
+//     int a;
+//     public:
+//     number(){
+//         a = 5;
+//     }
+//     number(int x){
+//         a = x;
+//     }
+//     number(number &z){
+//         a = z.a;
+//     }
+//     void putdata(){
+//         std::cout << "The number is:" << a << "\n";
+//     }
+// };
+
+// int main(){
+//     number aa;
+//     number bb(20);
+//     number cc(aa);
+//     aa.putdata();
+//     bb.putdata();
+//     cc.putdata();
+
+// return 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// using constructor and destructor 
+
 #include <iostream>
 
-class number{
-    int a;
+int a = 0;
+
+class check
+{
     public:
-    number(){
-        a = 5;
+    check(){
+        a++ ;
+        std::cout << "\nCreated a number" << a;
     }
-    number(int x){
-        a = x;
-    }
-    number(number &z){
-        a = z.a;
-    }
-    void putdata(){
-        std::cout << "The number is:" << a << "\n";
+    ~check()
+    { 
+        std::cout << "\nDeleted a number" << a ;
+        a--;
     }
 };
 
 int main(){
-    number aa;
-    number bb(20);
-    number cc(aa);
-    aa.putdata();
-    bb.putdata();
-    cc.putdata();
-
-return 0;
+    check aa,bb;
+    
+return 0; 
 }
