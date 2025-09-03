@@ -2163,26 +2163,72 @@
 
 // using constructor and destructor 
 
+// #include <iostream>
+
+// int a = 0;
+
+// class check
+// {
+//     public:
+//     check(){
+//         a++ ;
+//         std::cout << "\nCreated a number" << a;
+//     }
+//     ~check()
+//     { 
+//         std::cout << "\nDeleted a number" << a ;
+//         a--;
+//     }
+// };
+
+// int main(){
+//     check aa,bb;
+
+// return 0; 
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// using single inheritance functions
+
 #include <iostream>
 
-int a = 0;
-
-class check
+class numb
 {
+    protected: 
+    int a = 10;
+
     public:
-    check(){
-        a++ ;
-        std::cout << "\nCreated a number" << a;
+    int b; 
+
+    void getdata(){
+        std::cout << "Enter your number you want to addd";
+        std::cin >> b ;
     }
-    ~check()
-    { 
-        std::cout << "\nDeleted a number" << a ;
-        a--;
+
+};
+
+class sum:public numb{
+    protected: 
+    int c = 10;
+
+    public:
+    int d;
+
+    void getnum(){
+    std::cout << "Enter your number";
+    std::cin >> d ;
     }
+
+    void putdata(){
+        std::cout << "sum is = " << a + b + c + d;
+    }
+
 };
 
 int main(){
-    check aa,bb;
-    
-return 0; 
+    sum aa;
+    aa.getdata();
+    aa.getnum();
+    aa.putdata();
 }
