@@ -2279,62 +2279,96 @@
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-// using mutlilevel inheritance
+// using mutlilevel inheritance and function under function 
+
+// #include <iostream>
+
+// class maths{
+//     protected:
+//     int marksmath ;
+//     int marksmathinput2 = 0;
+//     public:
+//     void getmathsmarks(){
+//         std::cout << "Enter your marks in range of 1 to 100 \n";
+//         std::cin >> marksmath;
+//         if(marksmath <= 100 && marksmath >= 1){
+//             marksmathinput2 = marksmath;
+//         }
+//         else{
+//             std::cout << "Enter a vaild number\n";
+//             marksmath = 0;
+//         }
+//     }
+// };
+
+// class pps:public maths{
+//     protected:
+//     int markspps = 0;
+//     int totalmarks = 0;
+//     int marksppsinput = 0;
+//     public:
+//     void getppsmarks(){
+//         std::cout << "Enter your marks in range of 1 to 100 \n";
+//         std::cin >> markspps;
+//         if(markspps <= 100 && markspps >= 1){
+//             marksppsinput = markspps ;
+//         }
+//         else{
+//             std::cout << "Enter a vaild number\n";
+//         }
+
+//     totalmarks = marksmathinput2 + marksppsinput;
+//     }
+    
+// };
+
+// class result:public pps{
+//     public:
+//     void results(){
+//         getmathsmarks();
+//         getppsmarks();
+//     }
+//     void totalresult(){
+//         std::cout << "Your total is " << totalmarks ; 
+//     }
+// };
+
+// int main(){
+//     result aa;
+//     aa.results();
+//     aa.totalresult();
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// hierarchical inheritance
 
 #include <iostream>
 
-class maths{
-    protected:
-    int marksmath ;
-    int marksmathinput2 = 0;
+class a{
     public:
-    void getmathsmarks(){
-        std::cout << "Enter your marks in range of 1 to 100 \n";
-        std::cin >> marksmath;
-        if(marksmath <= 100 && marksmath >= 1){
-            marksmathinput2 = marksmath;
-        }
-        else{
-            std::cout << "Enter a vaild number\n";
-            marksmath = 0;
-        }
+    int num1 = 10;
+};
+
+class b:public a{
+    public:
+    void numb(){
+    int numb2 = 10 + num1;
+    std::cout << "Your number is " << numb2 ;
     }
 };
 
-class pps:public maths{
-    protected:
-    int markspps = 0;
-    int totalmarks = 0;
-    int marksppsinput = 0;
+class c:public a{
     public:
-    void getppsmarks(){
-        std::cout << "Enter your marks in range of 1 to 100 \n";
-        std::cin >> markspps;
-        if(markspps <= 100 && markspps >= 1){
-            marksppsinput = markspps ;
-        }
-        else{
-            std::cout << "Enter a vaild number\n";
-        }
-
-    totalmarks = marksmathinput2 + marksppsinput;
-    }
-    
-};
-
-class result:public pps{
-    public:
-    void results(){
-        getmathsmarks();
-        getppsmarks();
-    }
-    void totalresult(){
-        std::cout << "Your total is " << totalmarks ; 
+    void numc(){
+    int numb2 = 20 + num1;
+    std::cout << "\nYour number is " << numb2 ;
     }
 };
 
 int main(){
-    result aa;
-    aa.results();
-    aa.totalresult();
+    b aa;
+    aa.numb();
+    c bb;
+    bb.numc();
 }
