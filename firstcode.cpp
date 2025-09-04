@@ -2191,44 +2191,88 @@
 
 // using single inheritance functions
 
+// #include <iostream>
+
+// class numb
+// {
+//     protected: 
+//     int a = 10;
+
+//     public:
+//     int b; 
+
+//     void getdata(){
+//         std::cout << "Enter your number you want to addd";
+//         std::cin >> b ;
+//     }
+
+// };
+
+// class sum:public numb{
+//     protected: 
+//     int c = 10;
+
+//     public:
+//     int d;
+
+//     void getnum(){
+//     std::cout << "Enter your number";
+//     std::cin >> d ;
+//     }
+
+//     void putdata(){
+//         std::cout << "sum is = " << a + b + c + d;
+//     }
+
+// };
+
+// int main(){
+//     sum aa;
+//     aa.getdata();
+//     aa.getnum();
+//     aa.putdata();
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// unsing multiple inheritance
+
 #include <iostream>
 
-class numb
-{
-    protected: 
-    int a = 10;
-
+class a{
+    protected:
+    int num1 = 10;
     public:
-    int b; 
-
+    int num2;
     void getdata(){
-        std::cout << "Enter your number you want to addd";
-        std::cin >> b ;
+        std::cout << "Enter your number";
+        std::cin >> num2;
     }
-
 };
 
-class sum:public numb{
-    protected: 
-    int c = 10;
-
+class b{
+    protected:
+    int num3 = 10;
     public:
-    int d;
-
-    void getnum(){
-    std::cout << "Enter your number";
-    std::cin >> d ;
+    int num4;
+    void getinput(){
+        std::cout << "Enter your number";
+        std::cin >> num4;
     }
+};
 
+class c:public a,public b{
+    public:
+    int num5;
     void putdata(){
-        std::cout << "sum is = " << a + b + c + d;
+        num5 = num1 + num2 + num3 + num4;
+        std::cout << "Total is " << num5;
     }
-
 };
 
 int main(){
-    sum aa;
+    c aa;
     aa.getdata();
-    aa.getnum();
+    aa.getinput();
     aa.putdata();
 }
