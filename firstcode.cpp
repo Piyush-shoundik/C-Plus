@@ -2237,42 +2237,104 @@
 
 // unsing multiple inheritance
 
+// #include <iostream>
+
+// class a{
+//     protected:
+//     int num1 = 10;
+//     public:
+//     int num2;
+//     void getdata(){
+//         std::cout << "Enter your number";
+//         std::cin >> num2;
+//     }
+// };
+
+// class b{
+//     protected:
+//     int num3 = 10;
+//     public:
+//     int num4;
+//     void getinput(){
+//         std::cout << "Enter your number";
+//         std::cin >> num4;
+//     }
+// };
+
+// class c:public a,public b{
+//     public:
+//     int num5;
+//     void putdata(){
+//         num5 = num1 + num2 + num3 + num4;
+//         std::cout << "Total is " << num5;
+//     }
+// };
+
+// int main(){
+//     c aa;
+//     aa.getdata();
+//     aa.getinput();
+//     aa.putdata();
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// using mutlilevel inheritance
+
 #include <iostream>
 
-class a{
+class maths{
     protected:
-    int num1 = 10;
+    int marksmath ;
+    int marksmathinput2 = 0;
     public:
-    int num2;
-    void getdata(){
-        std::cout << "Enter your number";
-        std::cin >> num2;
+    void getmathsmarks(){
+        std::cout << "Enter your marks in range of 1 to 100 \n";
+        std::cin >> marksmath;
+        if(marksmath <= 100 && marksmath >= 1){
+            marksmathinput2 = marksmath;
+        }
+        else{
+            std::cout << "Enter a vaild number\n";
+            marksmath = 0;
+        }
     }
 };
 
-class b{
+class pps:public maths{
     protected:
-    int num3 = 10;
+    int markspps = 0;
+    int totalmarks = 0;
+    int marksppsinput = 0;
     public:
-    int num4;
-    void getinput(){
-        std::cout << "Enter your number";
-        std::cin >> num4;
+    void getppsmarks(){
+        std::cout << "Enter your marks in range of 1 to 100 \n";
+        std::cin >> markspps;
+        if(markspps <= 100 && markspps >= 1){
+            marksppsinput = markspps ;
+        }
+        else{
+            std::cout << "Enter a vaild number\n";
+        }
+
+    totalmarks = marksmathinput2 + marksppsinput;
     }
+    
 };
 
-class c:public a,public b{
+class result:public pps{
     public:
-    int num5;
-    void putdata(){
-        num5 = num1 + num2 + num3 + num4;
-        std::cout << "Total is " << num5;
+    void results(){
+        getmathsmarks();
+        getppsmarks();
+    }
+    void totalresult(){
+        std::cout << "Your total is " << totalmarks ; 
     }
 };
 
 int main(){
-    c aa;
-    aa.getdata();
-    aa.getinput();
-    aa.putdata();
+    result aa;
+    aa.results();
+    aa.totalresult();
 }
