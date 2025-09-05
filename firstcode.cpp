@@ -2472,24 +2472,47 @@
 
 // using virtual function
 
+// #include <iostream>
+// class a{
+//     public:
+//     virtual void putdata(){
+//         std::cout << "This class is base class";
+//     }
+// };
+// class b:public a{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is first derived class" << std::endl;
+//     }
+// };
+
+// int main(){
+//     a * sum ; b bb;
+//     sum = &bb;
+//     sum -> putdata();
+
+//     a * sun ; a aa;
+//     sun = &aa;
+//     sun -> putdata();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// finding if the alphabet is uppercase or lower case
+
 #include <iostream>
-class a{
-    public:
-    virtual void putdata(){
-        std::cout << "This class is base class";
-    }
-};
-class b:public a{
-    public:
-    void putdata(){
-        std::cout << "This class is first derived class\n";
-    }
-};
 
 int main(){
-    a * sum ; b bb;
-    sum = &bb;
-    sum -> putdata();
+    char vari ; 
+    std::cout << "Enter your letter\n" ;
+    std::cin >> vari;
 
-return 0;
+    if(vari >= 'a' && vari <= 'z'){
+        std::cout << "small case";
+    }
+    else {
+        std::cout << "upper case ";
+    }
 }
