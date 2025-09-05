@@ -2401,40 +2401,71 @@
 
 // constructor handaling in base class
 
-#include <iostream>
+// #include <iostream>
 
+// class a{
+//     public:
+//     int q;
+//     a(int x){
+//         q = x;
+//     }
+// };
+
+// class b{
+//     public:
+//     int w;
+//     b(int y){
+//         w = y;
+//     }
+// };
+
+// class c: public a , public b {
+//     public:
+//     int g ,h ;
+
+//     c(int g1, int h1) : a(g1), b(h1) {
+//         g = g1;
+//         h = h1;
+//     }
+//     void result(){
+//         std::cout << "sum = " << g + h ;
+//     }
+// };
+
+// int main(){
+//     c aa(10,20);
+//     aa.result();
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// using ambiguity resolution in inheritance
+
+#include <iostream>
 class a{
     public:
-    int q;
-    a(int x){
-        q = x;
+    void putdata(){
+        std::cout << "This class is base class";
     }
 };
-
-class b{
+class b:public a{
     public:
-    int w;
-    b(int y){
-        w = y;
+    void putdata(){
+        std::cout << "This class is first derived class\n";
     }
 };
-
-class c: public a , public b {
+class c:public b{
     public:
-    int g ,h ;
-    
-    c(int g1, int h1) : a(g1), b(h1) {
-        g = g1;
-        h = h1;
-    }
-    void result(){
-        std::cout << "sum = " << g + h ;
+    void putdata(){
+        std::cout << "This class is second derived class\n";
     }
 };
 
 int main(){
-    c aa(10,20);
-    aa.result();
-
-return 0;
+    c aa;
+    aa.putdata(), aa.a::putdata();
 }
+
+///////////////////////////////////////////////////////////////////////////////////
