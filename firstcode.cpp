@@ -2443,10 +2443,39 @@
 
 // using ambiguity resolution in inheritance
 
+// #include <iostream>
+// class a{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is base class";
+//     }
+// };
+// class b:public a{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is first derived class\n";
+//     }
+// };
+// class c:public b{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is second derived class\n";
+//     }
+// };
+
+// int main(){
+//     c aa;
+//     aa.putdata(), aa.a::putdata();
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// using virtual function
+
 #include <iostream>
 class a{
     public:
-    void putdata(){
+    virtual void putdata(){
         std::cout << "This class is base class";
     }
 };
@@ -2456,16 +2485,11 @@ class b:public a{
         std::cout << "This class is first derived class\n";
     }
 };
-class c:public b{
-    public:
-    void putdata(){
-        std::cout << "This class is second derived class\n";
-    }
-};
 
 int main(){
-    c aa;
-    aa.putdata(), aa.a::putdata();
-}
+    a * sum ; b bb;
+    sum = &bb;
+    sum -> putdata();
 
-///////////////////////////////////////////////////////////////////////////////////
+return 0;
+}
