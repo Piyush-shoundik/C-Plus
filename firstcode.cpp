@@ -2343,32 +2343,57 @@
 
 // hierarchical inheritance
 
-#include <iostream>
+// #include <iostream>
 
+// class a{
+//     public:
+//     int num1 = 10;
+// };
+
+// class b:public a{
+//     public:
+//     void numb(){
+//     int numb2 = 10 + num1;
+//     std::cout << "Your number is " << numb2 ;
+//     }
+// };
+
+// class c:public a{
+//     public:
+//     void numc(){
+//     int numb2 = 20 + num1;
+//     std::cout << "\nYour number is " << numb2 ;
+//     }
+// };
+
+// int main(){
+//     b aa;
+//     aa.numb();
+//     c bb;
+//     bb.numc();
+// }
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// using function overbiding 
+
+
+#include <iostream>
 class a{
     public:
-    int num1 = 10;
-};
-
-class b:public a{
-    public:
-    void numb(){
-    int numb2 = 10 + num1;
-    std::cout << "Your number is " << numb2 ;
+    void putdata(){
+        std::cout << "This class is base class";
     }
 };
-
-class c:public a{
+class b:public a{
     public:
-    void numc(){
-    int numb2 = 20 + num1;
-    std::cout << "\nYour number is " << numb2 ;
+    void putdata(){
+        std::cout << "This class is derived class\n";
+        // a::putdata(); //This is first way to call or use the function
     }
 };
 
 int main(){
     b aa;
-    aa.numb();
-    c bb;
-    bb.numc();
+    aa.putdata();aa.a::putdata(); //This is the second way to call or use the function 
 }
