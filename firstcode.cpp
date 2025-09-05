@@ -2377,23 +2377,64 @@
 
 // using function overbiding 
 
+// #include <iostream>
+// class a{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is base class";
+//     }
+// };
+// class b:public a{
+//     public:
+//     void putdata(){
+//         std::cout << "This class is derived class\n";
+//         // a::putdata(); //This is first way to call or use the function
+//     }
+// };
+
+// int main(){
+//     b aa;
+//     aa.putdata();aa.a::putdata(); //This is the second way to call or use the function 
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// constructor handaling in base class
 
 #include <iostream>
+
 class a{
     public:
-    void putdata(){
-        std::cout << "This class is base class";
+    int q;
+    a(int x){
+        q = x;
     }
 };
-class b:public a{
+
+class b{
     public:
-    void putdata(){
-        std::cout << "This class is derived class\n";
-        // a::putdata(); //This is first way to call or use the function
+    int w;
+    b(int y){
+        w = y;
+    }
+};
+
+class c: public a , public b {
+    public:
+    int g ,h ;
+    
+    c(int g1, int h1) : a(g1), b(h1) {
+        g = g1;
+        h = h1;
+    }
+    void result(){
+        std::cout << "sum = " << g + h ;
     }
 };
 
 int main(){
-    b aa;
-    aa.putdata();aa.a::putdata(); //This is the second way to call or use the function 
+    c aa(10,20);
+    aa.result();
+
+return 0;
 }
