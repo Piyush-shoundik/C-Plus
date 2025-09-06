@@ -2531,3 +2531,24 @@
 //     std::cout << a << "\n" << b ;
 //     // std::cout << aa << "\n" << bb ;
 // }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// using array
+
+#include <iostream>
+
+int main(){
+
+    int array_id[5] = {1,2,3,4,5};
+    
+    // we can make changes too
+    array_id[0] = 12345;
+
+    std::cout << array_id[0] << "\n";
+    std::cout << array_id[1] << "\n";
+    std::cout << array_id[2] << "\n";
+    std::cout << array_id[3] << "\n";
+    std::cout << array_id[4] << "\n"; 
+
+}
