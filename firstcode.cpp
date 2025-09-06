@@ -2502,17 +2502,32 @@
 
 // finding if the alphabet is uppercase or lower case
 
-#include <iostream>
+// #include <iostream>
 
-int main(){
-    char vari ; 
-    std::cout << "Enter your letter\n" ;
-    std::cin >> vari;
+// int main(){
+//     char vari ; 
+//     std::cout << "Enter your letter\n" ;
+//     std::cin >> vari;
 
-    if(vari >= 'a' && vari <= 'z'){
-        std::cout << "small case";
-    }
-    else {
-        std::cout << "upper case ";
-    }
-}
+//     if(vari >= 'a' && vari <= 'z'){
+//         std::cout << "small case";
+//     }
+//     else {
+//         std::cout << "upper case ";
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// using signed or unsigned integer 
+
+// #include <iostream> 
+// int main(){
+//     signed int a = -10;
+//     unsigned int b = 70; //only print positive value
+
+//     // we can't use this with float or double
+
+//     std::cout << a << "\n" << b ;
+//     // std::cout << aa << "\n" << bb ;
+// }
