@@ -2640,40 +2640,42 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-// #include <iostream>
+// printing largest value
 
-// int main(){
-//     int sizeofarray = 5;
-//     int arrayid[sizeofarray];
-//     int b = 0;
-//     int a;
+#include <iostream>
 
-//     for(int i = 0 ; i < sizeofarray; i++ ){
-//         std::cin >> arrayid[i];
-//     }
+int main(){
+    int sizeofarray = 2;
+    int arrayid[sizeofarray];
+    int b = 0;
+    int a;
 
-//     int num = arrayid[0];
+    for(int i = 0 ; i < sizeofarray; i++ ){
+        std::cin >> arrayid[i];
+    }
 
-//     for(int i = 0; i < sizeofarray ; i++ ){
-//         if(num < arrayid[i]){
-//             b = arrayid[i];
-//         }
-//     }
-//     std::cout << "Smallest number is " << b;
+    int num = arrayid[0];
 
-// }
+    for(int i = 0; i < sizeofarray ; i++ ){
+        if(num < arrayid[i]){
+            num = arrayid[i];
+        }
+    }
+    std::cout << "Smallest number is " << num;
+
+}
 
 /////////////////////////////////////////////////////////////////////////////////
 
 // checking code if it working or not
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    cout << "Hello, World!" << endl;
-    return 0;
-}
+// int main() {
+//     cout << "Hello, World!" << endl;
+//     return 0;
+// }
 
 /////////////////////////////////////////////////////////////////////////////////
 
