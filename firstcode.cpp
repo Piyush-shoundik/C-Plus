@@ -2577,23 +2577,76 @@
 
 // using loop in array and taking input 
 
+// #include <iostream>
+
+// int main(){
+
+//     int sizeofarray = 5;
+//     int array_id[sizeofarray];
+    
+//     // we can make changes too
+//     // array_id[0] = 12345;
+
+//     for(int i = 0 ; i < sizeofarray; i++ ){
+//         std::cin >> array_id[i]; 
+//     }
+
+//     for(int i = 0 ; i < sizeofarray; i++ ){
+//         std::cout << array_id[i] << "\n" ;
+//     }
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// finding smallest value in array
+
 #include <iostream>
 
 int main(){
-
     int sizeofarray = 5;
     int array_id[sizeofarray];
-    
-    // we can make changes too
-    // array_id[0] = 12345;
+    int a;
+    int num;
 
     for(int i = 0 ; i < sizeofarray; i++ ){
         std::cin >> array_id[i]; 
     }
 
-    for(int i = 0 ; i < sizeofarray; i++ ){
-        std::cout << array_id[i] << "\n" ;
+    // for(int i = 0 ; i < sizeofarray; i++ ){
+    //     int num = array_id[i];
+    //     if(smallest < num){
+    //         int a = num;
+    //     }
+    //     return a;
+    // }
+    // if(a > num){
+    //         std::cout << "number is" << num;
+    // }
+
+    int smallest = array_id[0];
+
+    for (int i = 1; i < sizeofarray; i++) {
+        if (array_id[i] < smallest) {
+            smallest = array_id[i];
+        }
     }
+
+    std::cout << "Smallest number is " << smallest << std::endl;
+
+    return 0;
 return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
