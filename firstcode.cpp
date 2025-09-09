@@ -2557,18 +2557,43 @@
 
 // using loop in array 
 
+// #include <iostream>
+
+// int main(){
+
+//     int array_id[5] = {1,2,3,4,5};
+//     int sizeofarray = 5;
+    
+//     // we can make changes too
+//     array_id[0] = 12345;
+
+//     for(int i = 0 ; i < sizeofarray; i++ ){
+//         std::cout << array_id[i] << "\n" ;
+//     }
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// using loop in array and taking input 
+
 #include <iostream>
 
 int main(){
 
-    int array_id[5] = {1,2,3,4,5};
     int sizeofarray = 5;
+    int array_id[sizeofarray];
     
     // we can make changes too
-    array_id[0] = 12345;
+    // array_id[0] = 12345;
+
+    for(int i = 0 ; i < sizeofarray; i++ ){
+        std::cin >> array_id[i]; 
+    }
 
     for(int i = 0 ; i < sizeofarray; i++ ){
         std::cout << array_id[i] << "\n" ;
     }
 return 0;
 }
+
