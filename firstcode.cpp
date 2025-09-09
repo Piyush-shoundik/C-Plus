@@ -2642,28 +2642,30 @@
 
 // printing largest value
 
-#include <iostream>
+// #include <iostream>
 
-int main(){
-    int sizeofarray = 2;
-    int arrayid[sizeofarray];
-    int b = 0;
-    int a;
+// int main(){
+//     int sizeofarray = 2;
+//     int arrayid[sizeofarray];
+//     int b = 0;
+//     int a;
 
-    for(int i = 0 ; i < sizeofarray; i++ ){
-        std::cin >> arrayid[i];
-    }
+//     for(int i = 0 ; i < sizeofarray; i++ ){
+//         std::cin >> arrayid[i];
+//     }
 
-    int num = arrayid[0];
+//     int num = arrayid[0];
 
-    for(int i = 0; i < sizeofarray ; i++ ){
-        if(num < arrayid[i]){
-            num = arrayid[i];
-        }
-    }
-    std::cout << "Smallest number is " << num;
+//     for(int i = 0; i < sizeofarray ; i++ ){
+//         if(num < arrayid[i]){
+//             num = arrayid[i];
+            
+//         }
+//     }
 
-}
+//     std::cout << "largest number is " << num;
+
+// }
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -2679,7 +2681,34 @@ int main(){
 
 /////////////////////////////////////////////////////////////////////////////////
 
+// find the index for largest value
 
+#include <iostream>
+
+int main(){
+    int sizeofarray = 4;
+    int arrayid[sizeofarray];
+    int b = 0;
+    int a;
+    int num1;
+
+    for(int i = 0 ; i < sizeofarray; i++ ){
+        std::cin >> arrayid[i];
+    }
+
+    int num = arrayid[0];
+
+    for(int i = 0; i < sizeofarray ; i++ ){
+        if(num < arrayid[i]){
+            num = arrayid[i];
+            num1 = i;
+            
+        }
+    }
+
+    std::cout << "index for largest number is " << num1 <<  "\nAnd the value is "<< num ;
+
+}
 
 
 
