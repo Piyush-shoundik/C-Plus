@@ -2733,17 +2733,41 @@
 
 // reversing the value
 
+// #include <iostream>
+
+// int main(){
+//     int sizearr = 6;
+//     int arr[sizearr] = {11, 12, 31, 41, 51, 61};
+//     int i , minusnum ;
+
+//     for(i = 1; i <= sizearr; i++){
+//         minusnum = sizearr - i ;
+//         std::cout << arr[minusnum] << "\n";
+//     }
+
+// }
+
+// second method to reverse array as pass by reference 
+
 #include <iostream>
 
-int main(){
+void printReverse(int arr[], int size, int revArr[]) {
+    for (int i = 0; i < size; i++) {
+        revArr[i] = arr[size - 1 - i]; 
+    }
+}
+
+int main() {
     int sizearr = 6;
     int arr[sizearr] = {11, 12, 31, 41, 51, 61};
-    int i , minusnum ;
+    int revArr[sizearr];
 
-    for(i = 1; i <= sizearr; i++){
-        minusnum = sizearr - i ;
-        std::cout << arr[minusnum] << "\n";
+    printReverse(arr, sizearr, revArr);
+
+    for (int i = 0; i < sizearr; i++) {
+        std::cout << revArr[i] << "\n";
     }
 
+    return 0;
 }
 
