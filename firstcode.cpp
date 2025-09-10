@@ -2749,25 +2749,38 @@
 
 // second method to reverse array as pass by reference 
 
+// #include <iostream>
+
+// void printReverse(int arr[], int size, int revArr[]) {
+//     for (int i = 0; i < size; i++) {
+//         revArr[i] = arr[size - 1 - i]; 
+//     }
+// }
+
+// int main() {
+//     int sizearr = 6;
+//     int arr[sizearr] = {11, 12, 31, 41, 51, 61};
+//     int revArr[sizearr];
+
+//     printReverse(arr, sizearr, revArr);
+
+//     for (int i = 0; i < sizearr; i++) {
+//         std::cout << revArr[i] << "\n";
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// using vector
+// vector is just like array but the only difference is that it is dynamic and array is not
+
 #include <iostream>
+#include <vector>
+using namespace std;
 
-void printReverse(int arr[], int size, int revArr[]) {
-    for (int i = 0; i < size; i++) {
-        revArr[i] = arr[size - 1 - i]; 
-    }
+int main(){
+    vector<int> vecname(5, 21);
+    cout << vecname[0];
 }
-
-int main() {
-    int sizearr = 6;
-    int arr[sizearr] = {11, 12, 31, 41, 51, 61};
-    int revArr[sizearr];
-
-    printReverse(arr, sizearr, revArr);
-
-    for (int i = 0; i < sizearr; i++) {
-        std::cout << revArr[i] << "\n";
-    }
-
-    return 0;
-}
-
