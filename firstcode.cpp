@@ -2776,11 +2776,26 @@
 // using vector
 // vector is just like array but the only difference is that it is dynamic and array is not
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> vecname(5, 21);
+//     cout << vecname[0];
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// by using for to access the value of vector
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main(){
-    vector<int> vecname(5, 21);
-    cout << vecname[0];
+    vector<int> vecname = {1,2,3,4,5,6,7,8};
+    for (int value : vecname){
+        cout << value << "\n";
+    }
 }
