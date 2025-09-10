@@ -2683,39 +2683,48 @@
 
 // find the index for largest value
 
+// #include <iostream>
+
+// int main(){
+//     int sizeofarray = 4;
+//     int arrayid[sizeofarray];
+//     int b = 0;
+//     int a;
+//     int num1;
+
+//     for(int i = 0 ; i < sizeofarray; i++ ){
+//         std::cin >> arrayid[i];
+//     }
+
+//     int num = arrayid[0];
+
+//     for(int i = 0; i < sizeofarray ; i++ ){
+//         if(num < arrayid[i]){
+//             num = arrayid[i];
+//             num1 = i;
+            
+//         }
+//     }
+
+//     std::cout << "index for largest number is " << num1 <<  "\nAnd the value is "<< num ;
+
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// searching value linearly value
+
 #include <iostream>
 
 int main(){
-    int sizeofarray = 4;
-    int arrayid[sizeofarray];
-    int b = 0;
-    int a;
-    int num1;
+    int arr[] = {1, 2, 3, 4, 5, 6};
+    int sizearr = 6;
 
-    for(int i = 0 ; i < sizeofarray; i++ ){
-        std::cin >> arrayid[i];
-    }
-
-    int num = arrayid[0];
-
-    for(int i = 0; i < sizeofarray ; i++ ){
-        if(num < arrayid[i]){
-            num = arrayid[i];
-            num1 = i;
-            
+    for(int i = 0; i < sizearr ; i++ ){
+        if(arr[i] == sizearr){
+            std::cout << i;
+            return i;
         }
     }
-
-    std::cout << "index for largest number is " << num1 <<  "\nAnd the value is "<< num ;
-
+    return -1;
 }
-
-
-
-
-
-
-
-
-
-
