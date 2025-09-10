@@ -2714,17 +2714,36 @@
 
 // searching value linearly value
 
+// #include <iostream>
+
+// int main(){
+//     int arr[] = {1, 2, 3, 4, 5, 6};
+//     int sizearr = 8;
+
+//     for(int i = 0; i < sizearr ; i++ ){
+//         if(arr[i] == sizearr){
+//             std::cout << i;
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// reversing the value
+
 #include <iostream>
 
 int main(){
-    int arr[] = {1, 2, 3, 4, 5, 6};
     int sizearr = 6;
+    int arr[sizearr] = {11, 12, 31, 41, 51, 61};
+    int i , minusnum ;
 
-    for(int i = 0; i < sizearr ; i++ ){
-        if(arr[i] == sizearr){
-            std::cout << i;
-            return i;
-        }
+    for(i = 1; i <= sizearr; i++){
+        minusnum = sizearr - i ;
+        std::cout << arr[minusnum] << "\n";
     }
-    return -1;
+
 }
+
