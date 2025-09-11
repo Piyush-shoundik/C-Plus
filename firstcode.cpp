@@ -2934,19 +2934,43 @@
 
 // eliminating repeated value in a array
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector <int> num1 = {1,2,3,4,3,2,1};
+//     int result = 0;
+
+//             for(int i = 0; i < num1.size() ; i++){
+//                 for(int j = 0; j < num1.size() ; j++){
+//                     result = num1[i] ^ num1[j];
+//                 }
+//             }
+//             cout << result;
+//         }
+        
+////////////////////////////////////////////////////////////////////////////////////////
+
+// printing all subarray index and values
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main(){
-    vector <int> num1 = {1,2,3,4,3,2,1};
-    int result = 0;
+int main() {
+    int n = 5;
+    int arr[n] = { 0, 1, 2, 3, 4};
 
-            for(int i = 0; i < num1.size() ; i++){
-                for(int j = 0; j < num1.size() ; j++){
-                    result = num1[i] ^ num1[j];
-                }
+    for (int st = 0; st < n; st++) {
+        for (int end = st; end < n; end++) {
+            for (int i = st; i <= end; i++) {
+                cout << arr[i];
             }
-            cout << result;
+            cout << " ";
         }
-        
+        cout << endl;
+    }
+
+    return 0;
+}
