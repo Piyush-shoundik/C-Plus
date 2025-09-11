@@ -2911,23 +2911,42 @@
 
 // using some vector function 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector <int> num1 = {1,2,3,4,5,6,7,8};
+
+//     num1.push_back(9);
+//     num1.pop_back();
+
+//     for(int putdata: num1){
+//         cout << putdata << " " ;
+//     }
+//     cout << "\nsize of vector " << num1.size();
+//     cout << "\nfront of vector " << num1.front();
+//     cout << "\nBack of vector " << num1.back();
+
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// eliminating repeated value in a array
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main(){
-    vector <int> num1 = {1,2,3,4,5,6,7,8};
+    vector <int> num1 = {1,2,3,4,3,2,1};
+    int result = 0;
 
-    num1.push_back(9);
-    num1.pop_back();
-
-    for(int putdata: num1){
-        cout << putdata << " " ;
-    }
-    cout << "\nsize of vector " << num1.size();
-    cout << "\nfront of vector " << num1.front();
-    cout << "\nBack of vector " << num1.back();
-
-}
-
-////////////////////////////////////////////////////////////////////////////////////////
+            for(int i = 0; i < num1.size() ; i++){
+                for(int j = 0; j < num1.size() ; j++){
+                    result = num1[i] ^ num1[j];
+                }
+            }
+            cout << result;
+        }
+        
