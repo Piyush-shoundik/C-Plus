@@ -2789,13 +2789,78 @@
 
 // by using for to access the value of vector
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> vecname = {1,2,3,4,5,6,7,8};
+//     for (int value : vecname){
+//         cout << value << "\n";
+//     }
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to print sum and multiple of all code using vector
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//         int a = 0;
+//         int result;
+//         int i = 0;
+//         vector <int> value = { 11,22,33,44,55 };
+//         int index = value.size();
+
+//     for(i = 0; i < index; i++){
+//         result += value[i];
+//     }
+
+//     if we want to print all the values
+
+//     cout << result;
+
+//     }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to swap min and max using array 
+
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main(){
-    vector<int> vecname = {1,2,3,4,5,6,7,8};
-    for (int value : vecname){
-        cout << value << "\n";
+    int sizeofarr = 5;
+    int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 13};
+    int smallest = arrid[0] , indexs = 0 ;
+    int largest = arrid[0], indexl = 0;
+
+    cout << "before changes \n" ;
+     for(int i = 0 ; i < sizeofarr; i++){
+            cout << arrid[i] <<"\n" ;
+    }
+
+    for(int i = 0 ; i < sizeofarr; i++){
+
+        if(arrid[i] > largest ){
+            largest = arrid[i];
+            indexl = i;
+        }
+        if(arrid[i] < smallest ){
+            smallest = arrid[i];
+            indexs = i;
+        }
+    }
+    
+    arrid[indexl] = smallest;
+    arrid[indexs] = largest;
+
+    cout << "After changes \n";
+    for(int i = 0 ; i < sizeofarr; i++){
+            cout << arrid[i] <<"\n" ;
     }
 }
+
