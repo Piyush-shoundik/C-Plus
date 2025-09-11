@@ -2868,18 +2868,66 @@
  
 // find same value in two of the array 
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int sizeofarr = 5;
+//     int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 13};
+//     int arrid2[sizeofarr] = { 12 , 310 , 13 , 100 , 50};
+
+//     for(int i = 0; i < sizeofarr; i++){
+//         for(int j = 0; j < sizeofarr ; j++ )
+//             if(arrid[i] == arrid2[j] ){
+//             cout << "number is: " << arrid[i] <<"\n";
+//         }
+//     }
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// printing all non repeating value
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int sizeofarr = 7;
+//     int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 80 , 100 , 50 };
+//     int nonrepeated = 0;
+
+//     for(int i = 0; i < sizeofarr; i++){
+//         for(int j = 0; j < sizeofarr ; j++ ){
+//             if (arrid[i] != arrid[j]){
+//                 // cout << "number is nonrepeated " << arrid[i];
+//                 nonrepeated = arrid[i];
+//             }
+//         }
+//     }
+//     cout << "non repeated value is: " << nonrepeated;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// using some vector function 
+
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main(){
-    int sizeofarr = 5;
-    int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 13};
-    int arrid2[sizeofarr] = { 12 , 310 , 13 , 100 , 50};
+    vector <int> num1 = {1,2,3,4,5,6,7,8};
 
-    for(int i = 0; i < sizeofarr; i++){
-        for(int j = 0; j < sizeofarr ; j++ )
-            if(arrid[i] == arrid2[j] ){
-            cout << "number is: " << arrid[i] <<"\n";
-        }
+    num1.push_back(9);
+    num1.pop_back();
+
+    for(int putdata: num1){
+        cout << putdata << " " ;
     }
+    cout << "\nsize of vector " << num1.size();
+    cout << "\nfront of vector " << num1.front();
+    cout << "\nBack of vector " << num1.back();
+
 }
+
+////////////////////////////////////////////////////////////////////////////////////////
