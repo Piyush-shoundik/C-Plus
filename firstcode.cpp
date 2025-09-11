@@ -2829,38 +2829,57 @@
 
 // code to swap min and max using array 
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int sizeofarr = 5;
+//     int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 13};
+//     int smallest = arrid[0] , indexs = 0 ;
+//     int largest = arrid[0], indexl = 0;
+
+//     cout << "before changes \n" ;
+//      for(int i = 0 ; i < sizeofarr; i++){
+//             cout << arrid[i] <<"\n" ;
+//     }
+
+//     for(int i = 0 ; i < sizeofarr; i++){
+
+//         if(arrid[i] > largest ){
+//             largest = arrid[i];
+//             indexl = i;
+//         }
+//         if(arrid[i] < smallest ){
+//             smallest = arrid[i];
+//             indexs = i;
+//         }
+//     }
+    
+//     arrid[indexl] = smallest;
+//     arrid[indexs] = largest;
+
+//     cout << "After changes \n";
+//     for(int i = 0 ; i < sizeofarr; i++){
+//             cout << arrid[i] <<"\n" ;
+//     }
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+ 
+// find same value in two of the array 
+
 #include <iostream>
 using namespace std;
 
 int main(){
     int sizeofarr = 5;
     int arrid[sizeofarr] = { 100 , 30 , 50 , 80 , 13};
-    int smallest = arrid[0] , indexs = 0 ;
-    int largest = arrid[0], indexl = 0;
+    int arrid2[sizeofarr] = { 12 , 310 , 13 , 100 , 50};
 
-    cout << "before changes \n" ;
-     for(int i = 0 ; i < sizeofarr; i++){
-            cout << arrid[i] <<"\n" ;
-    }
-
-    for(int i = 0 ; i < sizeofarr; i++){
-
-        if(arrid[i] > largest ){
-            largest = arrid[i];
-            indexl = i;
+    for(int i = 0; i < sizeofarr; i++){
+        for(int j = 0; j < sizeofarr ; j++ )
+            if(arrid[i] == arrid2[j] ){
+            cout << "number is: " << arrid[i] <<"\n";
         }
-        if(arrid[i] < smallest ){
-            smallest = arrid[i];
-            indexs = i;
-        }
-    }
-    
-    arrid[indexl] = smallest;
-    arrid[indexs] = largest;
-
-    cout << "After changes \n";
-    for(int i = 0 ; i < sizeofarr; i++){
-            cout << arrid[i] <<"\n" ;
     }
 }
-
