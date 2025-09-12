@@ -2978,6 +2978,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // find subarray of any array
+// here time complexity is o(n3) becaue here we use 3 algorithm
 
 // #include <iostream>
 
@@ -3003,24 +3004,57 @@
 // printing largest sum of sub array (brute force soluction)
 // here the time complexity is o(n2)
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+
+// int main (){
+    
+//     int sizearr = 5;
+//     int arr[sizearr] = { 1, 2, 3, 4, 5};
+
+//     int maxvalue = 0;
+     
+//     for(int i = 0; i < sizearr; i++ ){
+//         int currarr = 0; 
+//         for(int j = 0; j < sizearr; j++ ){
+//             currarr += arr[j] ; 
+//             maxvalue = max(currarr, maxvalue) ; 
+//         }
+//     }
+//     cout << maxvalue; 
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// finding largest number by using kadane's algorithm
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int currarr = 0;
+        int maxarr = INT_MIN;
+        
+        for(int i = 0; i < nums.size() ; i++){
+            currarr += nums[i];
+            maxarr = max(currarr, maxarr);
 
-int main (){
-    
-    int sizearr = 5;
-    int arr[sizearr] = { 1, 2, 3, 4, 5};
-
-    int maxvalue = 0;
-     
-    for(int i = 0; i < sizearr; i++ ){
-        int currarr = 0; 
-        for(int j = 0; j < sizearr; j++ ){
-            currarr += arr[j] ; 
-            maxvalue = max(currarr, maxvalue) ; 
+            if(currarr < 0 ){
+                currarr = 0;
+            }
         }
+        return maxarr;
     }
-    cout << maxvalue; 
+};
+
+
+int main(){
+    Solution aa;
+    vector<int> nums = {1, 2, -3, -2, 5};  
+    cout << aa.maxSubArray(nums);
 }
