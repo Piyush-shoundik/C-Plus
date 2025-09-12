@@ -2979,23 +2979,48 @@
 
 // find subarray of any array
 
-#include <iostream>
+// #include <iostream>
 
-int main(){
-    int sizeofarr = 5;
-    int arr[5] = { 0 , 1 , 2 , 3 , 4 };
+// int main(){
+//     int sizeofarr = 5;
+//     int arr[5] = { 0 , 1 , 2 , 3 , 4 };
 
-    for(int i = 0 ; i < sizeofarr ; i++ ){
-        for(int j = i ; j < sizeofarr ; j++ ){
-            for(int k = i; k <= j; k++){
-                std::cout << arr[k];
-            }
-            std::cout << " ";
-        }
-        std::cout << "\n";
-    }
+//     for(int i = 0 ; i < sizeofarr ; i++ ){
+//         for(int j = i ; j < sizeofarr ; j++ ){
+//             for(int k = i; k <= j; k++){
+//                 std::cout << arr[k];
+//             }
+//             std::cout << " ";
+//         }
+//         std::cout << "\n";
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////
+
+// printing largest sum of sub array (brute force soluction)
+// here the time complexity is o(n2)
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main (){
+    
+    int sizearr = 5;
+    int arr[sizearr] = { 1, 2, 3, 4, 5};
+
+    int maxvalue = 0;
+     
+    for(int i = 0; i < sizearr; i++ ){
+        int currarr = 0; 
+        for(int j = 0; j < sizearr; j++ ){
+            currarr += arr[j] ; 
+            maxvalue = max(currarr, maxvalue) ; 
+        }
+    }
+    cout << maxvalue; 
+}
