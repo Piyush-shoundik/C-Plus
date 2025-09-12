@@ -2954,23 +2954,48 @@
 
 // printing all subarray index and values
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     int n = 5;
+//     int arr[n] = { 0, 1, 2, 3, 4};
+
+//     for (int st = 0; st < n; st++) {
+//         for (int end = st; end < n; end++) {
+//             for (int i = st; i <= end; i++) {
+//                 cout << arr[i];
+//             }
+//             cout << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// find subarray of any array
+
 #include <iostream>
-#include <vector>
-using namespace std;
 
-int main() {
-    int n = 5;
-    int arr[n] = { 0, 1, 2, 3, 4};
+int main(){
+    int sizeofarr = 5;
+    int arr[5] = { 0 , 1 , 2 , 3 , 4 };
 
-    for (int st = 0; st < n; st++) {
-        for (int end = st; end < n; end++) {
-            for (int i = st; i <= end; i++) {
-                cout << arr[i];
+    for(int i = 0 ; i < sizeofarr ; i++ ){
+        for(int j = i ; j < sizeofarr ; j++ ){
+            for(int k = i; k <= j; k++){
+                std::cout << arr[k];
             }
-            cout << " ";
+            std::cout << " ";
         }
-        cout << endl;
+        std::cout << "\n";
     }
 
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////
