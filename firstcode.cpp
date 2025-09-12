@@ -2718,7 +2718,7 @@
 
 // int main(){
 //     int arr[] = {1, 2, 3, 4, 5, 6};
-//     int sizearr = 8;
+//     int sizearr = 5 ;
 
 //     for(int i = 0; i < sizearr ; i++ ){
 //         if(arr[i] == sizearr){
@@ -3029,6 +3029,40 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // finding largest number by using kadane's algorithm
+// time complexity is 0(n)
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution {
+// public:
+//     int maxSubArray(vector<int>& nums) {
+//         int currarr = 0;
+//         int maxarr = INT_MIN;
+        
+//         for(int i = 0; i < nums.size() ; i++){
+//             currarr += nums[i];
+//             maxarr = max(currarr, maxarr);
+
+//             if(currarr < 0 ){
+//                 currarr = 0;
+//             }
+//         }
+//         return maxarr;
+//     }
+// };
+
+
+// int main(){
+//     Solution aa;
+//     vector<int> nums = {1, 2, -3, -2, 5};  
+//     cout << aa.maxSubArray(nums);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// finding sum of two pair array to find by target
 
 #include <iostream>
 #include <vector>
@@ -3036,25 +3070,33 @@ using namespace std;
 
 class Solution {
 public:
-    int maxSubArray(vector<int>& nums) {
-        int currarr = 0;
-        int maxarr = INT_MIN;
-        
-        for(int i = 0; i < nums.size() ; i++){
-            currarr += nums[i];
-            maxarr = max(currarr, maxarr);
+    vector<int> nums = {1,2,3,4,5};
+    vector<int> retx;
+    int total = 0;
+    int target = 9;
 
-            if(currarr < 0 ){
-                currarr = 0;
+    void maxSubArray() {
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = i+1 ; j < nums.size(); j++ ){
+                total = nums[i] + nums[j];
+                if(total == target){
+                    retx.push_back(nums[i]);
+                    retx.push_back(nums[j]);
+                }
             }
         }
-        return maxarr;
+        if(retx.size() == 2 ){
+            cout << retx[0] << "," << retx[1];
+        }else{
+            cout << "no match found" ;
+        }
     }
+   
 };
-
 
 int main(){
     Solution aa;
-    vector<int> nums = {1, 2, -3, -2, 5};  
-    cout << aa.maxSubArray(nums);
+    aa.maxSubArray();
+
+return 0;
 }
