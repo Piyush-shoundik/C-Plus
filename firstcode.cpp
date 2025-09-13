@@ -2942,14 +2942,12 @@
 //     vector <int> num1 = {1,2,3,4,3,2,1};
 //     int result = 0;
 
-//             for(int i = 0; i < num1.size() ; i++){
-//                 for(int j = 0; j < num1.size() ; j++){
-//                     result = num1[i] ^ num1[j];
+//                 for(int nums: num1){ 
+//                     result ^= nums;
 //                 }
-//             }
 //             cout << result;
 //         }
-        
+
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // printing all subarray index and values
@@ -3064,37 +3062,89 @@
 // find the majority numbers in a array by 
 // Boyer–Moore Voting Algorithm
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+// vector<int> nums = {1,2,2,2};
+
+// int freq = 0 , sum = 0;
+
+//     for(int i = 0; i < nums.size(); i++){
+//         if(freq == 0){
+//             sum = nums[i];
+//         }
+//         if(sum == nums[i]){
+//             freq++;
+//         }
+//         else{
+//             freq--;
+//         }
+//     }
+
+//     int count = 0;
+//     for(int num : nums) {
+//         if(num == sum) count++;
+//     }
+
+//     if(count > nums.size()/2) {
+//         cout << "Majority Element = " << sum << endl;
+//     } else {
+//         cout << "No Majority Element" << endl;
+//     }
+
+// return 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// leetcode question number 121
+
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+ 
+
+// Example 1:
+
+// Input: prices = [7,1,5,3,6,4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+// Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+// Example 2:
+
+// Input: prices = [7,6,4,3,1]
+// Output: 0
+// Explanation: In this case, no transactions are done and the max profit = 0.
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+    int n = prices.size();
+    int bestBuy = prices[0];  
+    int maxProfit = 0;         
+
+    for(int i = 0  ; i < n ; i++ ){
+        if(prices[i] > bestBuy){
+            maxProfit = max(maxProfit, prices[i] - bestBuy);
+        }
+        bestBuy = min(bestBuy, prices[i]);
+    }
+
+    return  maxProfit;
+    }
+};
+
 int main(){
-vector<int> nums = {1,2,2,2};
-
-int freq = 0 , sum = 0;
-
-    for(int i = 0; i < nums.size(); i++){
-        if(freq == 0){
-            sum = nums[i];
-        }
-        if(sum == nums[i]){
-            freq++;
-        }
-        else{
-            freq--;
-        }
-    }
-
-    int count = 0;
-    for(int num : nums) {
-        if(num == sum) count++;
-    }
-
-    if(count > nums.size()/2) {
-        cout << "Majority Element = " << sum << endl;
-    } else {
-        cout << "No Majority Element" << endl;
-    }
-
-return 0;
+    Solution aa;
+    vector<int> prices = {7,1,5,3,6,4};  
+    cout << aa.maxProfit(prices);
 }
