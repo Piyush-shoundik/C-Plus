@@ -3174,18 +3174,55 @@
 // Input: height = [1,1]
 // Output: 1
 
+// O(n3)
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+
+//     vector<int> height = {1,8,6,2,5,4,8,3,7};
+    
+
+//     int n = height.size();
+//     int area = 0;
+//     int maxNum = 0;
+    
+
+//     for(int i= 0; i < n; i++){
+//         for(int j = i+1 ; j < n; j++){
+//             int index = (j - i) ;
+//             area = min(height[i], height[j]);
+//             int summ = area * index;
+//             // result.push_back(summ); 
+//             maxNum = max(maxNum, summ); 
+//         }
+//     }
+
+
+//     cout << maxNum;
+
+// return 0;
+// }
+
+// with time complexity O(n2)
+// with space complexity O(n2)
+
+// without using for
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-int main(){
-
-    vector<int> height = {1,8,6,2,5,4,8,3,7};
-    vector<int> result;
-
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
     int n = height.size();
-    int area;
+    int area = 0;
+    int maxNum = 0;
     
 
     for(int i= 0; i < n; i++){
@@ -3193,19 +3230,20 @@ int main(){
             int index = (j - i) ;
             area = min(height[i], height[j]);
             int summ = area * index;
-            result.push_back(summ); 
+            // result.push_back(summ); 
+            maxNum = max(maxNum, summ); 
         }
     }
-
-    int maxNum = result[0];
-
-    for (int i = 1; i < result.size(); i++) {
-        if (result[i] > maxNum) {
-            maxNum = result[i];
-        }
-    }
-
     cout << maxNum;
 
-return 0;
+    }
+};
+
+int main(){
+    Solution aa;
+    vector<int> height = {1,8,6,2,5,4,8,3,7};
+    aa.maxArea(height);
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
