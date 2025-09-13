@@ -3030,31 +3030,71 @@
 
 // finding largest number by using kadane's algorithm
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution {
+// public:
+//     int maxSubArray(vector<int>& nums) {
+//         int currarr = 0;
+//         int maxarr = INT_MIN;
+        
+//         for(int i = 0; i < nums.size() ; i++){
+//             currarr += nums[i];
+//             maxarr = max(currarr, maxarr);
+
+//             if(currarr < 0 ){
+//                 currarr = 0;
+//             }
+//         }
+//         return maxarr;
+//     }
+// };
+
+
+// int main(){
+//     Solution aa;
+//     vector<int> nums = {1, 2, -3, -2, 5};  
+//     cout << aa.maxSubArray(nums);
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// find the majority numbers in a array by 
+// Boyer–Moore Voting Algorithm
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int currarr = 0;
-        int maxarr = INT_MIN;
-        
-        for(int i = 0; i < nums.size() ; i++){
-            currarr += nums[i];
-            maxarr = max(currarr, maxarr);
-
-            if(currarr < 0 ){
-                currarr = 0;
-            }
-        }
-        return maxarr;
-    }
-};
-
-
 int main(){
-    Solution aa;
-    vector<int> nums = {1, 2, -3, -2, 5};  
-    cout << aa.maxSubArray(nums);
+vector<int> nums = {1,2,2,2};
+
+int freq = 0 , sum = 0;
+
+    for(int i = 0; i < nums.size(); i++){
+        if(freq == 0){
+            sum = nums[i];
+        }
+        if(sum == nums[i]){
+            freq++;
+        }
+        else{
+            freq--;
+        }
+    }
+
+    int count = 0;
+    for(int num : nums) {
+        if(num == sum) count++;
+    }
+
+    if(count > nums.size()/2) {
+        cout << "Majority Element = " << sum << endl;
+    } else {
+        cout << "No Majority Element" << endl;
+    }
+
+return 0;
 }
