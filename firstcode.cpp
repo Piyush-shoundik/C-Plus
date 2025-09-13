@@ -3121,30 +3121,91 @@
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution {
+// public:
+//     int maxProfit(vector<int>& prices) {
+//     int n = prices.size();
+//     int bestBuy = prices[0];  
+//     int maxProfit = 0;         
+
+//     for(int i = 0  ; i < n ; i++ ){
+//         if(prices[i] > bestBuy){
+//             maxProfit = max(maxProfit, prices[i] - bestBuy);
+//         }
+//         bestBuy = min(bestBuy, prices[i]);
+//     }
+
+//     return  maxProfit;
+//     }
+// };
+
+// int main(){
+//     Solution aa;
+//     vector<int> prices = {7,1,5,3,6,4};  
+//     cout << aa.maxProfit(prices);
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+// leetcode queston 11
+
+// You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+// Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+// Return the maximum amount of water a container can store.
+
+// Notice that you may not slant the container.
+
+ 
+
+// Example 1:
+
+
+// Input: height = [1,8,6,2,5,4,8,3,7]
+// Output: 49
+// Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+// Example 2:
+
+// Input: height = [1,1]
+// Output: 1
+
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-    int n = prices.size();
-    int bestBuy = prices[0];  
-    int maxProfit = 0;         
-
-    for(int i = 0  ; i < n ; i++ ){
-        if(prices[i] > bestBuy){
-            maxProfit = max(maxProfit, prices[i] - bestBuy);
-        }
-        bestBuy = min(bestBuy, prices[i]);
-    }
-
-    return  maxProfit;
-    }
-};
-
 int main(){
-    Solution aa;
-    vector<int> prices = {7,1,5,3,6,4};  
-    cout << aa.maxProfit(prices);
+
+    vector<int> height = {1,8,6,2,5,4,8,3,7};
+    vector<int> result;
+
+    int n = height.size();
+    int area;
+    
+
+    for(int i= 0; i < n; i++){
+        for(int j = i+1 ; j < n; j++){
+            int index = (j - i) ;
+            area = min(height[i], height[j]);
+            int summ = area * index;
+            result.push_back(summ); 
+        }
+    }
+
+    int maxNum = result[0];
+
+    for (int i = 1; i < result.size(); i++) {
+        if (result[i] > maxNum) {
+            maxNum = result[i];
+        }
+    }
+
+    cout << maxNum;
+
+return 0;
 }
