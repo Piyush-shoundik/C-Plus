@@ -3207,43 +3207,89 @@
 // return 0;
 // }
 
+// type 2 approach
+
 // with time complexity O(n2)
 // with space complexity O(n2)
 
 // without using for
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
 
-class Solution {
-public:
-    int maxArea(vector<int>& height) {
-    int n = height.size();
-    int area = 0;
-    int maxNum = 0;
+// class Solution {
+// public:
+//     int maxArea(vector<int>& height) {
+//     int n = height.size();
+//     int area = 0;
+//     int maxNum = 0;
     
 
-    for(int i= 0; i < n; i++){
-        for(int j = i+1 ; j < n; j++){
-            int index = (j - i) ;
-            area = min(height[i], height[j]);
-            int summ = area * index;
-            // result.push_back(summ); 
-            maxNum = max(maxNum, summ); 
-        }
-    }
-    cout << maxNum;
+//     for(int i= 0; i < n; i++){
+//         for(int j = i+1 ; j < n; j++){
+//             int index = (j - i) ;
+//             area = min(height[i], height[j]);
+//             int summ = area * index;
+//             // result.push_back(summ); 
+//             maxNum = max(maxNum, summ); 
+//         }
+//     }
+//     cout << maxNum;
 
-    }
-};
+//     }
+// };
+
+// int main(){
+//     Solution aa;
+//     vector<int> height = {1,8,6,2,5,4,8,3,7};
+//     aa.maxArea(height);
+// }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// leetcode question 238
+
+// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+// The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+
+// You must write an algorithm that runs in O(n) time and without using the division operation.
+
+ 
+
+// Example 1:
+
+// Input: nums = [1,2,3,4]
+// Output: [24,12,8,6]
+// Example 2:
+
+// Input: nums = [-1,1,0,-3,3]
+// Output: [0,0,9,0,0]
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
 
 int main(){
-    Solution aa;
-    vector<int> height = {1,8,6,2,5,4,8,3,7};
-    aa.maxArea(height);
-}
+    vector<int> nums = {-1,1,0,-3,3};
+    vector<int> result;
 
+    
+    for(int i = 0;i < nums.size(); i++){
+        int resultt = 1;
+        for(int j = 0;j < nums.size(); j++){
+            if(i != j){
+                resultt *= nums[j];
+            }
+        }
+        result.push_back(resultt);
+    }
+    for(int k = 0; k < nums.size();k++ ){
+        cout << result[k] << " " ;
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
