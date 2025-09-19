@@ -3269,27 +3269,68 @@
 // Input: nums = [-1,1,0,-3,3]
 // Output: [0,0,9,0,0]
  
-#include <iostream>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-int main(){
-    vector<int> nums = {-1,1,0,-3,3};
-    vector<int> result;
+// int main(){
+//     vector<int> nums = {-1,1,0,-3,3};
+//     vector<int> result;
 
     
-    for(int i = 0;i < nums.size(); i++){
-        int resultt = 1;
-        for(int j = 0;j < nums.size(); j++){
-            if(i != j){
-                resultt *= nums[j];
-            }
-        }
-        result.push_back(resultt);
-    }
-    for(int k = 0; k < nums.size();k++ ){
-        cout << result[k] << " " ;
-    }
+//     for(int i = 0;i < nums.size(); i++){
+//         int resultt = 1;
+//         for(int j = 0;j < nums.size(); j++){
+//             if(i != j){
+//                 resultt *= nums[j];
+//             }
+//         }
+//         result.push_back(resultt);
+//     }
+//     for(int k = 0; k < nums.size();k++ ){
+//         cout << result[k] << " " ;
+//     }
+// }
+
+// time complexcity O(n)
+ 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> nums = {1,2,3,4};
+//     vector<int> result;
+//     int prefix = INT_MAX;
+
+//     for(int i = 0; i < nums.size(); i++){
+//         int currval = nums[nums.size() - i];
+//         // if(currval == nums[i]){
+//         //     prefix *= nums[i-1];
+//             cout << currval;
+//         // }
+//     }
+
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// pointers
+
+#include <iostream>
+
+int main(){
+    int a = 10;
+    int *p = &a;
+    int **p1 = &p;
+
+    float b = 10.33;
+
+    std::cout << &p << "\n" << p1 ;
+
+    // std::cout << &a << "\n";
+    // std::cout << p << "\n" ;
+    // std::cout << &p << "\n";
+
+    // std::cout << &b;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
