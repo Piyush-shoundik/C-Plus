@@ -3356,19 +3356,39 @@
 
 // pass by refernece using alias
 
+// #include <iostream>
+
+// void ref(int &b){
+//     b = 100;
+   
+// }
+
+// int main(){
+//     int a = 10;
+
+//     ref(a);
+
+//     std::cout << a;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// pass by value
+
 #include <iostream>
 
-void ref(int &b){
+void ref(int b){
     b = 100;
-   
+    // if you want to reflect the value to main file use 
+    // which i use in next line
+    // return b;
 }
 
 int main(){
     int a = 10;
 
     ref(a);
+    // a = ref(a);
 
     std::cout << a;
 }
-
-
