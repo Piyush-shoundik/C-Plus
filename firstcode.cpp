@@ -3337,16 +3337,38 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// using dereference
+// using dereference(*)
+
+// #include <iostream>
+
+// int main(){
+//     int a = 10;
+//     int *p = &a;
+//     int **p1 = &p;
+
+//     std::cout << *(p1) << "\n";
+//     std::cout << p1 << "\n";
+//     std::cout << &a;
+
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// pass by refernece using alias
 
 #include <iostream>
 
+void ref(int &b){
+    b = 100;
+   
+}
+
 int main(){
     int a = 10;
-    int *p = &a;
-    int **p1 = &p;
 
-    std::cout << *(p1) << "\n";
-    std::cout << p1;
+    ref(a);
 
+    std::cout << a;
 }
+
+
