@@ -3375,20 +3375,39 @@
 
 // pass by value
 
+// #include <iostream>
+
+// void ref(int b){
+//     b = 100;
+//     // if you want to reflect the value to main file use 
+//     // which i use in next line
+//     // return b;
+// }
+
+// int main(){
+//     int a = 10;
+
+//     ref(a);
+//     // a = ref(a);
+
+//     std::cout << a;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// pass by reference using pointers
+
 #include <iostream>
 
-void ref(int b){
-    b = 100;
-    // if you want to reflect the value to main file use 
-    // which i use in next line
-    // return b;
+void changes(int *x, int *y){
+    *x = 200;
+    *y = 50;
 }
 
 int main(){
-    int a = 10;
+    int a = 10, b = 20;
+    
+    changes(&a,&b);
 
-    ref(a);
-    // a = ref(a);
-
-    std::cout << a;
+    std::cout << a << " " << b;
 }
