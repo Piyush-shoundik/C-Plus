@@ -3397,17 +3397,40 @@
 
 // pass by reference using pointers
 
-#include <iostream>
+// #include <iostream>
 
-void changes(int *x, int *y){
-    *x = 200;
-    *y = 50;
-}
+// void changes(int *x, int *y){
+//     *x = 200;
+//     *y = 50;
+// }
 
-int main(){
-    int a = 10, b = 20;
+// int main(){
+//     int a = 10, b = 20;
     
-    changes(&a,&b);
+//     changes(&a , &b);
 
-    std::cout << a << " " << b;
+//     std::cout << a << " " << b;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using arthmetic operations in pointers
+
+// or we can also use relational operator 
+
+#include <iostream>
+using namespace std;
+
+int main (){
+    int arr[4] = {10,20,30,40};
+
+    int *ptr = arr;
+    cout << ptr << "\n";
+
+    int *ptr2 = arr;
+    
+    ptr2 += 1;
+    cout << ptr << "\n";
+
+    cout << ptr2 - ptr;
 }
