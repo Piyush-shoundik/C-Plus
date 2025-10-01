@@ -3418,19 +3418,54 @@
 
 // or we can also use relational operator 
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// int main (){
+//     int arr[4] = {10,20,30,40};
+
+//     int *ptr = arr;
+//     cout << ptr << "\n";
+
+//     int *ptr2 = arr;
+    
+//     ptr2 += 1;
+//     cout << ptr << "\n";
+
+//     cout << ptr2 - ptr;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// binary search 
+
+#include <iostream> 
+#include <vector>
 using namespace std;
 
-int main (){
-    int arr[4] = {10,20,30,40};
+int result(vector<int> vec1,int tgt){
+    int srt = 0, end1 = vec1.size()-1;
+        while(srt <= end1){
+        int mid = (srt + end1) / 2;
+        if(tgt > vec1[mid]){
+            srt = mid + 1;
+        }
+        else if(tgt < vec1[mid]){
+            end1 = mid - 1;
+        }
+        else{
+            return mid;
+        }
+    }
+    return -1;
+}
 
-    int *ptr = arr;
-    cout << ptr << "\n";
-
-    int *ptr2 = arr;
+int main(){
+    int tgt = 69;
+    vector<int> vec1 = {1,2,3,7,9,15,17,18};
     
-    ptr2 += 1;
-    cout << ptr << "\n";
+    cout << result(vec1,tgt);
+    // cout << out;
 
-    cout << ptr2 - ptr;
+return 0;
 }
