@@ -3439,33 +3439,62 @@
 
 // binary search 
 
-#include <iostream> 
+// #include <iostream> 
+// #include <vector>
+// using namespace std;
+
+// int result(vector<int> vec1,int tgt){
+//     int srt = 0, end1 = vec1.size()-1;
+//         while(srt <= end1){
+//             int mid = (srt + end1) / 2;
+
+//             if(tgt > vec1[mid]){
+//                 srt = mid + 1;
+//             }
+//             else if(tgt < vec1[mid]){
+//                 end1 = mid - 1;
+//             }
+//             else{
+//                 return mid;
+//             }
+//     }
+//     return -1;
+// }
+
+// int main(){
+//     int tgt = 69;
+//     vector<int> vec1 = {1,2,3,7,9,15,17,18};
+    
+//     cout << result(vec1,tgt);
+//     // cout << out;
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using selection sort
+
 #include <vector>
+#include <iostream>
 using namespace std;
 
-int result(vector<int> vec1,int tgt){
-    int srt = 0, end1 = vec1.size()-1;
-        while(srt <= end1){
-        int mid = (srt + end1) / 2;
-        if(tgt > vec1[mid]){
-            srt = mid + 1;
-        }
-        else if(tgt < vec1[mid]){
-            end1 = mid - 1;
-        }
-        else{
-            return mid;
+int main (){
+    int n = 5;
+    int arr[n] = {12,2,20,4,1};
+
+    int mini = arr[0];
+
+    for(int i = 0; i < n-1 ; i++ ){
+        for(int j = i + 1; j < n; j++){
+            if(arr[j] < arr[i]){
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
         }
     }
-    return -1;
-}
-
-int main(){
-    int tgt = 69;
-    vector<int> vec1 = {1,2,3,7,9,15,17,18};
-    
-    cout << result(vec1,tgt);
-    // cout << out;
-
-return 0;
+    for(int k = 0 ; k < 5 ; k++){
+        cout << arr[k] << "\n";
+    }
 }
