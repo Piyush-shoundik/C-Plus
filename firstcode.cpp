@@ -3475,26 +3475,53 @@
 
 // using selection sort
 
+// #include <vector>
+// #include <iostream>
+// using namespace std;
+
+// int main (){
+//     int n = 5;
+//     int arr[n] = {12,2,20,4,1};
+
+//     int mini = arr[0];
+
+//     for(int i = 0; i < n-1 ; i++ ){
+//         for(int j = i + 1; j < n; j++){
+//             if(arr[j] < arr[i]){
+//                 int temp = arr[j];
+//                 arr[j] = arr[i];
+//                 arr[i] = temp;
+//             }
+//         }
+//     }
+//     for(int k = 0 ; k < 5 ; k++){
+//         cout << arr[k] << "\n";
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// find the max number here in array 
+
+#include <iostream> 
 #include <vector>
-#include <iostream>
+#include <algorithm>
 using namespace std;
 
-int main (){
-    int n = 5;
-    int arr[n] = {12,2,20,4,1};
+int main(){
+    vector<int> vec1 = {1,6,4,5,9,7};
 
-    int mini = arr[0];
-
-    for(int i = 0; i < n-1 ; i++ ){
-        for(int j = i + 1; j < n; j++){
-            if(arr[j] < arr[i]){
-                int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp;
-            }
+    int max_val = vec1[0];
+    int min_val = vec1[0];
+    int sec_max = 0;
+    for(int i = 0; i < vec1.size(); i++){
+        if (vec1[i] > max_val) {
+            sec_max = max_val;
+            max_val = vec1[i];
+        }
+        else if (vec1[i] > sec_max) {
+            sec_max = vec1[i];
         }
     }
-    for(int k = 0 ; k < 5 ; k++){
-        cout << arr[k] << "\n";
-    }
+    cout << "max:" <<max_val  << "\nsecmax:" << sec_max;
 }
