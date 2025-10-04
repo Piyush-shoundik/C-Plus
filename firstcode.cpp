@@ -3503,25 +3503,69 @@
 
 // find the max number here in array 
 
+// #include <iostream> 
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+//     vector<int> vec1 = {1,6,4,5,9,7};
+
+//     int max_val = vec1[0];
+//     int min_val = vec1[0];
+//     int sec_max = 0;
+//     for(int i = 0; i < vec1.size(); i++){
+//         if (vec1[i] > max_val) {
+//             sec_max = max_val;
+//             max_val = vec1[i];
+//         }
+//         else if (vec1[i] > sec_max) {
+//             sec_max = vec1[i];
+//         }
+//     }
+//     cout << "max:" <<max_val  << "\nsecmax:" << sec_max;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// code to insert any value to any position 
+ 
 #include <iostream> 
-#include <vector>
-#include <algorithm>
+#include <vector> 
 using namespace std;
 
 int main(){
-    vector<int> vec1 = {1,6,4,5,9,7};
+    int n, index, value,j;
+    vector<int> vec(n);
+    vector<int> vec2;
 
-    int max_val = vec1[0];
-    int min_val = vec1[0];
-    int sec_max = 0;
-    for(int i = 0; i < vec1.size(); i++){
-        if (vec1[i] > max_val) {
-            sec_max = max_val;
-            max_val = vec1[i];
-        }
-        else if (vec1[i] > sec_max) {
-            sec_max = vec1[i];
+    cout << "Enter your size\n";
+    cin >> n;
+
+    cout << "Input your array values\n" ; 
+    for(int i = 0; i < n-1; i++){
+        cin >> vec[i];
+    }
+
+    cout << "Enter your Index\n";
+    cin >> index;
+    cout << "Enter your  value\n";
+    cin >> value;
+
+    for(j = 0; j <= index ; j++){
+        if( j < index ){
+            int num = vec[j];
+            vec2.push_back(num);
+        }else{
+            vec2.push_back(value);       
         }
     }
-    cout << "max:" <<max_val  << "\nsecmax:" << sec_max;
+    for(int k = index; k < n; k++){
+        vec2.push_back(vec[k]);
+    }
+    for(int l = 0 ; l < n  ; l++  ){
+        cout << vec2[l];  
+    }
+    
+
 }
