@@ -1,5 +1,3 @@
-for(int l = index ; l < n + 1 ; l++  ){
-    //     cout << l;
-    //     int num2 = vec[l];
-    //     vec2.push_back(l);
+for(int j = 0; j < vec2.size(); j++){
+    //     cout << vec2[j] << "\n";
     // }

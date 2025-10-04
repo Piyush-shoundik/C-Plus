@@ -3568,39 +3568,68 @@
 
 // deletion the number from array
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int rtn(vector<int>vec1, int tgt){
+//     for(int i = 0; i < vec1.size(); i++){
+//         int value = 0;
+//         if(vec1[i] == tgt ){
+//             value++;
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// int main()
+// {
+//     vector<int>vec1 = {1,2,3,4,5,8};
+//     int tgt = 9;
+
+//     int result = rtn(vec1 , tgt);
+
+//     if(result >= 0){
+//         for(int j = result; j < vec1.size();j++){
+//         int numm = vec1[j+1];
+
+//         vec1[j] = numm;
+//     }
+//     for(int k = 0;k < vec1.size()-1 ; k++){
+//         cout << vec1[k] <<"\n";
+//     }
+//     }
+//     else{
+//         cout << "Input not found";
+//     }
+
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// not printing the target no matter how many 
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int rtn(vector<int>vec1, int tgt){
-    for(int i = 0; i < vec1.size(); i++){
-        int value = 0;
-        if(vec1[i] == tgt ){
-            value++;
-            return i;
+int main(){
+    vector <int>vec1 = {7,3,2,5,6,7,8};
+    int tgt = 7;
+    int rmd = 0;
+
+    for(int i = 0; i < vec1.size();i++){
+        if(vec1[i] != tgt){
+            int k = vec1[i];
+            vec1[rmd] = k;
+            rmd++;
         }
+        
     }
-    return -1;
-}
-
-int main()
-{
-    vector<int>vec1 = {1,2,3,4,5,8};
-    int tgt = 9;
-
-    int result = rtn(vec1 , tgt);
-
-    if(result >= 0){
-        for(int j = result; j < vec1.size();j++){
-        int numm = vec1[j+1];
-        vec1[j] = numm;
-    }
-    for(int k = 0;k < vec1.size()-1 ; k++){
-        cout << vec1[k] <<"\n";
-    }
-    }
-    else{
-        cout << "Input not found";
+    for(int j = 0; j < rmd; j++){
+        cout << vec1[j] << "\n";
     }
 
+return 0;
 }
