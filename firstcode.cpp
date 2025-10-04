@@ -24,7 +24,7 @@
 // adding two no.
 
 // #include <iostream>
-// using namespace std; 
+// using namespace std;
 
 // main()
 // {
@@ -34,14 +34,14 @@
 //     cout << "Enter your second no. ";
 //     cin >> b;
 //     c = a + b;
-//     cout << "This is the sum " << c;  
+//     cout << "This is the sum " << c;
 
-// return 0; 
+// return 0;
 // }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// trying for one more time 
+// trying for one more time
 
 // # include <iostream>
 // main()
@@ -124,21 +124,21 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// using if and else statment 
-// to check weather the no is even or false 
+// using if and else statment
+// to check weather the no is even or false
 
-// #include <iostream> 
+// #include <iostream>
 
 // int main()
 // {
 //     int number;
 //     std:: cout << "Enter your no. \n";
 //     std:: cin >> number;
-    
+
 //     if(number % 2 == 0)
 //     {
 //         std::cout << "number is even";
-//     } 
+//     }
 //     else
 //     {
 //         std::cout<< "number is odd";
@@ -150,8 +150,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // how to check which number is greater
- 
-// #include <iostream> 
+
+// #include <iostream>
 
 // int main()
 // {
@@ -165,7 +165,7 @@
 //     {
 //         std::cout << "Both Are Equal";
 //     }
-//     else 
+//     else
 //     {
 //         std::cout <<"Second one is greater "<<number2;
 //     }
@@ -199,7 +199,7 @@
 // int main(){
 //     int a,b,c;
 //     std::cout << "Enter your no. \n";
-//     std::cin >> a >> b >> c ; 
+//     std::cin >> a >> b >> c ;
 //     if (a && b < c ){
 //         std::cout << "Third number is greater ";
 //     }else if ( a && c < b ){
@@ -221,7 +221,7 @@
 //     int sub1,sub2,sub3,per;
 //     std::cout << "Enter the numbers";
 //     std::cin >> sub1 >> sub2 >> sub3;
-    
+
 //     per = (sub1+sub2+sub3) / 3;
 
 //     if (sub1 >= 33 && sub2 >= 33 && sub3 >= 33 && per >= 40){
@@ -242,7 +242,6 @@
 //  5.0L - 10.0L 20%
 //  Above 10.0L 30%
 // Note that there is no tax below 2.5L. Take income amount as an input from the user
-
 
 // #include <iostream>
 //     int main(){
@@ -286,7 +285,7 @@
 // #include <iostream>
 
 // int main(){
-//     int a,b,c,d; 
+//     int a,b,c,d;
 //     std::cout << "Enter your 4 no.\n ";
 //     std::cin >> a >> b >> c >> d ;
 //     if (a > b && c && d ){
@@ -351,7 +350,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// to print number from n to 1 
+// to print number from n to 1
 
 // #include <iostream>
 // int main(){
@@ -402,7 +401,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// using do while loop 
+// using do while loop
 
 // #include <iostream>
 
@@ -458,7 +457,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// print the no. in reverse form 
+// print the no. in reverse form
 
 // #include <iostream>
 // int main(){
@@ -518,7 +517,7 @@
 //         sum = sum + i;
 //         if (i == n){
 //             std::cout << sum;
-//         } 
+//         }
 //         i ++;
 //     }
 // return(0);
@@ -536,9 +535,9 @@
 //     for(i = 1;i <= n; i++)
 //     {
 //         sum = sum + i;
-//         if (i >= n){    
+//         if (i >= n){
 //         std::cout << sum;}
-        
+
 //     }
 //     return (0);
 // }
@@ -564,14 +563,14 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// write a program to add the even nos. and multiply the odd no. 
+// write a program to add the even nos. and multiply the odd no.
 
 // #include <iostream>
 // int main(){
 //     int number,digit,add = 0 ,multi = 1;
 //     std::cout << "Enter your number: ";
 //     std::cin >> number;
-    
+
 //     while (number != 0) {
 //         digit = number % 10;
 //         if ((digit % 2) == 0 ){
@@ -590,7 +589,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// To find the factorial of given no. n 
+// To find the factorial of given no. n
 
 // #include <iostream>
 //     int main(){
@@ -605,7 +604,7 @@
 //     std::cout << mult;
 //     return(0);
 //     }
-    
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // to find the palindrome no.
@@ -642,12 +641,12 @@
 //     int num, i = 1, digit;
 //     std:: cout << "Enter your no.";
 //     std:: cin >> num;
-    
+
 //     while (i <= 10){
 //         digit = num * i;
 //         std::cout << digit << "\n";
 //         i++;
-        
+
 //     }
 //     return(0);
 // }
@@ -662,7 +661,7 @@
 //     std:: cout << "Enter your no.";
 //     std:: cin >> num;
 //     int n = num;
-    
+
 //     do{
 //         gum = 0 + i;
 //         gap = gum + i;
@@ -679,7 +678,7 @@
 
 // code to write a * a * a.....n'th
 
-// #include <iostream> 
+// #include <iostream>
 // int main (){
 //     int a,b ,digit = 1, i = 1;
 //     std::cout << "Enter your no. and times you want to multiply the number \n";
@@ -695,7 +694,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// writing program to print in stars 
+// writing program to print in stars
 
 // #include <iostream>
 // int main(){
@@ -728,7 +727,6 @@
 //     return(0);
 // }
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // star question no. 3
@@ -748,7 +746,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // star question no. 4
-                                                                       
+
 // #include <iostream>
 // int main(){
 //     int i, j;
@@ -785,16 +783,16 @@
 //             if(j == 5){
 //                 std::cout << "e";
 //             }
-            
+
 //         }
-//     std::cout << "\n" ;    
+//     std::cout << "\n" ;
 //     }
 //     return(0);
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// star queation 6 
+// star queation 6
 
 // #include <iostream>
 // int main(){
@@ -828,7 +826,7 @@
 
 // star question 8
 
-// #include <iostream> 
+// #include <iostream>
 // int main(){
 //     int i;
 //     for(i = 1;i <= 5; i++){
@@ -915,7 +913,7 @@
 //         }
 //         for (k = 1; k <= i; k++){
 //             std::cout << "*";
-            
+
 //         }
 //         for(h = 2; h <= i; h++){
 //             std::cout << "*";
@@ -929,12 +927,12 @@
 
 // star in reverse form but in different form
 
-// #include <iostream> 
+// #include <iostream>
 // int main(){
 //     int i,j,k,l;
 //     for(i = 1; i <= 5; i++){
 //         for(j = 2; j <= i; j++){
-//             std::cout << " "; 
+//             std::cout << " ";
 //         }
 //         for(k = i; k <= 5; k++){
 //             std::cout << "*";
@@ -946,7 +944,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// barfi shape star code 
+// barfi shape star code
 
 // #include <iostream>
 // int main(){
@@ -1012,7 +1010,7 @@
 // #include <iostream>
 
 //     inline int sum(int a, int b){
-//         return a + b ; 
+//         return a + b ;
 //     }
 
 //     int main(){
@@ -1031,7 +1029,7 @@
 // #include <iostream>
 
 //     inline int sum(int a, int b){
-//         return a * b ; 
+//         return a * b ;
 //     }
 
 //     int main(){
@@ -1048,40 +1046,40 @@
 
 // writing code to print in inline code by taking input from user performing subtarct
 
-    // #include <iostream>
+// #include <iostream>
 
-    // inline int sum(int a, int b){
-    //     return a - b ; 
-    // }
+// inline int sum(int a, int b){
+//     return a - b ;
+// }
 
-    // int main(){
-    //     int a , b;
-    //     std::cout << "Enter your two number \n";
-    //     std::cin >> a >> b ;
-    //     int total = sum(a,b);
-    //     std::cout << total;
+// int main(){
+//     int a , b;
+//     std::cout << "Enter your two number \n";
+//     std::cin >> a >> b ;
+//     int total = sum(a,b);
+//     std::cout << total;
 
-    //     return(0);
-    // }
+//     return(0);
+// }
 
-    ////////////////////////////////////////////////////////////////////////////////
-    
-    // program to add two number by taking input from user by using void as function
+////////////////////////////////////////////////////////////////////////////////
 
-    //   #include <iostream>
+// program to add two number by taking input from user by using void as function
 
-    // void sum(int a , int b ){
-    //     std::cout << a + b;
-    // }
+//   #include <iostream>
 
-    // int main(){
-    //     int aa , bb;
-    //     std::cout << "Enter your two number you want to add " ;
-    //     std::cin >> aa >> bb ;
-    //     sum(aa,bb);
-        
-    // return(0);
-    // }
+// void sum(int a , int b ){
+//     std::cout << a + b;
+// }
+
+// int main(){
+//     int aa , bb;
+//     std::cout << "Enter your two number you want to add " ;
+//     std::cin >> aa >> bb ;
+//     sum(aa,bb);
+
+// return(0);
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1093,7 +1091,7 @@
 //     private:
 //     int a , b;
 
-//     public: 
+//     public:
 //     void get();
 //     void put();
 // };
@@ -1118,7 +1116,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-// writing code to print output using class and function 
+// writing code to print output using class and function
 
 // #include <iostream>
 
@@ -1147,7 +1145,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-// writing code to print output using class and function and applying multipication. 
+// writing code to print output using class and function and applying multipication.
 
 // #include <iostream>
 
@@ -1207,7 +1205,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-// write a code to check if the number is even or odd using class and fuction 
+// write a code to check if the number is even or odd using class and fuction
 
 // #include <iostream>
 
@@ -1230,7 +1228,6 @@
 //     }
 // };
 
-
 // int main(){
 //     number num;
 //     num.get();
@@ -1241,7 +1238,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-// write a code to check if the number is posite or negative using class and fuction 
+// write a code to check if the number is posite or negative using class and fuction
 
 // #include <iostream>
 
@@ -1275,7 +1272,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-// write a code to check if the number is greater using class and fuction 
+// write a code to check if the number is greater using class and fuction
 
 // #include <iostream>
 
@@ -1308,10 +1305,9 @@
 // return(0);
 // }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-// priting number from 1 to 10 using class and function 
+// priting number from 1 to 10 using class and function
 
 // #include <iostream>
 
@@ -1336,9 +1332,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-// code to print from 1 to n  
+// code to print from 1 to n
 
-// #include <iostream> 
+// #include <iostream>
 
 // class number{
 //     private:
@@ -1350,7 +1346,7 @@
 
 // void number::get(){
 //     std::cout << "Enter your number till where you want to print\n";
-//     std::cin >> a ;    
+//     std::cin >> a ;
 // };
 
 // void number::put(){
@@ -1376,7 +1372,7 @@
 // class number{
 //     private:
 //     int a , b , rev;
-    
+
 //     public:
 //     void get();
 //     void put();
@@ -1557,7 +1553,7 @@
 //         for(int j = 1; i <= 5 ; j--){
 //             std::cout << "*" ;
 //         }
-        
+
 //         std::cout << "\n"  ;
 //     }
 // };
@@ -1740,9 +1736,9 @@
 // };
 
 // int main() {
-//     Calculator calc;   
-//     calc.getNumbers(); 
-//     calc.displayResult(); 
+//     Calculator calc;
+//     calc.getNumbers();
+//     calc.displayResult();
 //     return 0;
 // }
 
@@ -1791,7 +1787,7 @@
 //     private:
 //     int a , b ;
 //     public:
-//     void getdata();                
+//     void getdata();
 //     friend int sum(add aa);
 // };
 
@@ -1925,8 +1921,8 @@
 // using namespace std;
 
 // class out {
-//     int a;                     
-//     static int b;              
+//     int a;
+//     static int b;
 // public:
 //     void getdata();
 //     static void number();
@@ -1935,7 +1931,7 @@
 // int out::b = 0;
 
 // void out::getdata() {
-//     a = 2;             
+//     a = 2;
 //     cout << "a = " << a << endl;
 //     b = b + 1;
 // }
@@ -1950,7 +1946,7 @@
 //     bb.getdata();
 //     cc.getdata();
 
-//     out::number();  
+//     out::number();
 
 //     return 0;
 // }
@@ -1989,19 +1985,19 @@
 //     div = a/b;
 
 //     if(choice == 1 ){
-//         std::cout << "Result = " << sum ; 
+//         std::cout << "Result = " << sum ;
 //     }
 //     if(choice == 2 ){
-//         std::cout << "Result = " << sub ; 
+//         std::cout << "Result = " << sub ;
 //     }
 //     if(choice == 3 ){
-//         std::cout << "Result = " << multi ; 
+//         std::cout << "Result = " << multi ;
 //     }
 //     if(choice == 4){
-//         std::cout << "Result = " << div ; 
+//         std::cout << "Result = " << div ;
 //     }
 //     else{
-//         std::cout << "Enter valid input"  ; 
+//         std::cout << "Enter valid input"  ;
 //     }
 // }
 // int calculator::menu(){
@@ -2104,7 +2100,7 @@
 
 // class number{
 //     int a;
-//     public : 
+//     public :
 //     number(){
 //         a = 10;
 //     }
@@ -2121,7 +2117,7 @@
 //     number bb;
 //     aa.putdata();
 //     bb.putdata();
-    
+
 // return 0;
 // }
 
@@ -2161,7 +2157,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-// using constructor and destructor 
+// using constructor and destructor
 
 // #include <iostream>
 
@@ -2175,7 +2171,7 @@
 //         std::cout << "\nCreated a number" << a;
 //     }
 //     ~check()
-//     { 
+//     {
 //         std::cout << "\nDeleted a number" << a ;
 //         a--;
 //     }
@@ -2184,7 +2180,7 @@
 // int main(){
 //     check aa,bb;
 
-// return 0; 
+// return 0;
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -2195,11 +2191,11 @@
 
 // class numb
 // {
-//     protected: 
+//     protected:
 //     int a = 10;
 
 //     public:
-//     int b; 
+//     int b;
 
 //     void getdata(){
 //         std::cout << "Enter your number you want to addd";
@@ -2209,7 +2205,7 @@
 // };
 
 // class sum:public numb{
-//     protected: 
+//     protected:
 //     int c = 10;
 
 //     public:
@@ -2279,7 +2275,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-// using mutlilevel inheritance and function under function 
+// using mutlilevel inheritance and function under function
 
 // #include <iostream>
 
@@ -2319,7 +2315,7 @@
 
 //     totalmarks = marksmathinput2 + marksppsinput;
 //     }
-    
+
 // };
 
 // class result:public pps{
@@ -2329,7 +2325,7 @@
 //         getppsmarks();
 //     }
 //     void totalresult(){
-//         std::cout << "Your total is " << totalmarks ; 
+//         std::cout << "Your total is " << totalmarks ;
 //     }
 // };
 
@@ -2375,7 +2371,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-// using function overbiding 
+// using function overbiding
 
 // #include <iostream>
 // class a{
@@ -2394,7 +2390,7 @@
 
 // int main(){
 //     b aa;
-//     aa.putdata();aa.a::putdata(); //This is the second way to call or use the function 
+//     aa.putdata();aa.a::putdata(); //This is the second way to call or use the function
 // }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -2505,7 +2501,7 @@
 // #include <iostream>
 
 // int main(){
-//     char vari ; 
+//     char vari ;
 //     std::cout << "Enter your letter\n" ;
 //     std::cin >> vari;
 
@@ -2519,9 +2515,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-// using signed or unsigned integer 
+// using signed or unsigned integer
 
-// #include <iostream> 
+// #include <iostream>
 // int main(){
 //     signed int a = -10;
 //     unsigned int b = 70; //only print positive value
@@ -2541,7 +2537,7 @@
 // int main(){
 
 //     int array_id[5] = {1,2,3,4,5};
-    
+
 //     // we can make changes too
 //     array_id[0] = 12345;
 
@@ -2549,13 +2545,13 @@
 //     std::cout << array_id[1] << "\n";
 //     std::cout << array_id[2] << "\n";
 //     std::cout << array_id[3] << "\n";
-//     std::cout << array_id[4] << "\n"; 
+//     std::cout << array_id[4] << "\n";
 
 // }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-// using loop in array 
+// using loop in array
 
 // #include <iostream>
 
@@ -2563,7 +2559,7 @@
 
 //     int array_id[5] = {1,2,3,4,5};
 //     int sizeofarray = 5;
-    
+
 //     // we can make changes too
 //     array_id[0] = 12345;
 
@@ -2575,7 +2571,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-// using loop in array and taking input 
+// using loop in array and taking input
 
 // #include <iostream>
 
@@ -2583,12 +2579,12 @@
 
 //     int sizeofarray = 5;
 //     int array_id[sizeofarray];
-    
+
 //     // we can make changes too
 //     // array_id[0] = 12345;
 
 //     for(int i = 0 ; i < sizeofarray; i++ ){
-//         std::cin >> array_id[i]; 
+//         std::cin >> array_id[i];
 //     }
 
 //     for(int i = 0 ; i < sizeofarray; i++ ){
@@ -2610,7 +2606,7 @@
 //     int num;
 
 //     for(int i = 0 ; i < sizeofarray; i++ ){
-//         std::cin >> array_id[i]; 
+//         std::cin >> array_id[i];
 //     }
 
 //     // for(int i = 0 ; i < sizeofarray; i++ ){
@@ -2659,7 +2655,7 @@
 //     for(int i = 0; i < sizeofarray ; i++ ){
 //         if(num < arrayid[i]){
 //             num = arrayid[i];
-            
+
 //         }
 //     }
 
@@ -2702,7 +2698,7 @@
 //         if(num < arrayid[i]){
 //             num = arrayid[i];
 //             num1 = i;
-            
+
 //         }
 //     }
 
@@ -2747,13 +2743,13 @@
 
 // }
 
-// second method to reverse array as pass by reference 
+// second method to reverse array as pass by reference
 
 // #include <iostream>
 
 // void printReverse(int arr[], int size, int revArr[]) {
 //     for (int i = 0; i < size; i++) {
-//         revArr[i] = arr[size - 1 - i]; 
+//         revArr[i] = arr[size - 1 - i];
 //     }
 // }
 
@@ -2827,7 +2823,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-// code to swap min and max using array 
+// code to swap min and max using array
 
 // #include <iostream>
 // using namespace std;
@@ -2854,7 +2850,7 @@
 //             indexs = i;
 //         }
 //     }
-    
+
 //     arrid[indexl] = smallest;
 //     arrid[indexs] = largest;
 
@@ -2865,8 +2861,8 @@
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
- 
-// find same value in two of the array 
+
+// find same value in two of the array
 
 // #include <iostream>
 // using namespace std;
@@ -2909,7 +2905,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-// using some vector function 
+// using some vector function
 
 // #include <iostream>
 // #include <vector>
@@ -2942,7 +2938,7 @@
 //     vector <int> num1 = {1,2,3,4,3,2,1};
 //     int result = 0;
 
-//                 for(int nums: num1){ 
+//                 for(int nums: num1){
 //                     result ^= nums;
 //                 }
 //             cout << result;
@@ -3006,22 +3002,21 @@
 // #include <vector>
 // using namespace std;
 
-
 // int main (){
-    
+
 //     int sizearr = 5;
 //     int arr[sizearr] = { 1, 2, 3, 4, 5};
 
 //     int maxvalue = 0;
-     
+
 //     for(int i = 0; i < sizearr; i++ ){
-//         int currarr = 0; 
+//         int currarr = 0;
 //         for(int j = 0; j < sizearr; j++ ){
-//             currarr += arr[j] ; 
-//             maxvalue = max(currarr, maxvalue) ; 
+//             currarr += arr[j] ;
+//             maxvalue = max(currarr, maxvalue) ;
 //         }
 //     }
-//     cout << maxvalue; 
+//     cout << maxvalue;
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -3037,7 +3032,7 @@
 //     int maxSubArray(vector<int>& nums) {
 //         int currarr = 0;
 //         int maxarr = INT_MIN;
-        
+
 //         for(int i = 0; i < nums.size() ; i++){
 //             currarr += nums[i];
 //             maxarr = max(currarr, maxarr);
@@ -3050,16 +3045,15 @@
 //     }
 // };
 
-
 // int main(){
 //     Solution aa;
-//     vector<int> nums = {1, 2, -3, -2, 5};  
+//     vector<int> nums = {1, 2, -3, -2, 5};
 //     cout << aa.maxSubArray(nums);
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-// find the majority numbers in a array by 
+// find the majority numbers in a array by
 // Boyer–Moore Voting Algorithm
 
 // #include <iostream>
@@ -3107,8 +3101,6 @@
 
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
- 
-
 // Example 1:
 
 // Input: prices = [7,1,5,3,6,4]
@@ -3129,8 +3121,8 @@
 // public:
 //     int maxProfit(vector<int>& prices) {
 //     int n = prices.size();
-//     int bestBuy = prices[0];  
-//     int maxProfit = 0;         
+//     int bestBuy = prices[0];
+//     int maxProfit = 0;
 
 //     for(int i = 0  ; i < n ; i++ ){
 //         if(prices[i] > bestBuy){
@@ -3145,7 +3137,7 @@
 
 // int main(){
 //     Solution aa;
-//     vector<int> prices = {7,1,5,3,6,4};  
+//     vector<int> prices = {7,1,5,3,6,4};
 //     cout << aa.maxProfit(prices);
 // }
 
@@ -3161,10 +3153,7 @@
 
 // Notice that you may not slant the container.
 
- 
-
 // Example 1:
-
 
 // Input: height = [1,8,6,2,5,4,8,3,7]
 // Output: 49
@@ -3184,23 +3173,20 @@
 // int main(){
 
 //     vector<int> height = {1,8,6,2,5,4,8,3,7};
-    
 
 //     int n = height.size();
 //     int area = 0;
 //     int maxNum = 0;
-    
 
 //     for(int i= 0; i < n; i++){
 //         for(int j = i+1 ; j < n; j++){
 //             int index = (j - i) ;
 //             area = min(height[i], height[j]);
 //             int summ = area * index;
-//             // result.push_back(summ); 
-//             maxNum = max(maxNum, summ); 
+//             // result.push_back(summ);
+//             maxNum = max(maxNum, summ);
 //         }
 //     }
-
 
 //     cout << maxNum;
 
@@ -3225,15 +3211,14 @@
 //     int n = height.size();
 //     int area = 0;
 //     int maxNum = 0;
-    
 
 //     for(int i= 0; i < n; i++){
 //         for(int j = i+1 ; j < n; j++){
 //             int index = (j - i) ;
 //             area = min(height[i], height[j]);
 //             int summ = area * index;
-//             // result.push_back(summ); 
-//             maxNum = max(maxNum, summ); 
+//             // result.push_back(summ);
+//             maxNum = max(maxNum, summ);
 //         }
 //     }
 //     cout << maxNum;
@@ -3247,7 +3232,6 @@
 //     aa.maxArea(height);
 // }
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // leetcode question 238
@@ -3258,8 +3242,6 @@
 
 // You must write an algorithm that runs in O(n) time and without using the division operation.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,3,4]
@@ -3268,7 +3250,7 @@
 
 // Input: nums = [-1,1,0,-3,3]
 // Output: [0,0,9,0,0]
- 
+
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -3277,7 +3259,6 @@
 //     vector<int> nums = {-1,1,0,-3,3};
 //     vector<int> result;
 
-    
 //     for(int i = 0;i < nums.size(); i++){
 //         int resultt = 1;
 //         for(int j = 0;j < nums.size(); j++){
@@ -3293,7 +3274,7 @@
 // }
 
 // time complexcity O(n)
- 
+
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -3360,7 +3341,7 @@
 
 // void ref(int &b){
 //     b = 100;
-   
+
 // }
 
 // int main(){
@@ -3379,7 +3360,7 @@
 
 // void ref(int b){
 //     b = 100;
-//     // if you want to reflect the value to main file use 
+//     // if you want to reflect the value to main file use
 //     // which i use in next line
 //     // return b;
 // }
@@ -3406,7 +3387,7 @@
 
 // int main(){
 //     int a = 10, b = 20;
-    
+
 //     changes(&a , &b);
 
 //     std::cout << a << " " << b;
@@ -3416,7 +3397,7 @@
 
 // using arthmetic operations in pointers
 
-// or we can also use relational operator 
+// or we can also use relational operator
 
 // #include <iostream>
 // using namespace std;
@@ -3428,7 +3409,7 @@
 //     cout << ptr << "\n";
 
 //     int *ptr2 = arr;
-    
+
 //     ptr2 += 1;
 //     cout << ptr << "\n";
 
@@ -3437,9 +3418,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// binary search 
+// binary search
 
-// #include <iostream> 
+// #include <iostream>
 // #include <vector>
 // using namespace std;
 
@@ -3464,7 +3445,7 @@
 // int main(){
 //     int tgt = 69;
 //     vector<int> vec1 = {1,2,3,7,9,15,17,18};
-    
+
 //     cout << result(vec1,tgt);
 //     // cout << out;
 
@@ -3501,9 +3482,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// find the max number here in array 
+// find the max number here in array
 
-// #include <iostream> 
+// #include <iostream>
 // #include <vector>
 // #include <algorithm>
 // using namespace std;
@@ -3528,44 +3509,98 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// code to insert any value to any position 
- 
-#include <iostream> 
-#include <vector> 
+// code to insert any value to any position
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n, index, value, j;
+//     vector<int> vec(n);
+//     vector<int> vec2;
+
+//     cout << "Enter your size\n";
+//     cin >> n;
+
+//     cout << "Input your array values\n";
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         cin >> vec[i];
+//     }
+
+//     cout << "Enter your Index\n";
+//     cin >> index;
+//     cout << "Enter your  value\n";
+//     cin >> value;
+
+//     if (index <= n)
+//     {
+//         for (j = 0; j <= index; j++)
+//         {
+//             if (j < index)
+//             {
+//                 int num = vec[j];
+//                 vec2.push_back(num);
+//             }
+//             else
+//             {
+//                 vec2.push_back(value);
+//             }
+//         }
+//         for (int k = index; k < n; k++)
+//         {
+//             vec2.push_back(vec[k]);
+//         }
+//         for (int l = 0; l < n; l++)
+//         {
+//             cout << vec2[l];
+//         }
+//     }
+//     else
+//     {
+//         cout << "Input correct index next time";
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// deletion the number from array
+
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int main(){
-    int n, index, value,j;
-    vector<int> vec(n);
-    vector<int> vec2;
-
-    cout << "Enter your size\n";
-    cin >> n;
-
-    cout << "Input your array values\n" ; 
-    for(int i = 0; i < n-1; i++){
-        cin >> vec[i];
-    }
-
-    cout << "Enter your Index\n";
-    cin >> index;
-    cout << "Enter your  value\n";
-    cin >> value;
-
-    for(j = 0; j <= index ; j++){
-        if( j < index ){
-            int num = vec[j];
-            vec2.push_back(num);
-        }else{
-            vec2.push_back(value);       
+int rtn(vector<int>vec1, int tgt){
+    for(int i = 0; i < vec1.size(); i++){
+        int value = 0;
+        if(vec1[i] == tgt ){
+            value++;
+            return i;
         }
     }
-    for(int k = index; k < n; k++){
-        vec2.push_back(vec[k]);
+    return -1;
+}
+
+int main()
+{
+    vector<int>vec1 = {1,2,3,4,5,8};
+    int tgt = 9;
+
+    int result = rtn(vec1 , tgt);
+
+    if(result >= 0){
+        for(int j = result; j < vec1.size();j++){
+        int numm = vec1[j+1];
+        vec1[j] = numm;
     }
-    for(int l = 0 ; l < n  ; l++  ){
-        cout << vec2[l];  
+    for(int k = 0;k < vec1.size()-1 ; k++){
+        cout << vec1[k] <<"\n";
     }
-    
+    }
+    else{
+        cout << "Input not found";
+    }
 
 }
