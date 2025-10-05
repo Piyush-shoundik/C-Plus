@@ -3610,26 +3610,63 @@
 
 // not printing the target no matter how many 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector <int>vec1 = {7,3,2,5,6,7,8};
+//     int tgt = 7;
+//     int rmd = 0;
+
+//     for(int i = 0; i < vec1.size();i++){
+//         if(vec1[i] != tgt){
+//             int k = vec1[i];
+//             vec1[rmd] = k;
+//             rmd++;
+//         }
+        
+//     }
+//     for(int j = 0; j < rmd; j++){
+//         cout << vec1[j] << "\n";
+//     }
+
+// return 0;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// returning the repeated value
+
 #include <iostream>
-#include <vector>
-using namespace std;
+#include <vector> 
+using namespace std; 
 
 int main(){
-    vector <int>vec1 = {7,3,2,5,6,7,8};
-    int tgt = 7;
-    int rmd = 0;
 
-    for(int i = 0; i < vec1.size();i++){
-        if(vec1[i] != tgt){
-            int k = vec1[i];
-            vec1[rmd] = k;
-            rmd++;
+vector<int>arr = {1,2,3};
+vector<int>arr2;
+
+        int n = arr.size(),num ;
+
+        for(int i = 0; i < n-1; i++){
+            for(int k = i+1; k < n; k++){
+                if(arr[i] == arr[k]){
+                    num = arr[i];
+                    arr2.push_back(num);
+                    num++;
+                }
+            }
         }
-        
+        for(int l = 0; l < arr2.size(); l++){
+                cout << arr2[l];
+        }
+        if(arr2[0] > 0){
+            for(int l = 0; l < arr2.size(); l++){
+                int h = arr2[l];
+                cout << h;
+            }
+        }else{
+            cout << arr2[0];
+        }
     }
-    for(int j = 0; j < rmd; j++){
-        cout << vec1[j] << "\n";
-    }
-
-return 0;
-}
