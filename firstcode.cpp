@@ -3636,37 +3636,105 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// returning the repeated value
+// printing all the repeated values in an array
 
-#include <iostream>
-#include <vector> 
-using namespace std; 
+// #include <iostream>
+// #include <vector> 
+// using namespace std; 
+
+// int main(){
+
+// vector<int>arr = {1,2,3};
+// vector<int>arr2;
+
+//         int n = arr.size(),num ;
+
+//         for(int i = 0; i < n-1; i++){
+//             for(int k = i+1; k < n; k++){
+//                 if(arr[i] == arr[k]){
+//                     num = arr[i];
+//                     arr2.push_back(num);
+//                     num++;
+//                 }
+//             }
+//         }
+//         for(int l = 0; l < arr2.size(); l++){
+//                 cout << arr2[l];
+//         }
+//         if(arr2[0] > 0){
+//             for(int l = 0; l < arr2.size(); l++){
+//                 int h = arr2[l];
+//                 cout << h;
+//             }
+//         }else{
+//             cout << arr2[0];
+//         }
+//     }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// not completed 
+// question is finding the equlibrium point in any where in array
+// if not return -1
+
+// #include <iostream>
+// #include <vector> 
+// using namespace std; 
+
+// int main(){
+//         vector<int> arr = {-7, 1, 5, 2, -4, 3, 0};
+
+//         vector<int> arr2;
+//         vector<int> arr3;
+//         int num1, n = arr.size(),num2;
+        
+//         for(int i = 1; i < n ; i++ ){
+//             num1 = 0;
+//             for(int j = i ; j < n; j++ ){
+//                 num1 = num1 + arr[j];
+//             }
+//             arr2.push_back(num1);
+//         }
+//         for(int l = 1; l < n; l++){  
+//             num2 = 0;
+//             for(int k = 0 ; k < l-1; k++ ){
+//                 num2 = num2 + arr[k]; 
+//             }
+//             arr3.push_back(num2);
+//         }
+//         for(int g = 0 ; g < n; g++){
+//             if(arr3[g] == arr2[g]){
+//                 cout << arr2[g] << "\n";
+//             }
+//         }
+
+        // for(int p = 1; p < n-1 ; p++){
+        //     cout << arr3[p];
+        // }
+        
+    // }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// removing all particular values from any array
+
+#include <iostream> 
+#include <vector>
+using namespace std;
 
 int main(){
-
-vector<int>arr = {1,2,3};
-vector<int>arr2;
-
-        int n = arr.size(),num ;
-
-        for(int i = 0; i < n-1; i++){
-            for(int k = i+1; k < n; k++){
-                if(arr[i] == arr[k]){
-                    num = arr[i];
-                    arr2.push_back(num);
-                    num++;
-                }
-            }
+    vector<int> vec = {5,4,6,7,7,8,4};
+    int rum = 0;
+    for(int i = 0 ; i < vec.size(); i++){
+        if(vec[i] == 7){
+            vec[i] = vec[i] ^ 7;
         }
-        for(int l = 0; l < arr2.size(); l++){
-                cout << arr2[l];
-        }
-        if(arr2[0] > 0){
-            for(int l = 0; l < arr2.size(); l++){
-                int h = arr2[l];
-                cout << h;
-            }
-        }else{
-            cout << arr2[0];
+        if(vec[i] == 0){
+            rum++;
         }
     }
+    for(int j = 0; j < vec.size(); j++){
+        cout << vec[j] << "\n";
+    }
+}
