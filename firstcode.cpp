@@ -3719,22 +3719,107 @@
 
 // removing all particular values from any array
 
+// #include <iostream> 
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> vec = {5,4,6,7,7,8,4};
+//     int rum = 0;
+//     for(int i = 0 ; i < vec.size(); i++){
+//         if(vec[i] == 7){
+//             vec[i] = vec[i] ^ 7;
+//         }
+//         if(vec[i] == 0){
+//             rum++;
+//         }
+//     }
+//     for(int j = 0; j < vec.size(); j++){
+//         cout << vec[j] << "\n";
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n, i = 1;
+//     // code to print number from 1 to n
+//     cout << "Enter your last number\n";
+//     cin >> n ;
+
+//     for(i = 1; i <= n ; i++){
+//         cout << i << "\n";
+//     }
+
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cout << "Enter your size";
+//     cin >> n;
+
+//     vector<int> naam(n);
+
+//     int l = naam[0];
+    
+//     for(int i = 0; i < n; i++){
+//         cin >> naam[i];
+//     }
+
+//     for(int k = 0; k < n; k++){
+//         if(l < naam[k]){
+//             l = naam[k];
+//         }
+//     }
+
+//     cout << l << " is the largest in naam array";
+
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     cout << "hello World";
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// checking even and odd in a code by cpp 
+
 #include <iostream> 
-#include <vector>
 using namespace std;
 
 int main(){
-    vector<int> vec = {5,4,6,7,7,8,4};
-    int rum = 0;
-    for(int i = 0 ; i < vec.size(); i++){
-        if(vec[i] == 7){
-            vec[i] = vec[i] ^ 7;
-        }
-        if(vec[i] == 0){
-            rum++;
-        }
+    int a;
+    // cout << "Enter number you want to check\n";
+    // cin >> a ;
+    // if(a%2 == 0){
+    //     cout << "even" ;
+    // }
+    // else{
+    //     cout << "odd";
+    // }
+    for(int i = 10; i >= 1; i--){
+        cout << i << "\n" ;
     }
-    for(int j = 0; j < vec.size(); j++){
-        cout << vec[j] << "\n";
-    }
+    
+
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
