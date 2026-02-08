@@ -3800,11 +3800,11 @@
 
 // checking even and odd in a code by cpp 
 
-#include <iostream> 
-using namespace std;
+// #include <iostream> 
+// using namespace std;
 
-int main(){
-    int a;
+// int main(){
+//     int a;
     // cout << "Enter number you want to check\n";
     // cin >> a ;
     // if(a%2 == 0){
@@ -3813,13 +3813,63 @@ int main(){
     // else{
     //     cout << "odd";
     // }
-    for(int i = 10; i >= 1; i--){
-        cout << i << "\n" ;
-    }
+//     for(int i = 10; i >= 1; i--){
+//         cout << i << "\n" ;
+//     }
     
 
-}
+// }
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// leetode problem no.268
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int k = 0, l = 0, p = 0;
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != l) {
+                k = i;
+                p++;
+                break;
+            }
+            l++;
+        }
+
+        if (p == 1) {
+            return k;
+        }
+
+        int g = nums.size();
+        if (nums[k] != nums.size()) {
+            return nums.size();
+        }
+
+        return 0;
+    }
+};
+
+int main() {
+    int n;
+    cin >> n;                 // size
+
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];       // elements
+    }
+
+    Solution s;
+    cout << s.missingNumber(nums);
+
+    return 0;
+}
