@@ -3825,51 +3825,78 @@
 
 // leetode problem no.268
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+
+// using namespace std;
+
+// class Solution {
+// public:
+//     int missingNumber(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
+//         int k = 0, l = 0, p = 0;
+
+//         for (int i = 0; i < nums.size(); i++) {
+//             if (nums[i] != l) {
+//                 k = i;
+//                 p++;
+//                 break;
+//             }
+//             l++;
+//         }
+
+//         if (p == 1) {
+//             return k;
+//         }
+
+//         int g = nums.size();
+//         if (nums[k] != nums.size()) {
+//             return nums.size();
+//         }
+
+//         return 0;
+//     }
+// };
+
+// int main() {
+//     int n;
+//     cin >> n;                 // size
+
+//     vector<int> nums(n);
+//     for (int i = 0; i < n; i++) {
+//         cin >> nums[i];       // elements
+//     }
+
+//     Solution s;
+//     cout << s.missingNumber(nums);
+
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// using sort function
+
 #include <iostream>
-#include <vector>
 #include <algorithm>
+#include <limits>
+#include <iterator>
 
 using namespace std;
 
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int k = 0, l = 0, p = 0;
-
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] != l) {
-                k = i;
-                p++;
-                break;
-            }
-            l++;
-        }
-
-        if (p == 1) {
-            return k;
-        }
-
-        int g = nums.size();
-        if (nums[k] != nums.size()) {
-            return nums.size();
-        }
-
-        return 0;
-    }
-};
-
-int main() {
-    int n;
-    cin >> n;                 // size
-
-    vector<int> nums(n);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];       // elements
-    }
-
-    Solution s;
-    cout << s.missingNumber(nums);
+int main(){
+    int arr[] = {1,6,4,5,2,3,0};
+    int size = std::size(arr);
+    sort(arr , size + arr);
+    cout << "smallest " << arr[0];
+    cout << "\nbiggest " << arr[std::size(arr)-1];
+    
+    // for(int i = 0; i < std::size(arr); i++){
+        // cout << arr[i] << " ";
+    // }
+    
 
     return 0;
 }
