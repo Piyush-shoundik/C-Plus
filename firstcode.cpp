@@ -3906,66 +3906,83 @@
 
 // leetcode question 66
 
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+
+// vector<int> plusOne(vector<int>& digits) {
+//     vector<int> arr;
+//     long long power = pow(10, digits.size() - 1), sum = 0, digit = 0;
+
+//     // array to integer
+//     for (int i = 0; i < digits.size(); i++) {
+//         sum = (digits[i] * power) + sum;
+//         power = power / 10;
+//     }
+
+//     long long last_d = sum + 1;
+//     long long o_last = last_d;
+
+//     // count digits
+//     while (last_d != 0) {
+//         digit++;
+//         last_d = last_d / 10;
+//     }
+
+//     // reverse number
+//     long long k = 0, new_d;
+//     for (int y = 0; y < digit; y++) {
+//         new_d = o_last % 10;
+//         k = (k * 10) + new_d;
+//         o_last = o_last / 10;
+//     }
+
+//     // push digits into vector
+//     long long s = 0;
+//     for (int h = 0; h < digit; h++) {
+//         s = k % 10;
+//         arr.push_back(s);
+//         k = k / 10;
+//     }
+
+//     return arr;
+// }
+
+// int main() {
+//     int n;
+//     cout << "Enter number of digits: ";
+//     cin >> n;
+
+//     vector<int> digits(n);
+//     cout << "Enter digits: ";
+//     for (int i = 0; i < n; i++) {
+//         cin >> digits[i];
+//     }
+
+//     vector<int> result = plusOne(digits);
+
+//     cout << "Result: ";
+//     for (int x : result) {
+//         cout << x << " ";
+//     }
+
+//     return 0;
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// starting with functions 
+
 #include <iostream>
-#include <vector>
-#include <cmath>
 using namespace std;
 
-vector<int> plusOne(vector<int>& digits) {
-    vector<int> arr;
-    long long power = pow(10, digits.size() - 1), sum = 0, digit = 0;
-
-    // array to integer
-    for (int i = 0; i < digits.size(); i++) {
-        sum = (digits[i] * power) + sum;
-        power = power / 10;
+void name(){
+        cout << "Sucessfully completed";
     }
 
-    long long last_d = sum + 1;
-    long long o_last = last_d;
-
-    // count digits
-    while (last_d != 0) {
-        digit++;
-        last_d = last_d / 10;
-    }
-
-    // reverse number
-    long long k = 0, new_d;
-    for (int y = 0; y < digit; y++) {
-        new_d = o_last % 10;
-        k = (k * 10) + new_d;
-        o_last = o_last / 10;
-    }
-
-    // push digits into vector
-    long long s = 0;
-    for (int h = 0; h < digit; h++) {
-        s = k % 10;
-        arr.push_back(s);
-        k = k / 10;
-    }
-
-    return arr;
-}
-
-int main() {
-    int n;
-    cout << "Enter number of digits: ";
-    cin >> n;
-
-    vector<int> digits(n);
-    cout << "Enter digits: ";
-    for (int i = 0; i < n; i++) {
-        cin >> digits[i];
-    }
-
-    vector<int> result = plusOne(digits);
-
-    cout << "Result: ";
-    for (int x : result) {
-        cout << x << " ";
-    }
-
+int main(){
+    name();
     return 0;
 }
