@@ -3991,28 +3991,61 @@
 
 // using with argument and with return function
 
+// #include <iostream>
+// using namespace std;
+
+// int calculatebill(int bill){
+//     if(bill <= 100){
+//         bill *= 5;
+//     }
+//     else if(bill > 100 && bill <= 200){
+//         bill *= 7;
+//     }
+//     else{
+//         bill *= 10;
+//     }
+
+//     return bill;
+// }
+
+// int main(){
+//     int units;
+//     cin >> units;
+
+//     int totalbill = calculatebill(units);
+//     cout << totalbill;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// my first bubble sort
+
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int calculatebill(int bill){
-    if(bill <= 100){
-        bill *= 5;
-    }
-    else if(bill > 100 && bill <= 200){
-        bill *= 7;
-    }
-    else{
-        bill *= 10;
-    }
+vector<int> bubblesort(vector<int>sortbubble){
 
-    return bill;
+    for(int i = 0; i < sortbubble.size(); i++){ 
+
+        for(int j = 0 ; j < sortbubble.size()-i-1; j++){
+
+            if(sortbubble[j] > sortbubble[j+1]){
+                int t = sortbubble[j]; 
+                sortbubble[j] = sortbubble[j+1];
+                sortbubble[j+1] = t;
+            }
+        }
+    }
+    return sortbubble;
 }
-
 int main(){
-    int units;
-    cout << "Enter units";
-    cin >> units;
+    vector<int>arr = {1,4,6,3,5,2};
 
-    int totalbill = calculatebill(units);
-    cout << "Total bill is " << totalbill;
+    vector<int>sorted = bubblesort(arr);
+
+    for(int i = 0; i < sorted.size();i++){
+        cout << sorted[i] << " ";
+    }
+    return 0;
 }
