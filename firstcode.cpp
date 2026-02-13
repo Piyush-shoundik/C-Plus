@@ -3975,14 +3975,44 @@
 
 // starting with functions 
 
+// #include <iostream>
+// using namespace std;
+
+// void name(){
+//         cout << "Sucessfully completed";
+//     }
+
+// int main(){
+//     name();
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// using with argument and with return function
+
 #include <iostream>
 using namespace std;
 
-void name(){
-        cout << "Sucessfully completed";
+int calculatebill(int bill){
+    if(bill <= 100){
+        bill *= 5;
+    }
+    else if(bill > 100 && bill <= 200){
+        bill *= 7;
+    }
+    else{
+        bill *= 10;
     }
 
+    return bill;
+}
+
 int main(){
-    name();
-    return 0;
+    int units;
+    cout << "Enter units";
+    cin >> units;
+
+    int totalbill = calculatebill(units);
+    cout << "Total bill is " << totalbill;
 }
