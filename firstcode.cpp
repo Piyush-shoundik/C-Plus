@@ -4056,33 +4056,63 @@
 // creating a bubble sort function 
 // converting vector code to array code
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void bubblesort(int sort[],int n){
+//     // int n = sort.size();
+//     for(int i = 1; i <= n; i++){
+//         for(int k = 1; k <= n - 1 - i; k++){
+//             if(sort[k] > sort[k + 1]){
+//                 int firstnumber = sort[k];
+//                 sort[k] = sort[k+1];
+//                 sort[k+1] = firstnumber;
+//             }
+//         }
+//     }
+// }
+
+// int main(){
+//     int arr[] = {1,4,3,6,2,5};
+//     int size = 6;
+
+//     bubblesort(arr,size);
+
+//     for(int i = 0; i < 6; i++){
+//         cout << arr[i] << " ";
+//     }
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// lets code selection sort
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-void bubblesort(int sort[],int n){
-    // int n = sort.size();
-    for(int i = 1; i <= n; i++){
-        for(int k = 1; k <= n - 1 - i; k++){
-            if(sort[k] > sort[k + 1]){
-                int firstnumber = sort[k];
-                sort[k] = sort[k+1];
-                sort[k+1] = firstnumber;
+void sort(int arr[], int n){
+    // int min = arr[0];
+    for(int i = 0; i < n; i++){
+        for(int k = i+1; k <= n; k++ ){
+            if(arr[i] > arr[k]){
+                int temp = arr[i];
+                arr[i] = arr[k];
+                arr[k] = temp;
             }
         }
     }
 }
 
 int main(){
-    int arr[] = {1,4,3,6,2,5};
+    int arr[] = {1,4,3,6,3,3,5};
     int size = 6;
 
-    bubblesort(arr,size);
+    sort(arr,size);
 
     for(int i = 0; i < 6; i++){
         cout << arr[i] << " ";
     }
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
