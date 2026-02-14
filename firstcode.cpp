@@ -4054,13 +4054,14 @@
 
 
 // creating a bubble sort function 
+// converting vector code to array code
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int>bubblesort(vector<int>sort){
-    int n = sort.size();
+void bubblesort(int sort[],int n){
+    // int n = sort.size();
     for(int i = 1; i <= n; i++){
         for(int k = 1; k <= n - 1 - i; k++){
             if(sort[k] > sort[k + 1]){
@@ -4070,15 +4071,18 @@ vector<int>bubblesort(vector<int>sort){
             }
         }
     }
-    return sort;
 }
 
 int main(){
-    vector<int>sorter = {1,4,3,6,2,5};
+    int arr[] = {1,4,3,6,2,5};
+    int size = 6;
 
-    vector<int>sorted = bubblesort(sorter);
-    
-    for(int i = 0; i < sorted.size(); i++){
-        cout << sorted[i] << " ";
+    bubblesort(arr,size);
+
+    for(int i = 0; i < 6; i++){
+        cout << arr[i] << " ";
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
