@@ -4020,32 +4020,65 @@
 
 // my first bubble sort
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// vector<int> bubblesort(vector<int>sortbubble){
+
+//     for(int i = 0; i < sortbubble.size(); i++){ 
+
+//         for(int j = 0 ; j < sortbubble.size()-i-1; j++){
+
+//             if(sortbubble[j] > sortbubble[j+1]){
+//                 int t = sortbubble[j]; 
+//                 sortbubble[j] = sortbubble[j+1];
+//                 sortbubble[j+1] = t;
+//             }
+//         }
+//     }
+//     return sortbubble;
+// }
+// int main(){
+//     vector<int>arr = {1,4,6,3,5,2};
+
+//     vector<int>sorted = bubblesort(arr);
+
+//     for(int i = 0; i < sorted.size();i++){
+//         cout << sorted[i] << " ";
+//     }
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// creating a bubble sort function 
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> bubblesort(vector<int>sortbubble){
-
-    for(int i = 0; i < sortbubble.size(); i++){ 
-
-        for(int j = 0 ; j < sortbubble.size()-i-1; j++){
-
-            if(sortbubble[j] > sortbubble[j+1]){
-                int t = sortbubble[j]; 
-                sortbubble[j] = sortbubble[j+1];
-                sortbubble[j+1] = t;
+vector<int>bubblesort(vector<int>sort){
+    int n = sort.size();
+    for(int i = 1; i <= n; i++){
+        for(int k = 1; k <= n - 1 - i; k++){
+            if(sort[k] > sort[k + 1]){
+                int firstnumber = sort[k];
+                sort[k] = sort[k+1];
+                sort[k+1] = firstnumber;
             }
         }
     }
-    return sortbubble;
+    return sort;
 }
+
 int main(){
-    vector<int>arr = {1,4,6,3,5,2};
+    vector<int>sorter = {1,4,3,6,2,5};
 
-    vector<int>sorted = bubblesort(arr);
-
-    for(int i = 0; i < sorted.size();i++){
+    vector<int>sorted = bubblesort(sorter);
+    
+    for(int i = 0; i < sorted.size(); i++){
         cout << sorted[i] << " ";
     }
-    return 0;
 }
