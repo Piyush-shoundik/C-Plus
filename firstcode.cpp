@@ -4183,32 +4183,73 @@
 
 // lets create a class and object
 
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class print{
+//     private:
+//     string name;
+//     int classroom;
+
+//     public:
+//     void getinput(){
+//         cout << "Enter your name here \n";
+//         cin >> name ;
+
+//         cout << "Enter your classroom here \n";
+//         cin >> classroom;
+//     }
+
+//     void print_command(){
+//         cout << "Name is " << name << endl;
+//         cout << "Classroom is " << classroom << endl;
+//     }
+// };
+ 
+// int main(){
+//     print classprint[3];
+
+//     for(int i = 0; i < 3; i++){
+//         classprint[i].getinput();
+//         classprint[i].print_command();
+//     }
+
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Creating a clock feature in my program that add two clock by using object as function
+
 #include <iostream>
-#include <string>
+#include <vector>
 using namespace std;
 
-class print{
+class clockk{
     private:
-    string name;
-    int classroom;
-
+    int hour, min;
+    
     public:
-    void getinput(){
-        cout << "Enter your name here \n";
-        cin >> name ;
-
-        cout << "Enter your classroom here \n";
-        cin >> classroom;
+    void getdata(){
+        cout << "Enter hours and then minutes" << endl;
+        cin >> hour >> min;
+        
     }
-
-    void print_command(){
-        cout << "Name is " << name << endl;
-        cout << "Classroom is " << classroom;
+    void printout(){
+        cout << "Total is " << hour << " hr " << min << " min";
+    }
+    void sum(clockk c1,clockk c2){
+        hour = (c1.min + c2.min) /60;
+        min = (c1.min + c2.min) % 60;
+        hour = hour + (c1.hour + c2.hour) ;
     }
 };
+    
 
 int main(){
-    print classprint;
-    classprint.getinput();
-    classprint.print_command();
+    clockk c1, c2, c3;
+    c1.getdata();
+    c2.getdata();
+    c3.sum(c1,c2);
+    c3.printout();
 }
