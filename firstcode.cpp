@@ -4089,30 +4089,64 @@
 
 // lets code selection sort
 
-#include <iostream>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void sort(int arr[], int n){
+//     // int min = arr[0];
+//     for(int i = 0; i < n; i++){
+//         for(int k = i+1; k <= n; k++ ){
+//             if(arr[i] > arr[k]){
+//                 int temp = arr[i];
+//                 arr[i] = arr[k];
+//                 arr[k] = temp;
+//             }
+//         }
+//     }
+// }
+
+// int main(){
+//     int arr[] = {1,4,3,6,3,3,5};
+//     int size = 6;
+
+//     sort(arr,size);
+
+//     for(int i = 0; i < 6; i++){
+//         cout << arr[i] << " ";
+//     }
+// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// insertion sort in a function
+
+#include <iostream> 
 #include <vector>
 using namespace std;
 
+
 void sort(int arr[], int n){
-    // int min = arr[0];
-    for(int i = 0; i < n; i++){
-        for(int k = i+1; k <= n; k++ ){
-            if(arr[i] > arr[k]){
-                int temp = arr[i];
-                arr[i] = arr[k];
-                arr[k] = temp;
-            }
+    for(int i = 1; i < n ; i++){
+        int temp = arr[i];
+        int j = i - 1; 
+
+        while(j >= 0 && temp < arr[j]){
+            arr[j+1] = arr[j];
+            j--;
         }
+
+        
+        arr[j+1] = temp;
     }
 }
 
 int main(){
-    int arr[] = {1,4,3,6,3,3,5};
-    int size = 6;
+    int arr[] = {2,4,5,1,3};
+    int size = 5;
 
     sort(arr,size);
 
-    for(int i = 0; i < 6; i++){
+    for(int i = 0; i < size; i++){
         cout << arr[i] << " ";
     }
 }
