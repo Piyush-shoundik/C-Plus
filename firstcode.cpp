@@ -4155,26 +4155,60 @@
 
 // using insertion sort
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int arr[] = {5,4,2,3,1};
+//     int n = 5;
+
+//     for(int i = 1; i < n ; i++){
+//         int temp = arr[i]; //5
+//         int j = i-1; //1
+//         while(arr[j] > temp && j >= 0 ){
+//             arr[j+1] = arr[j];
+//             j--;
+//         }
+//         arr[j+1] = temp;
+//     }
+
+//     for(int i = 0; i < n; i++){
+//         cout << arr[i] << " ";
+//     }
+//     return 0;
+    
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// lets create a class and object
+
 #include <iostream>
+#include <string>
 using namespace std;
 
+class print{
+    private:
+    string name;
+    int classroom;
+
+    public:
+    void getinput(){
+        cout << "Enter your name here \n";
+        cin >> name ;
+
+        cout << "Enter your classroom here \n";
+        cin >> classroom;
+    }
+
+    void print_command(){
+        cout << "Name is " << name << endl;
+        cout << "Classroom is " << classroom;
+    }
+};
+
 int main(){
-    int arr[] = {5,4,2,3,1};
-    int n = 5;
-
-    for(int i = 1; i < n ; i++){
-        int temp = arr[i]; //5
-        int j = i-1; //1
-        while(arr[j] > temp && j >= 0 ){
-            arr[j+1] = arr[j];
-            j--;
-        }
-        arr[j+1] = temp;
-    }
-
-    for(int i = 0; i < n; i++){
-        cout << arr[i] << " ";
-    }
-    return 0;
-    
+    print classprint;
+    classprint.getinput();
+    classprint.print_command();
 }
