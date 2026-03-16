@@ -1,1 +1,3 @@
-num1
+for(int j = 0 ; j > b; j++){
+        //     cout << " ";
+        // }

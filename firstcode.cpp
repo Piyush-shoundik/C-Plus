@@ -4221,35 +4221,56 @@
 
 // Creating a clock feature in my program that add two clock by using object as function
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class clockk{
+//     private:
+//     int hour, min;
+    
+//     public:
+//     void getdata(){
+//         cout << "Enter hours and then minutes" << endl;
+//         cin >> hour >> min;
+        
+//     }
+//     void printout(){
+//         cout << "Total is " << hour << " hr " << min << " min";
+//     }
+//     void sum(clockk c1,clockk c2){
+//         hour = (c1.min + c2.min) /60;
+//         min = (c1.min + c2.min) % 60;
+//         hour = hour + (c1.hour + c2.hour) ;
+//     }
+// };
+    
+
+// int main(){
+//     clockk c1, c2, c3;
+//     c1.getdata();
+//     c2.getdata();
+//     c3.sum(c1,c2);
+//     c3.printout();
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #include <iostream>
-#include <vector>
 using namespace std;
 
-class clockk{
-    private:
-    int hour, min;
-    
-    public:
-    void getdata(){
-        cout << "Enter hours and then minutes" << endl;
-        cin >> hour >> min;
-        
-    }
-    void printout(){
-        cout << "Total is " << hour << " hr " << min << " min";
-    }
-    void sum(clockk c1,clockk c2){
-        hour = (c1.min + c2.min) /60;
-        min = (c1.min + c2.min) % 60;
-        hour = hour + (c1.hour + c2.hour) ;
-    }
-};
-    
-
 int main(){
-    clockk c1, c2, c3;
-    c1.getdata();
-    c2.getdata();
-    c3.sum(c1,c2);
-    c3.printout();
+    int a = 5;
+    int b = 0;
+    for(int i = 1 ; i <= 4; i++){
+        for(int k = a; k > 1; k--){
+            cout << i;
+        }
+        cout << endl;
+        a--;
+        for(int j = 0 ; j < i; j++){
+            cout << " ";
+        }
+        b++;
+    }
 }
